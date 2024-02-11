@@ -12,3 +12,14 @@ li{
 nav{
    display:flex
 }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column{
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; 
+}
