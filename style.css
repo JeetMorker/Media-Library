@@ -1,11 +1,6 @@
-/*header style*/
-header {
-   text-align: center; 
-   padding: 20px;
+ul{
+   display:flex
 }
-/*navigation menu style*/
-nav {
-   text-align: center;
-   word-spacing: 30px;
-   Padding: 10px;
+li{
+   margin-right: 25px;
 }
