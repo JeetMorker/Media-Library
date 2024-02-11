@@ -1,5 +1,6 @@
 ul{
-   display:flex
+   display:flex;
+   list-style: none;
 }
 li{
    margin-right: 25px;
