@@ -12,8 +12,14 @@ const pool = mysql.createPool({
 async function getbooks(){
     const [rows] = await pool.query("SELECT * FROM books")
     return rows
-
 }
-const books =  await getbooks()
+async function getbook(id){
+    const [rows] = await pool.query("SELECT * FROM books WHERE id = ?",[id])
+    return rows 
+}
+
+
+
+const books =  await getbook(1)
 
 console.log(books);
