@@ -1,0 +1,17 @@
+{
+  "name": "ci-102-lab-61-group-14",
+  "version": "1.0.0",
+  "description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
+  "type": "module",
+  "main": "database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.3",
+    "mysql2": "^3.9.1"
+  }
+}
