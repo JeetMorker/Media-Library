@@ -19,7 +19,29 @@ nav{
 
 .column{
     flex: 1;
+    align-items: center;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc; 
+    border: medium solid brown;
+    text-align: center; 
 }
+
+body{
+  font-family: American Typewriter, serif;
+  background-color: #FFFFCC;
+  color: #666600
+}
+
+h2{
+  font-family: Verdana, sans-serif;
+  text-align: center;
+}
+
+a{
+  color: #6E260E;
+}
+
+header{
+  border: medium solid brown;
+  height: 120px;
+  text-align: center;
