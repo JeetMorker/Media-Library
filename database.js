@@ -24,3 +24,7 @@ export async function createbook(title,genre,summary){
 
 }  
 
+const book = await getbooks()
+
+console.log(book)
+
