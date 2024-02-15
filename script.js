@@ -504,18 +504,39 @@ function showDetails(movie) {
     const overlay = document.getElementById('overlay');
     const details = document.getElementById('movieDetails');
     details.innerHTML = ` <button id="closeOverlay" onclick="closeOverlay()">Close</button>
-			 <h2>${movie.title}</h2>
-                         <p>Release Year: ${movie.year}</p>
-                         <p>IMDB Rating: ${movie.rating}</p>
-                         <p>Genre(s): ${movie.genre}</p>
-                         <p>${movie.description}</p>`;
-    overlay.style.display = 'flex';
-}
 
+<h2>${movie.title}</h2>
+<div class="movieContent">	
+		<div class="textDetails">
+            <p><strong>Release Year:</strong> ${movie.year}</p>
+            <p><strong>IMDB Rating:</strong> ${movie.rating}</p>
+            <p><strong>Genre(s):</strong> ${movie.genre}</p>
+            <div class="movieDescription">${movie.description}</div>
+</div>
+<div class="moviePoster">
+<img src="movies/${movie.title.replace(/:/g, '')}.jpg" alt="${movie.title}" class="moviePoster">
+</div>
+</div>
+`;
+  
+
+  overlay.style.display = 'flex';
+overlay.classList.add('active');
+}
 function closeOverlay() {
-    document.getElementById('overlay').style.display = 'none';
-}
+    var overlay = document.getElementById('overlay');
+    if (overlay) {
+	overlay.style.transition = 'opacity 0.1s linear';
+        overlay.classList.remove('active');
 
+    }
+}
+function showOverlay() {
+    var overlay = document.getElementById('overlay');
+    if (overlay) {
+        overlay.classList.add('active');
+    }
+}
 
 document.getElementById('sortOptions').addEventListener('change', function() {
 	currentSortOption = this.value;

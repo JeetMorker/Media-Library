@@ -5,16 +5,11 @@ body, html {
     overflow-x: hidden;
 }
 
-.textDetails {
-    flex: 1; 
-    margin-right: 20px; 
-}
-
-
 .movieContent {
     display: flex;
     align-items: flex-start; 
-        justify-content: space-between;
+    gap: 20px; 
+    width: 100%;
 }
 
 
@@ -63,25 +58,14 @@ body {
 }
 
 .movieDescription {
- width: 100%; 
     margin-top: 20px;
- font-size: 16px;
-margin-top: 1em;
+order: 3; 
+    width: 100%; 
 }
 .moviePoster {
     flex: 1;
-    max-width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.moviePoster img {
-    width: auto;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    order: 2; 
+    max-width: 50%; 
 }
 
 #searchBar input[type="text"], #searchBar select, #searchBar button {
@@ -141,32 +125,45 @@ margin-top: 10px;
     gap: 10px;
     width: 100%; 
 }
+
 #movieDetails {
     background: #fff;
     padding: 20px;
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start;
-     
-    max-width: 53%;
-    height: 85vh; 
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    align-items: flex-start; /* Align items to the start of the cross axis */
+    justify-content: space-between; /* Space between the text details and image */
+    max-width: 80%; /* Adjust as necessary */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     position: relative;
-    margin: 10vh auto; 
-    overflow: hidden; 
-font-size: 18px;
+    margin: 20px auto; /* Center the overlay */
 }
-#movieDetails h2 {
-    font-size: 24px;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 30px;
+1~#movieDetails {
+    background: #fff;
+    padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    align-items: flex-start; /* Align items to the start of the cross axis */
+    justify-content: space-between; /* Space between the text details and image */
+    max-width: 80%; /* Adjust as necessary */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    margin: 20px auto; /* Center the overlay */
 }
-
-#movieDetails p {
-    font-size: 16px; 
-    margin-bottom: 0.5em;
+1~#movieDetails {
+    background: #fff;
+    padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    align-items: flex-start; /* Align items to the start of the cross axis */
+    justify-content: space-between; /* Space between the text details and image */
+    max-width: 80%; /* Adjust as necessary */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    margin: 20px auto; /* Center the overlay */
 }
 
 
@@ -191,6 +188,11 @@ font-size: 18px;
 }
 
 
+.textDetails {
+    flex: 1;
+    order: 1;
+    max-width: 50%; 
+}
 
 #movieDetails {
     background: white;
