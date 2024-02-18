@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="database.js"></script>
+    <link rel="stylesheet" href="books.css">
     <style>
         ul{
    display:flex;
@@ -27,7 +27,6 @@ a{
 #demo{
     border-style: dotted;
 
-
 }
     </style>
 </head>
@@ -40,30 +39,33 @@ a{
            <li><a href="songs.html">Songs</a></li>
          </ul>
         </nav>
+
          <h1>WELCOME TO MEDIA LIBRARY</h2>
          <p1>Rate Today, Reshape Tommorrow: Your Daily Impact on Media Choices!</p2>
        </header>
- 
-        <h1>Welcome to the Library Page!</h1>
- <h4>Here's todays list of recommended books!</h4>
-        <ul>
-            <li>The Art of Zen - Alan Watts</li>
-            <li>The Jungle Book - That one guy</li>
-            <li>I Am America and So Can You! - S. Colbert</li>
-	    <li>Come and Get It - Kiley Reid</li>
-	    <li>Good Material - Dolly Alderton</li>
-	    <li>The Women - Kristin Hannah</li>
-  	</ul>
-&nbsp
-&nbsp
-&nbsp
-<div class="wrap">
-         <img width="400" src="https://images.pexels.com/photos/590493/pexels-photo-590493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="hello">
-      </div>
-&nbsp
-&nbsp
-&nbsp
-&nbsp
+
+<h3>Search for a Book</h3>
+<div id="searchBar">
+	<input type="text" id="titleSearch" placeholder="Search by book title...">
+<select id="sortOptions">
+	<option value="a-z">A-Z</option>
+	<option value="z-a">Z-A</option>
+	<option value="newest">Newest</option>
+	<option value="oldest">Oldest</option>
+	<option value="rating">Highest Rating</option>
+   </select>
+
+<button onclick="clearSearch()">Clear</button>
+	<span id="movieCount"></span>
+</div>
+
+
+<h4>Here's todays list of recommended books!</h4>
+    
+
+
+    
+
 
 	<h2>Featured News & Updates</h2>
     <div id ="demo">
@@ -75,5 +77,5 @@ a{
 </ul> 
 </div>
    </body>
+	<script src="booksscript.js"></script>
 </html>
-		 
