@@ -97,20 +97,20 @@ padding: 10px;
     border-radius: 5px;
     margin-bottom: 20px;
 }
-#movieCount {
+#bookCount {
     font-size: 1em;
     color: #666;
 margin-top: 10px;
 }
 
 
-.movieItem img{
+.bookItem img{
     cursor: pointer;
      width: 200px; 
     height: 300px; 
     overflow: hidden; 
 }
-.movieItem h3{
+.bookItem h3{
      text-align: center;
 }
 
