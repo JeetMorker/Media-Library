@@ -147,7 +147,7 @@ function loadBooks(filteredBooks = Books) {
     filteredBooks.forEach(book => {
         const bookItem = document.createElement('div');
         bookItem.className = 'bookItem';
-        bookItem.innerHTML = `<img src="Books/${book.title.replace(/:/g, '')}.jpg" alt="${book.title}" style="width:100%"><h3>${book.title}</h3>`;
+        bookItem.innerHTML = `<img src="bookimages/${book.title.replace(/:/g, '')}.jpg" alt="${book.title}" style="width:100%"><h3>${book.title}</h3>`;
         bookItem.onclick = () => showDetails(book);
         grid.appendChild(bookItem);
     });
