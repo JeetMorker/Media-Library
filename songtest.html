@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>song Library</title>
+    <link rel="stylesheet" href="song.css"> 
+</head>
+<body>
+
+<div id="searchBar">
+    <input type="text" id="artistSearch" placeholder="Search by artist...">
+ <select id="sortOptions">
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
+        <option value="rank">Billboard rank</option>
+    </select>
+  <select id="genreOptions">
+      <option value="all">All Genres</option>
+      <option value="Pop">Pop</option>
+      <option value="Country">Country</option>
+      <option value="R&B">R&B</option>
+      <option value="Hip Hop">Hip Hop</option>
+      <option value="Latin">Latin</option>
+  </select>
+
+     <button onclick="clearSearch()">Clear</button>
+   <span id="songCount"></span>
+</div>
+
+<div id="songsGrid">
+</div>
+
+<div id="overlay" class="hidden">
+    <div id="songDetails">
+
+  </div>
+</div>
+
+
+</body>
+<script src="songscript.js"></script>
+</html>
+

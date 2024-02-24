@@ -1,0 +1,203 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.textDetails {
+    flex: 1; 
+    margin-right: 20px; 
+}
+
+
+.songContent {
+    display: flex;
+    align-items: flex-start; 
+        justify-content: space-between;
+}
+
+
+#songsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 20px;
+     width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    box-sizing: border-box;
+}
+
+#overlay.active {
+    visibility: visible; 
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 0.2s linear; 
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+.songItem {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+.songItem:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.songInfo {
+    flex: 1;
+}
+
+.songDescription {
+ width: 100%; 
+    margin-top: 20px;
+ font-size: 16px;
+margin-top: 1em;
+}
+.songPoster {
+    flex: 1;
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.songPoster img {
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#searchBar input[type="text"], #searchBar select, #searchBar button {
+margin-top: 10px;    
+padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#searchContainer {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+#songCount {
+    font-size: 1em;
+    color: #666;
+margin-top: 10px;
+}
+
+
+.songItem img{
+    cursor: pointer;
+     width: 200px; 
+    height: 300px; 
+    overflow: hidden; 
+}
+.songItem h3{
+     text-align: center;
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#searchBar {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px;
+    width: 100%; 
+}
+#songDetails {
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+
+    max-width: 53%;
+    height: 85vh; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    margin: 10vh auto; 
+    overflow: hidden; 
+font-size: 18px;
+}
+#songDetails h2 {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#songDetails p {
+    font-size: 16px; 
+    margin-bottom: 0.5em;
+}
+
+
+#closeOverlay {
+    position: absolute;    
+    top: 10px;
+    right: 10px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    z-index: 1002;
+
+}
+
+
+#closeOverlay:hover {
+    background-color: darkred;
+}
+
+
+
+#songDetails {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
