@@ -417,14 +417,14 @@ const moviesArray = [
     "title": "Prey",
     "genre": "Action,Adventure,Drama",
     "rating": 7.1,
-    "description": null
+    "description": "Naru, a skilled warrior of the Comanche Nation, fights to protect her tribe against one of the first highly-evolved Predators to land on Earth."
   },
   {
     "year": 2021.0,
     "title": "Rurouni Kenshin: Final Chapter Part II - The Beginning",
     "genre": "Action,Adventure,Drama",
     "rating": 7.4,
-    "description": null
+    "description": "Before becoming a protector, Kenshin is a fearsome assassin known as Battosai, but his story changes when he meets the gentle Tomoe Yukishiro."
   },
   {
     "year": 2011.0,
@@ -478,10 +478,17 @@ const moviesArray = [
   {
     "year": 2023.0,
     "title": "Simon",
-    "genre": "\\N",
+    "genre": "Action",
     "rating": 9.4,
-    "description": null
-  }
+    "description": "Simón, a Venezuelan freedom fighter exiled in Miami, copes not only with trauma, but also deep guilt over a choice he must make: stay in Miami and start a new life, or return home to the losing fight against a tyrannical regime."
+ },
+{
+   "year": 2023.0,
+    "title": "Taylor Swift: The Eras Tour",
+    "genre": "Documentary",
+    "rating": 8.2,
+    "description": "Experience the Eras Tour concert, performed by the one and only Taylor Swift."
+}
 ];
 
 let movies = moviesArray; 
