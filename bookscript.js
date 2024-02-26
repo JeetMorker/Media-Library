@@ -97,10 +97,10 @@ function sortAndDisplayBooks(BooksToSort, sortOption) {
             sortedBooks.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
             break;
         case 'a-z':
-            sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
+            sortedBooks.sort((a, b) => a.Title.localeCompare(b.Title));
             break;
         case 'z-a':
-            sortedBooks.sort((a, b) => b.title.localeCompare(a.title));
+            sortedBooks.sort((a, b) => b.Title.localeCompare(a.Title));
             break;
     }
 
@@ -150,7 +150,7 @@ function loadBooks(filteredBooks = Books) {
     filteredBooks.forEach(book => {
         const bookItem = document.createElement('div');
         bookItem.className = 'bookItem';
-        bookItem.innerHTML = `<img src="bookimages/${book.title.replace(/:/g, '')}.jpg" alt="${book.title}" style="width:100%"><h3>${book.title}</h3>`;
+        bookItem.innerHTML = `<img src="bookimages/${book.Title.replace(/:/g, '')}.jpg" alt="${book.Title}" style="width:100%"><h3>${book.Title}</h3>`;
         bookItem.onclick = () => showDetails(book);
         grid.appendChild(bookItem);
     });
