@@ -1,14 +1,17 @@
 const BooksArray = [
   {
-"Year": ,
-    "Title": ,
-    "Genre": ,
-    "Rating": ,
-    "Description": 
+"Year": 1925.0,
+    "Title": "The Great Gatsby" ,
+    "Genre": "Tragedy,Literary Fiction",
+    "Rating": "4/5",
+    "Description": "The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan." 
       },
   {
-     },
-  {
+"Year": 2010.0,
+   "Title":"The Hunger Games",
+   "Genre": "Science Fiction, Thriller, Dystopian Fiction",
+   "Rating": "4.7/5",
+   "Description": "The Hunger Games is a series of young adult dystopian novels written by American author Suzanne Collins. The first three novels are part of a trilogy following teenage protagonist Katniss Everdeen, and the fourth book is a prequel set 64 years before the original."
      }
 ];
 

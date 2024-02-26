@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Library</title>
+    <link rel="stylesheet" href="test.css"> 
+</head>
+<body>
+
+<div id="searchBar">
+    <input type="text" id="titleSearch" placeholder="Search by title...">
+ <select id="sortOptions">
+        <option value="a-z">A-Z</option>
+        <option value="z-a">Z-A</option>
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+        <option value="rating">IMDB Rating</option>
+    </select>
+
+     <button onclick="clearSearch()">Clear</button>
+	 <span id="movieCount"></span>
+</div>
+
+<div id="moviesGrid">
+</div>
+
+<div id="overlay" class="hidden">
+    <div id="movieDetails">
+
+	</div>
+</div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
