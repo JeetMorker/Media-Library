@@ -89,7 +89,7 @@ const BooksArray = [
 }
 ];
 
-let Books = BooksArray; 
+let books = booksArray; 
 
 document.addEventListener('DOMContentLoaded', function() {
 sortAndDisplayBooks(Books, 'a-z');
