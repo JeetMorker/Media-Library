@@ -485,7 +485,7 @@ const moviesArray = [
 {
    "year": 2023.0,
     "title": "Taylor Swift: The Eras Tour",
-    "genre": "Documentary",
+    "genre": "Music",
     "rating": 8.2,
     "description": "Experience the Eras Tour concert, performed by the one and only Taylor Swift."
 }
@@ -494,7 +494,7 @@ const moviesArray = [
 let movies = moviesArray; 
 
 document.addEventListener('DOMContentLoaded', function() {
-sortAndDisplayMovies(movies, 'a-z');
+sortAndDisplayMovies(movies, 'a-z', 'All');
         });
 
 
@@ -502,7 +502,8 @@ sortAndDisplayMovies(movies, 'a-z');
 function clearSearch() {
     document.getElementById('titleSearch').value = '';
     document.getElementById('sortOptions').value = 'a-z';
-    sortAndDisplayMovies(movies, 'a-z');
+ document.getElementById('genreSelect').value = 'All';
+    sortAndDisplayMovies(movies, 'a-z','All');
 }
 
 
@@ -545,8 +546,29 @@ function showOverlay() {
     }
 }
 
+
+
+function showLoadingOverlay() {
+    document.getElementById('loading-overlay').style.display = 'flex';
+}
+
+function hideLoadingOverlay() {
+    document.getElementById('loading-overlay').style.display = 'none';
+}
+
+
+
+
+
+
 document.getElementById('sortOptions').addEventListener('change', function() {
 	currentSortOption = this.value;
+updateMovies();
+
+});
+
+document.getElementById('genreSelect').addEventListener('change', function() {
+        currentGenreOption = this.value;
 updateMovies();
 
 });
@@ -555,13 +577,18 @@ function updateMovies() {
     const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
     const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(titleSearchValue));
 	currentSortOption = document.getElementById('sortOptions').value;
-    sortAndDisplayMovies(filteredMovies, currentSortOption);
+currentGenreOption = document.getElementById('genreSelect').value;
+    sortAndDisplayMovies(filteredMovies, currentSortOption, currentGenreOption);
 }
 
 
-function sortAndDisplayMovies(moviesToSort, sortOption) {
-    let sortedMovies = [...moviesToSort]; 
+function sortAndDisplayMovies(moviesToSort, sortOption, genreFilter) {
+showLoadingOverlay(); 
 
+   let sortedMovies = [...moviesToSort]; 
+if (genreFilter != "All") {
+	 sortedMovies = sortedMovies.filter(movie => movie.genre.includes(genreFilter));
+}
     switch (sortOption) {
         case 'newest':
             sortedMovies.sort((a, b) => parseInt(b.year) - parseInt(a.year));
@@ -581,6 +608,8 @@ function sortAndDisplayMovies(moviesToSort, sortOption) {
     }
 
     loadMovies(sortedMovies);
+    hideLoadingOverlay();
+
 }
 function sortMovies() {
     const sortValue = document.getElementById('sortOptions').value;
@@ -632,3 +661,4 @@ function loadMovies(filteredmovies = movies) {
     });
 	document.getElementById('movieCount').textContent = `${filteredmovies.length} results`;
 }
+updateMovies();
