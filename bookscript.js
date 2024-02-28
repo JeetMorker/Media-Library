@@ -1,3 +1,4 @@
+
 const booksArray = [
 {
 "Year Published": 1925.0,
@@ -143,7 +144,7 @@ updateBooks();
 
 function updateBooks() {
     const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
-    const filteredBooks = Books.filter(book => book.title.toLowerCase().includes(titleSearchValue));
+    const filteredBooks = Books.filter(book => book.Title.toLowerCase().includes(titleSearchValue));
 	currentSortOption = document.getElementById('sortOptions').value;
     sortAndDisplayBooks(filteredBooks, currentSortOption);
 }
