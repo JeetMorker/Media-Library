@@ -1,4 +1,4 @@
-const BooksArray = [
+const booksArray = [
 {
 "Year Published": 1925.0,
     "Title": "The Great Gatsby",
@@ -16,7 +16,7 @@ const BooksArray = [
    "Description": "The Hunger Games is a series of young adult dystopian novels written by American author Suzanne Collins. The first three novels are part of a trilogy following teenage protagonist Katniss Everdeen, and the fourth book is a prequel set 64 years before the original."
 },
 {
-"Year Published": 1960.0
+"Year Published": 1960.0,
    "Title": "To Kill a MockingBird",
    "Author": "Harper Lee",
    "Genre": "Fiction, Historical Fiction, Literature",
@@ -33,11 +33,11 @@ const BooksArray = [
 },
 { 
 "Year Published": 1951.0,
-   "Title": The Catcher in the Rye",
-   "Author": "J.D. Salinger"
+   "Title": "The Catcher in the Rye",
+   "Author": "J.D. Salinger",
    "Genre": "Classics, Fiction, Literature",
    "Rating": "3.8/5",
-   "Summary": "The novel details two days in the life of 16-year-old Holden Caulfield after he has been expelled from prep school. Confused and disillusioned, Holden searches for truth and rails against the “phoniness” of the adult world."
+   "Summary": "The novel details two days in the life of 16-year-old Holden Caulfield after he has been expelled from prep school. Confused and disillusioned, Holden searches for truth and rails against the phoniness of the adult world."
 },
 {
 "Year Published": 2023.0,
@@ -60,36 +60,28 @@ const BooksArray = [
    "Title": "All The Sinners Bleed",
    "Author": "S.A. Cosby",
    "Genre": "Southern Thriller",
-   "Rating": "",
+   "Rating": "2/4",
    "Summary": "In his earlier thrillers, Cosby worked the outlaw side of the crime genre. In his new one — about a Black sheriff in a rural Southern town, searching for a serial killer who tortures Black children — he’s written a crackling good police procedural." 
 },
 {
-“Year Published”: 2023.0
-   “Title”: "Biography of X", 
-   “Author”: "Catherine Lacey",
-   “Genre”: "Experimental Fiction",
-   “Rating”: "3.9/5"
-   “Summary”: "Lacey rewrites 20th-century U.S. history through the audacious fictional life story of X, a polarizing female performance artist who made her way from the South to New York City’s downtown art scene."
+"Year Published": 2023.0, 
+   "Title": "Chain-Gang All Stars", 
+   "Author": "Nana Kwame Adjei-Brenyah",
+   "Genre": "Literary Dystopia",
+   "Rating": "29/29",
+   "Summary": "This satire — in which prison inmates duel on TV for a chance at freedom — makes readers complicit with the bloodthirsty fans sitting ringside. The fight scenes are so well written they demonstrate how easy it might be to accept a world this sick."
 },
 {
-“Year Published”: 2023.0 
-   “Title”: "Chain-Gang All Stars", 
-   “Author”: "Nana Kwame Adjei-Brenyah",
-   “Genre”: "Literary Dystopia",
-   “Rating”: ""
-   “Summary”: "This satire — in which prison inmates duel on TV for a chance at freedom — makes readers complicit with the bloodthirsty fans sitting ringside. The fight scenes are so well written they demonstrate how easy it might be to accept a world this sick."
-},
-{
-“Year Published”: 2023.0 
-   “Title”: "The Covenant of Water",
-   “Author”: "Abraham Verghese",
-   “Genre”: "Historical Fiction",
-   “Rating”: ""
-   “Summary”: "Verghese’s first novel since “Cutting for Stone” follows generations of a family across 77 years in southwestern India as they contend with political strife and other troubles — capped by a shocking discovery made by the matriarch’s granddaughter, a doctor."
+"Year Published": 2023.0, 
+   "Title": "The Covenant of Water",
+   "Author": "Abraham Verghese",
+   "Genre": "Historical Fiction",
+   "Rating": "29/2934",
+   "Summary": "Verghese’s first novel since Cutting for Stone follows generations of a family across 77 years in southwestern India as they contend with political strife and other troubles — capped by a shocking discovery made by the matriarch’s granddaughter, a doctor."
 }
 ];
 
-let books = booksArray; 
+let Books = booksArray; 
 
 document.addEventListener('DOMContentLoaded', function() {
 sortAndDisplayBooks(Books, 'a-z');
@@ -219,7 +211,7 @@ function searchBooks() {
 document.getElementById('titleSearch').addEventListener('input', updateBooks);
 
 function loadBooks(filteredBooks = Books) {
-    const grid = document.getElementById('BooksGrid');
+    const grid = document.getElementById('booksGrid');
     grid.innerHTML = '';
     filteredBooks.forEach(book => {
         const bookItem = document.createElement('div');
