@@ -34,7 +34,7 @@ const booksArray = [
 },
 { 
 "Year Published": 1951.0,
-   "Title": "The Catcher in the Rye",
+   "Title": "Catcher in the Rye",
    "Author": "J.D. Salinger",
    "Genre": "Classics, Fiction, Literature",
    "Rating": "3.8/5",
@@ -79,7 +79,23 @@ const booksArray = [
    "Genre": "Historical Fiction",
    "Rating": "29/2934",
    "Summary": "Verghese’s first novel since Cutting for Stone follows generations of a family across 77 years in southwestern India as they contend with political strife and other troubles — capped by a shocking discovery made by the matriarch’s granddaughter, a doctor."
-}
+},
+{
+"Year Published": 1949.0,
+   "Title": "1984",
+   "Author": "George Orwell",
+   "Genre": "Genre",
+   "Rating": "4.2/5",
+   "Summary": "1984 is a dystopian novel that was written by George Orwell and published in 1949. It tells the story of Winston Smith, a citizen of the miserable society of Oceania, who is trying to rebel against the Party and its omnipresent symbol, Big Brother." 
+},
+{
+"Year Published":234.0,
+   "Title": "Title",
+   "Author": "Author",
+   "Genre": "Genre",
+   "Rating": "Rating",
+   "Summary": "Summary"
+} 
 ];
 
 let Books = booksArray; 
