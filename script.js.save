@@ -649,21 +649,16 @@ function searchMovies() {
 
 document.getElementById('titleSearch').addEventListener('input', updateMovies);
 
-function loadMovies(filteredmovies = movies) { // Takes in filtered movie list
+function loadMovies(filteredmovies = movies) {
     const grid = document.getElementById('moviesGrid');
-    grid.innerHTML = ''; // Resets current grid
-			
+    grid.innerHTML = '';
     filteredmovies.forEach(movie => {
         const movieItem = document.createElement('div');
-
-        movieItem.className = 'movieItem'; // Adds movie title to the element
-
+        movieItem.className = 'movieItem';
         movieItem.innerHTML = `<img src="movies/${movie.title.replace(/:/g, '')}.jpg" alt="${movie.title}" style="width:100%"><h3>${movie.title}</h3>`;
-	//Adds movie image to the element
-
         movieItem.onclick = () => showDetails(movie);
-        grid.appendChild(movieItem); // Adds element to grid
+        grid.appendChild(movieItem);
     });
-	document.getElementById('movieCount').textContent = `${filteredmovies.length} results`; // Counts total amount of movies in the grid
+	document.getElementById('movieCount').textContent = `${filteredmovies.length} results`;
 }
 updateMovies();
