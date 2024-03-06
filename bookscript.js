@@ -111,14 +111,14 @@ function showDetails(book) {
     const details = document.getElementById('bookDetails');
     details.innerHTML = ` <button id="closeOverlay" onclick="closeOverlay()">Close</button>
 
-<h2>${book.title}</h2>
+<h2>${book.Title}</h2>
 <div class="bookContent">	
 		<div class="textDetails">
-            <p><strong>Published Year:</strong> ${book.year}</p>
-	    <p><strong>Author:</strong> ${book.author}</p>
-            <p><strong>Rating:</strong> ${book.rating}</p>
-            <p><strong>Genre(s):</strong> ${book.genre}</p>
-            <div class="Summaary:">${book.summary}</div>
+            <p><strong>Year Published:</strong> ${book.Year Published}</p>
+	    <p><strong>Author:</strong> ${book.Author}</p>
+            <p><strong>Rating:</strong> ${book.Rating}</p>
+            <p><strong>Genre(s):</strong> ${book.Genre}</p>
+            <div class="Summary:">${book.Summary}</div>
 </div>
 <div class="bookPoster">
 <img src="books/${book.Title.replace(/:/g, '')}.jpg" alt="${book.title}" class="bookPoster">
