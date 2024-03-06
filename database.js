@@ -21,8 +21,14 @@ export async function createbook(title,genre,summary){
     const [result] = await pool.query('INSERT INTO books (title,genre,summary) VALUES (?,?,?)',[title,genre,summary])
     const id =  result.insertId
     return getbook(id)
-
 }  
+
+export async function getcomments(){
+    const[rows] = await pool.query("SELECT * from comments")
+    return rows
+}
+
+
 
 const book = await getbooks()
 

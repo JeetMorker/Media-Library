@@ -1,6 +1,6 @@
 import express from "express";
 
-import{getbooks,getbook,createbook} from './database.js'
+import{getbooks,getbook,createbook,getcomments} from './database.js'
 const app = express();
 app.use(express.json());
 
@@ -20,6 +20,13 @@ app.post('/books', async(req,res)=>{
     const book = await createbook(title,genre,summary)
     res.status(201).send(book)
 })
+
+app.get("/comments",async(req,res)=>{
+    const comment = await getcomments()
+    res.send(comment)
+})
+
+
 
 
 app.use((err, req, res, next) => {
