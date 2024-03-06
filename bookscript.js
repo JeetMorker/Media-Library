@@ -18,7 +18,7 @@ const booksArray = [
 },
 {
 "Year Published": 1960.0,
-   "Title": "To Kill a MockingBird",
+   "Title": "To Kill A MockingBird",
    "Author": "Harper Lee",
    "Genre": "Fiction, Historical Fiction, Literature",
    "Rating": "4.26/5",
@@ -58,7 +58,7 @@ const booksArray = [
 },
 {
 "Year Published": 2023.0,
-   "Title": "All The Sinners Bleed",
+   "Title": "All the Sinner's Bleed",
    "Author": "S.A. Cosby",
    "Genre": "Southern Thriller",
    "Rating": "3/5",
@@ -225,7 +225,7 @@ function loadBooks(filteredBooks = Books) {
     filteredBooks.forEach(book => {
         const bookItem = document.createElement('div');
         bookItem.className = 'bookItem';
-        bookItem.innerHTML = `<img src="bookimages/${book.Title.replace(/:/g, '')}.jpg" alt="${book.Title}" style="width:100%"><h3>${book.Title}</h3>`;
+        bookItem.innerHTML = `<img src="books/${book.Title.replace(/:/g, '')}.jpg" alt="${book.Title}" style="width:100%"><h3>${book.Title}</h3>`;
         bookItem.onclick = () => showDetails(book);
         grid.appendChild(bookItem);
     });
