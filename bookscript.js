@@ -87,7 +87,56 @@ const booksArray = [
    "Genre": "Genre",
    "Rating": "4.2/5",
    "Summary": "1984 is a dystopian novel that was written by George Orwell and published in 1949. It tells the story of Winston Smith, a citizen of the miserable society of Oceania, who is trying to rebel against the Party and its omnipresent symbol, Big Brother." 
-}, 
+},
+{
+"Year Published": 1865.0, 
+   "Title": "Alice's Adventure in Wonderland",
+   "Author": "Lewis Carroll",
+   "Genre": "Children's Literature, Fantasy Fiction",
+   "Rating": "4.4/5",
+   "Summary": "A young girl named Alice is the main character in Alice's Adventures in Wonderland. She falls asleep and dreams that she follows a White Rabbit down a rabbit hole. She has many wondrous, often bizarre adventures. Alice often changes size unexpectedly, growing as tall as a house an shrinking to three inches."
+},
+{
+"Year Published": 1605.0,
+   "Title": "Don Quixote",
+   "Author": "Miguel de Cervantes",
+   "Genre": "Novel,Psychological Fiction, Satire",
+   "Rating": "3.9/5",
+   "Summary": "Don Quixote was a one volume book published in 1605, divided internally into four parts, not the first part of a two-part set. The mention in the 1605 book of further adventures yet to be told was totally conventional, did not indicate any authorial plans for a continuation, and was not taken seriously by the book
+s first readers."
+},
+{
+"Year Published": 1726.0,
+   "Title": "Gulliver's Travels",
+   "Author": "Jonathan Swift",
+   "Genre": "Satire, Science Fiction",
+   "Rating": "3.6/5",
+   "Summary": "Gulliver goes to the sea as a surgeon on the merchant ship,Antelope. This ship is destroyed during a heavy windstorm, and Gulliver, the only survivor, swims to a nearby island, Lilliput. Being nearly exhausted from the ordeal, he falls asleep. Upon awakening, he finds himself captured by the island's inhabitants."
+},
+{
+"Year Published": 1997.0,
+   "Title": "Harry Potter and the Sorcerer's Stone",
+   "Author": "J.K. Rowling",
+   "Genre": "Novel, Children's Literature, Fantasy Fiction",
+   "Rating": "4.9/5",
+   "Summary": "11 year old Harry Potter receives a letter saying that he is invited to attend Hogwarts, school of witchcrat and wizardry. He then learns that a powerful wizard and his minions are after the sorcerer's stone that will make this evil waizard immortal and undefeatable."
+},
+{
+"Year Published": 1899.0,
+   "Title": "Heart of Darkness",
+   "Author": "Joseph Conrad",
+   "Genre": "Novella, Fiction",
+   "Rating": "3.4/5",
+   "Summary": "Various European powers are exploiting Africa for its riches and resources while leaving little or nothing to the Africans who are laboring under them. Through Marlow, Conrad shows the horros of colonialism and concludes that the Europeans, not the Africans, are the true savages."
+},
+{
+"Year Published": 1998.0,
+   "Title": "Holes",
+   "Author": "Louis Sachar",
+   "Genre": "Novel, Children's Literature, Mystery, Satire, Adventure Fiction",
+   "Rating": "4/5",
+   "Summary": "The book centers on Stanley Yelnats, who is sent to Camp Green Lake, a correctional boot camp in a desert in Texas, after being falsely accused of theft."
+}
 ];
 
 let Books = booksArray; 
