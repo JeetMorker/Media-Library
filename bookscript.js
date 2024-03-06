@@ -162,7 +162,7 @@ function showDetails(book) {
 <h2>${book.Title}</h2>
 <div class="bookContent">	
 		<div class="textDetails">
-            <p><strong>Year Published:</strong> ${book.Year Published}</p>
+            <p><strong>Year Published:</strong> ${book.YearPublished}</p>
 	    <p><strong>Author:</strong> ${book.Author}</p>
             <p><strong>Rating:</strong> ${book.Rating}</p>
             <p><strong>Genre(s):</strong> ${book.Genre}</p>
