@@ -102,8 +102,7 @@ const booksArray = [
    "Author": "Miguel de Cervantes",
    "Genre": "Novel,Psychological Fiction, Satire",
    "Rating": "3.9/5",
-   "Summary": "Don Quixote was a one volume book published in 1605, divided internally into four parts, not the first part of a two-part set. The mention in the 1605 book of further adventures yet to be told was totally conventional, did not indicate any authorial plans for a continuation, and was not taken seriously by the book
-s first readers."
+   "Summary": "Don Quixote was a one volume book published in 1605, divided internally into four parts, not the first part of a two-part set. The mention in the 1605 book of further adventures yet to be told was totally conventional, did not indicate any authorial plans for a continuation, and was not taken seriously by the books first readers.",
 },
 {
 "Year Published": 1726.0,
@@ -111,7 +110,7 @@ s first readers."
    "Author": "Jonathan Swift",
    "Genre": "Satire, Science Fiction",
    "Rating": "3.6/5",
-   "Summary": "Gulliver goes to the sea as a surgeon on the merchant ship,Antelope. This ship is destroyed during a heavy windstorm, and Gulliver, the only survivor, swims to a nearby island, Lilliput. Being nearly exhausted from the ordeal, he falls asleep. Upon awakening, he finds himself captured by the island's inhabitants."
+   "Summary": "Gulliver goes to the sea as a surgeon on the merchant ship,Antelope. This ship is destroyed during a heavy windstorm, and Gulliver, the only survivor, swims to a nearby island, Lilliput. Being nearly exhausted from the ordeal, he falls asleep. Upon awakening, he finds himself captured by the island's inhabitants.",
 },
 {
 "Year Published": 1997.0,
@@ -119,7 +118,7 @@ s first readers."
    "Author": "J.K. Rowling",
    "Genre": "Novel, Children's Literature, Fantasy Fiction",
    "Rating": "4.9/5",
-   "Summary": "11 year old Harry Potter receives a letter saying that he is invited to attend Hogwarts, school of witchcrat and wizardry. He then learns that a powerful wizard and his minions are after the sorcerer's stone that will make this evil waizard immortal and undefeatable."
+   "Summary": "11 year old Harry Potter receives a letter saying that he is invited to attend Hogwarts, school of witchcrat and wizardry. He then learns that a powerful wizard and his minions are after the sorcerer's stone that will make this evil waizard immortal and undefeatable.",
 },
 {
 "Year Published": 1899.0,
@@ -127,7 +126,7 @@ s first readers."
    "Author": "Joseph Conrad",
    "Genre": "Novella, Fiction",
    "Rating": "3.4/5",
-   "Summary": "Various European powers are exploiting Africa for its riches and resources while leaving little or nothing to the Africans who are laboring under them. Through Marlow, Conrad shows the horros of colonialism and concludes that the Europeans, not the Africans, are the true savages."
+   "Summary": "Various European powers are exploiting Africa for its riches and resources while leaving little or nothing to the Africans who are laboring under them. Through Marlow, Conrad shows the horros of colonialism and concludes that the Europeans, not the Africans, are the true savages.",
 },
 {
 "Year Published": 1998.0,
