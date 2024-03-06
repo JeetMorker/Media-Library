@@ -114,10 +114,11 @@ function showDetails(book) {
 <h2>${book.title}</h2>
 <div class="bookContent">	
 		<div class="textDetails">
-            <p><strong>Release Year:</strong> ${book.year}</p>
-            <p><strong>IMDB Rating:</strong> ${book.rating}</p>
+            <p><strong>Published Year:</strong> ${book.year}</p>
+	    <p><strong>Author:</strong> ${book.author}</p>
+            <p><strong>Rating:</strong> ${book.rating}</p>
             <p><strong>Genre(s):</strong> ${book.genre}</p>
-            <div class="bookDescription">${book.description}</div>
+            <div class="Summaary:">${book.summary}</div>
 </div>
 <div class="bookPoster">
 <img src="books/${book.Title.replace(/:/g, '')}.jpg" alt="${book.title}" class="bookPoster">
