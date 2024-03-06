@@ -513,7 +513,7 @@ function showDetails(movie) {
     const details = document.getElementById('movieDetails');
     details.innerHTML = ` <button id="closeOverlay" onclick="closeOverlay()">Close</button>
 
-<h2>${movie.title}</h2>
+<h2>${movie.Title}</h2>
 <div class="movieContent">	
 		<div class="textDetails">
             <p><strong>Release Year:</strong> ${movie.year}</p>
