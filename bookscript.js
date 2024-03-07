@@ -211,19 +211,19 @@ function sortAndDisplayBooks(BooksToSort, sortOption) {
     let sortedBooks = [...BooksToSort]; 
 
     switch (sortOption) {
-        case 'newest':
-            sortedBooks.sort((a, b) => parseInt(b.year) - parseInt(a.year));
+        case 'Recently Published':
+            sortedBooks.sort((a, b) => parseInt(b.PublishedYear) - parseInt(a.PublishedYear));
             break;
-        case 'oldest':
-            sortedBooks.sort((a, b) => parseInt(a.year) - parseInt(b.year));
+        case 'Oldest (year)':
+            sortedBooks.sort((a, b) => parseInt(a.PublishedYear) - parseInt(b.PublishedYear));
             break;
-        case 'rating':
-            sortedBooks.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
+        case 'Rating':
+            sortedBooks.sort((a, b) => parseFloat(b.Rating) - parseFloat(a.Rating));
             break;
-        case 'a-z':
+        case 'A-Z':
             sortedBooks.sort((a, b) => a.Title.localeCompare(b.Title));
             break;
-        case 'z-a':
+        case 'Z-A':
             sortedBooks.sort((a, b) => b.Title.localeCompare(a.Title));
             break;
     }
@@ -238,19 +238,19 @@ console.log('Sorting Books by: ', sortValue);
 console.log('Sorted Books: ', sortedBooks);
     switch (sortValue) {
         case 'newest':
-            sortedBooks.sort((a, b) => b.year - a.year);
+            sortedBooks.sort((a, b) => b.PublishedYear - a.PublishedYear);
             break;
         case 'oldest':
-            sortedBooks.sort((a, b) => a.year - b.year);
+            sortedBooks.sort((a, b) => a.PublishedYear - b.PublishedYear);
             break;
         case 'rating':
-            sortedBooks.sort((a, b) => b.rating - a.rating);
+            sortedBooks.sort((a, b) => b.Rating - a.Rating);
             break;
         case 'a-z':
-            sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
+            sortedBooks.sort((a, b) => a.Title.localeCompare(b.Title));
             break;
         case 'z-a':
-            sortedBooks.sort((a, b) => b.title.localeCompare(a.title));
+            sortedBooks.sort((a, b) => b.Title.localeCompare(a.Title));
             break;
     }
 
