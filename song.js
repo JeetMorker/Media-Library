@@ -9,7 +9,7 @@ const songsArray = [
     "artist": "Morgan Wallen",
     "genre": "Country",
     "rank": 2,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://www.youtube.com/watch?v=bUjPPBxbQrQ'>Last Night</a>  <br><a href='https://www.youtube.com/watch?v=5DCdL1zdpdM'>Thinkin’ Bout Me</a>  <br><a href='https://www.youtube.com/watch?v=Dw9VmOLwxoM'>Thought You Should Know</a> <br><a href='https://www.youtube.com/watch?v=3CkLMG5NwUg'>You Proof</a> <br><a href='https://www.youtube.com/watch?v=aN7WCsC9nkI'>Lies Lies Lies</a>"
   },
   {
     "artist": "SZA",
@@ -27,13 +27,13 @@ const songsArray = [
     "artist": "Luke Combs",
     "genre": "Country",
     "rank": 5,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://www.youtube.com/watch?v=aoJwvnDuAR0'>Where The Wild Things Are</a>  <br><a href='https://www.youtube.com/watch?v=BixwVsiDdZM'>Hurricane</a>  <br><a href='https://www.youtube.com/watch?v=uXyxFMbqKYA'>When It Rains It Pours</a> <br><a href='https://www.youtube.com/watch?v=27nRqoBQLl4'>Love You Anyway</a> <br><a href='https://www.youtube.com/watch?v=Ct9BFr9XBaI'>One Number Away</a>"
   },
   {
     "artist": "Zach Bryan",
     "genre": "Country",
     "rank": 6,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://www.youtube.com/watch?v=ZVVvJjwzl6c'>I Remember Everything</a>  <br><a href='https://www.youtube.com/watch?v=FJqd58_WgGo'>Oklahoma Smokeshow</a>  <br><a href='https://www.youtube.com/watch?v=lA8F9sIhGdg'>Something In Orange</a> <br><a href='https://www.youtube.com/watch?v=dc3Gp4nEq_s'>Dawns</a> <br><a href='https://www.youtube.com/watch?v=LZtiONeyMYY'>The Way Back</a>"
   },
   {
     "artist": "The Weeknd",
@@ -45,79 +45,79 @@ const songsArray = [
     "artist": "21 Savage",
     "genre": "Hip Hop",
     "rank": 8,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://www.youtube.com/watch?v=U4mADkt6o-M'>Redrum</a>  <br><a href='https://www.youtube.com/watch?v=DmWWqogr_r8'>A Lot ft. J Cole</a>  <br><a href='https://www.youtube.com/watch?v=ZZ6VhTBcc-c'>Runnin’</a> <br><a href='https://www.youtube.com/watch?v=cUtDb-blEMQ'>Immortal</a> <br><a href='https://www.youtube.com/watch?v=1r8BcVqXKlQ'>All The Smoke</a>"
   },
   {
     "artist": "Miley Cyrus",
     "genre": "Pop",
     "rank": 9,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://www.youtube.com/watch?v=G7KNmW9a75Y'>Flowers</a>  <br><a href='https://www.youtube.com/watch?v=M11SvDtPBhA'>Party In The USA</a>  <br><a href='https://www.youtube.com/watch?v=4q-Y6wt1h3k'>Jaded</a> <br><a href='https://www.youtube.com/watch?v=IZ3XMOdOdKM'>Used To Be Young</a> <br><a href='https://www.youtube.com/watch?v=LrUvu1mlWco'>We Cant Stop</a>"
   },
   {
     "artist": "Post Malone",
     "genre": "Hip Hop",
     "rank": 10,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://www.youtube.com/watch?v=IzPQ_jA00bk'>Chemical</a>  <br><a href='https://www.youtube.com/watch?v=wXhTHyIgQ_U'>Circles</a>  <br><a href='https://www.youtube.com/watch?v=7aekxC_monc'>I Like You ft. Doja Cat</a> <br><a href='https://www.youtube.com/watch?v=UYwF-jdcVjY​​'>Better Now</a> <br><a href='https://www.youtube.com/watch?v=au2n7VVGv_c'>Psycho</a>"
   },
   {
     "artist": "Metro Boomin",
     "genre": "Hip Hop",
     "rank": 11,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://www.youtube.com/watch?v=-kSAvHlXRUs'>Young Metrol</a>  <br><a href='https://www.youtube.com/watch?v=_WCD3Z9UmJ4'>Superhero</a>  <br><a href='https://www.youtube.com/watch?v=N9bKBAA22Go'>Like That</a> <br><a href='https://youtu.be/NyTkaQHdySM?si=4ceaPsTxrXgyOb9y​​'>Too Many Nights</a> <br><a href='https://youtu.be/qBWhc4qbsjo?si=AELdN9ptMA1HQET5'>Space Cadet ft. Gunna</a>"
   },
   {
     "artist": "Peso Pluma",
     "genre": "Latin",
     "rank": 12,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/8ttz1wdViys?si=9NW6i0NNDjAkoCpH'>Bye</a>  <br><a href='https://youtu.be/xjkeSrj-u-A?si=50k13hhPbrAtO_b6'></a>Bipolar  <br><a href='https://youtu.be/3mchJ-EW9rM?si=l9fdb_FGS7_ldXbX'>La Bebe</a> <br><a href='https://youtu.be/b2wQtu9YnWk?si=mUvtNlgg90Dj6pdL​​'>Chanel ft. Becky G</a> <br><a href='https://youtu.be/f7XYWF4fpik?si=lGKQSl_A91Xe4FKu'>Plebada</a>"
   },
   {
     "artist": "Travis Scott",
     "genre": "Hip Hop",
     "rank": 13,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/6ONRf7h3Mdk?si=NsTWTxyQkLbXh4DE'>Sicko Mode ft. Drake</a>  <br><a href='https://youtu.be/X7aF3nZOS98?si=Fv-bVKVBtJ3sb30D'>I Know</a> <br><a href='https://youtu.be/Dst9gZkq1a8?si=bpBe1CU7YNGsLmMW'>Goosebumps</a> <br><a href='https://youtu.be/tfSS1e3kYeo?si=8NCR0QKcQ7gbYQe-​​'>Highest In the Room</a> <br><a href='https://youtu.be/U-l4ya3ejko?si=Dajmjqu5zyAVhJGX'>Fein ft. Playboy Carti</a>"
   },
   {
     "artist": "Harry Styles",
     "genre": "Pop",
     "rank": 14,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/H5v3kku4y6Q?si=QVSKtUuxJo2TfQYV'>As It Was</a>  <br><a href='https://youtu.be/qN4ooNx77u0?si=IU8WqS84LP_HiMIK'>Sign Of The Times</a> <br><a href='https://youtu.be/E07s5ZYygMg?si=p5OejuRbCvdjf-E2'>Watermelon Sugar</a> <br><a href='https://youtu.be/P3cffdsEXXw?si=RVS2KkMF6ikc3Jcr'>Golden</a> <br><a href='https://youtu.be/VF-r5TtlT9w?si=75n7SVZcZzmUDCaI'>Adore You</a>"
   },
   {
     "artist": "Bad Bunny",
     "genre": "Latin",
     "rank": 15,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/bef8QLNHubw?si=w57-uF3y8Hzhwd0V'>Where She Goes</a>  <br><a href='https://youtu.be/p38WgakuYDo?si=rYTwJsawBKWdcwLl'>Moscow Mule</a> <br><a href='https://youtu.be/doLMt10ytHY?si=q1672AisiiM3nt3_'>Yonaguni</a> <br><a href='https://youtu.be/OSUxrSe5GbI?si=CevfjYYOlJouR1xtr'>Mia ft. Drake</a> <br><a href='https://youtu.be/_PJvpq8uOZM?si=ivzqLIyf7LXaGvHH'>Monaco</a>"
   },
   {
     "artist": "Olivia Rodrigo",
     "genre": "Pop",
     "rank": 16,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/QXcjPySjdJU?si=XE8trrmCjeBjzg32'>Obsessed</a>  <br><a href='https://youtu.be/RlPNh_PBZb4?si=KY4k2Jm0aF2lXfMJ'>Vampire</a> <br><a href='https://youtu.be/cii6ruuycQA?si=DQKC77m7XKya_p3E'>Deja Vu</a> <br><a href='https://youtu.be/ZmDBbnmKpqQ?si=6PkF97AoUpp-UcWB'>Drivers License</a> <br><a href='https://youtu.be/gNi_6U5Pm_o?si=qf3f2LjEnurU213y'>Good 4 u</a>"
   },
   {
     "artist": "Bailey Zimmerman",
     "genre": "Country",
     "rank": 17,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/UYCWaK6Sbik?si=NNzCHjZwlj_e_gP1'>Religously</a>  <br><a href='https://youtu.be/WVh073Yujmo?si=uNCWo5fvaYPP22tc'>Where It Ends</a> <br><a href='https://youtu.be/d1yKrnPHAmo?si=oWhFM-UeBOU73ZoD'>Fall In Love</a> <br><a href='https://youtu.be/QyapQFCHUlg?si=siQMnyQwixZDD5-Z'>Rock And A Hard Place</a> <br><a href='https://youtu.be/9C982wyEDco?si=nEezRTFJ6vlrJp6L'>Holy Smokes</a>"
   },
   {
     "artist": "Rod Wave",
     "genre": "Hip Hop",
     "rank": 18,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/nM6ayGKXFCw?si=k6ZVUbFfziMHrAW8'>Great Gatsby</a>  <br><a href='https://youtu.be/vhUD-j1JWGo?si=C-ym2r5sQaUN2LvT'>Long Journey</a> <br><a href='https://youtu.be/6dW4d0IcQ3k?si=U1XDVO4sBWgBbzBG'>Fight The Feeling</a> <br><a href='https://youtu.be/-Hu_Q4W8M6g?si=V5hPnsI_0Q7PQZ34'>Boyz Dont Cry</a> <br><a href='https://youtu.be/wo9AlOrQ3iE?si=V7yugzYpEJpksyeu'>Tombstone</a>"
   },
   {
     "artist": "Lil Baby",
     "genre": "Hip Hop",
     "rank": 19,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/nUEqPtVGIpE?si=K3J_65-btkOOYGYE'>Woah</a>  <br><a href='https://youtu.be/WyhU6Zb_fhY?si=Z5ZG-xYf3h4H8eaM'>California Breeze</a> <br><a href='https://youtu.be/_VDGysJGNoI?si=69CZOUAWPQnYDW58'>The Bigger Picture</a> <br><a href='https://youtu.be/iXUPeEuM1CM?si=y3uMpeovJ2Ufe4SS'>Emotionally Scarred</a> <br><a href='https://youtu.be/MHryuYVyHhk?si=dNs6xr0TgOYeVK7S'>Freestyle</a>"
   },
   {
     "artist": "Beyonce",
     "genre": "R&B",
     "rank": 20,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/238Z4YaAr1g?si=ZvEa3-occnv7q_3T'>Texas Hold Em</a>  <br><a href='https://youtu.be/Ob7vObnFUJc?si=b1Ne3CFj4mo7GwxX'>Love On Top</a> <br><a href='https://youtu.be/4m1EFMoRFvY?si=TGlVjTV1DbJ4OJ4L'>Single Ladies</a> <br><a href='https://youtu.be/bnVUHWCynig?si=GHTT8IPfdxOJAAbb'>Halo</a> <br><a href='https://youtu.be/JlxByc0-V40?si=HSEFhtVv7smZeJKa'>Sweet Dreams</a>"
   },
   {
     "artist": "Lil Uzi Vert",
