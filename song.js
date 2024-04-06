@@ -153,43 +153,43 @@ const songsArray = [
     "artist": "Gunna",
     "genre": "Hip Hop",
     "rank": 26,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/Tqjw-H4QyG0?si=VM9ncEhEJB6ZbAKF'>Prada Dem</a>  <br><a href='https://youtu.be/l21wGxlWwPw?si=GEKp-tCN0bvGyC4h'>Fukumean</a> <br><a href='https://youtu.be/7jAgLRk-sPc?si=n_Ti6YGlOG9dhH-J'>Back To The Moon</a> <br><a href='https://youtu.be/o_smxk-P5p4?si=VBkfEKgnYwPpUCvy'>Wunna</a> <br><a href='https://youtu.be/M8IDH7ClGRg?si=yAi-TF3Y0nZgnVak'>Rodeo Dr</a>"
   },
   {
     "artist": "Chris Brown",
     "genre": "R&B",
     "rank": 27,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/_t0qtSKOpO4?si=3Vb9FvQkpUt2gRWl'>Sensational</a>  <br><a href='https://youtu.be/wWR0VD6qgt8?si=3Ov8VWqf5MPm0EuI'>Angel Numbers</a> <br><a href='https://youtu.be/pfxyk1glEq4?si=Rn2-kfFp1kXvH6UK'>Under The Influence</a> <br><a href='https://youtu.be/xnumI3_qt-w?si=ZdTmgcuZnLk1E_Vv'>How We Roll</a> <br><a href='https://youtu.be/JXRN_LkCa_o?si=NMcFWb0rg9tuKY8c'>Loyal</a>"
   },
   {
     "artist": "Doja Cat",
     "genre": "Hip Hop",
     "rank": 28,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/m4_9TFeMfJE?si=F3JjAP5672YliYzR'>Paint The Town Red</a>  <br><a href='https://youtu.be/0c66ksfigtU?si=dFRedVgl9eWK7S10'>Agora Hills</a> <br><a href='https://youtu.be/0EVVKs6DQLo?si=y7zLpzLziChWsSnV'>Kiss Me More ft. SZA</a> <br><a href='https://youtu.be/dI3xkL7qUAc?si=KPE0SuieH1dUEq8O'>Need To Know</a> <br><a href='https://youtu.be/jJdlgKzVsnI?si=QEvoDClb0DU_hIjM'>Streets</a>"
   },
   {
     "artist": "Kendrick Lamar",
     "genre": "Hip Hop",
     "rank": 29,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/N9bKBAA22Go?si=E86aWqW3Cvv4RHw-'>Like That</a>  <br><a href='https://youtu.be/tvTRZJ-4EyI?si=wRFvAHKGo2kEWfOA'>Humble</a> <br><a href='https://youtu.be/Z-48u_uWMHY?si=BqXMFZ6US7-Unvly'>Alright</a> <br><a href='https://youtu.be/5GhhVHpPR_M?si=CznnhzKDwhZpYIv4'>Count Me Out</a> <br><a href='https://youtu.be/JQbjS0_ZfJ0?si=cNXtZKndOVF4O7if'>All The Stars ft. SZA</a>"
   },
   {
     "artist": "Tyler The Creator",
     "genre": "Hip Hop",
     "rank": 30,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/TGgcC5xg9YI?si=WFmbOkJ44Qf0CzK4'>See You Again</a>  <br><a href='https://youtu.be/FUXX55WqYZs?si=Fxi0vv5Rh__-gRkk'>Who Dat Boy</a> <br><a href='https://youtu.be/XSbZidsgMfw?si=JJbBd9-d1ILXp4f4'>Yonkerst</a> <br><a href='https://youtu.be/mFNaFeIm4bU?si=Wts8c6jDxFPbzw8A'>She</a> <br><a href='https://youtu.be/NkMTKGM-efw?si=qXnG1mRL5xbX2MPA'>Best Interest</a>"
   },
   {
     "artist": "Future",
     "genre": "Hip Hop",
     "rank": 32,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/N9bKBAA22Go?si=U4Oy0h0ccw5fvEFI'>Like That</a>  <br><a href='https://youtu.be/I0fgkcTbBoI?si=zmZcDwCMMSu6Wb9F'>Type Shit</a> <br><a href='https://youtu.be/FAeAp9MzPtk?si=JbDs4sQIssVK2WxQ'>Honest</a> <br><a href='https://youtu.be/K_9tX4eHztY?si=QihSLhU1-CvMiCPD'>Low Life</a> <br><a href='https://youtu.be/3gt-rxxs-RQ?si=QgKo9BvXLC9KvehN'>Wicked</a>"
   },
   {
     "artist": "Juice WRLD",
     "genre": "Hip Hop",
     "rank": 33,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/iI34LYmJ1Fs?si=Uihbx08Ch_lgd4CP'>Robbery</a>  <br><a href='https://youtu.be/C5i-UnuUKUI?si=K755llPqJVTjKQ4I'>Wishing Well</a> <br><a href='https://youtu.be/mzB1VGEGcSU?si=kO_N4v868193-tfX'>Lucid Dreams</a> <br><a href='https://youtu.be/f74GYIVMk3I?si=oISOuPtK-ZBlYGBd'>Already Dead</a> <br><a href='https://youtu.be/5SejM_hBvMM?si=Firn3bKe3dXestLo'>Lean Wit Me</a>"
   },
   {
     "artist": "Nicki Minaj",
@@ -201,43 +201,43 @@ const songsArray = [
     "artist": "Rihanna",
     "genre": "R&B",
     "rank": 40,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/wfN4PVaOU5Q?si=hcmoAyIirO7a-8oi'>Needed Me</a>  <br><a href='https://youtu.be/lWA2pjMjpBs?si=MuZlN3aMXGIMtKE5'>Diamonds</a> <br><a href='https://youtu.be/49lY0HqqUVc?si=VMOYNfcL6I4iXsKt'>Kiss It Bettert</a> <br><a href='https://youtu.be/J3UjJ4wKLkg?si=Mjkqdnk6d84fF-fZ'>Take A Bow</a> <br><a href='https://youtu.be/HL1UzIK-flA?si=UByCJKRfj6TpAscb'>Work ft. Drake</a>"
   },
   {
     "artist": "Billie Eilish",
     "genre": "Pop",
     "rank": 43,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/cW8VLC9nnTo?si=SBYmJazMqbX-Nxpy'>What Was I Made For</a>  <br><a href='https://youtu.be/V1Pl8CzNzCw?si=FBJevy5H1TqMBCeu'>Lovely</a> <br><a href='https://youtu.be/EgBJmlPo8Xw?si=_wAl_rzQM-hNFduU'>Everything I Wanted</a> <br><a href='https://youtu.be/viimfQi_pUw?si=g_-DTocWDeJRaLLD'>Ocean Eyes</a> <br><a href='https://youtu.be/skHbZBsS7hM?si=bGZE0K5kSiXjyeRa'>Hostage</a>"
   },
   {
     "artist": "Dua Lipa",
     "genre": "Pop",
     "rank": 44,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/suAR1PYFNYA?si=mpgkuffJ6GqSX1B_'>Houdinir</a>  <br><a href='https://youtu.be/OiC1rgCPmUQ?si=3Hof7-TBPovnDRv9'>Dance The Night</a> <br><a href='https://youtu.be/ZjBZ8MUnB0E?si=ePdy66bqMp-6N_Ap'>Training Season</a> <br><a href='https://youtu.be/k2qgadSvNyU?si=TIR64FyQxbtYVyxw'>New Rules</a> <br><a href='https://youtu.be/BC19kwABFwc?si=AyIrKtDs1LYvj_e1'>Love Again</a>"
   },
   {
     "artist": "Selena Gomez",
     "genre": "Pop",
     "rank": 46,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/WcIcVapfqXw?si=VgwIrZdtQbn7-Rw5'>Calm Down ft. Rema</a>  <br><a href='https://youtu.be/mNHNktxbjdk?si=jpCYprRMcIM8LVwh'>Love On</a> <br><a href='https://youtu.be/yOuqn4w1ozA?si=fg2cUlmSYvG_8zhF'>Single Soon</a> <br><a href='https://youtu.be/n-D1EB74Ckg?si=p5eGeDIT7N58HdqG'>Come And Get it</a> <br><a href='https://youtu.be/1TsVjvEkc4s?si=Z4Tn7UpRNW0TNP9g'>Good For You</a>"
   },
   {
     "artist": "Eminem",
     "genre": "Hip Hop",
     "rank": 50,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/eJO5HU_7_1w?si=5WPv9OyjRUh0QE8z'>The Real Slim Shady</a>  <br><a href='​​https://youtu.be/YVkUvmDQ3HY?si=DnKl_ya7_OWYOyF6'>Without Me</a> <br><a href='https://youtu.be/_Yhyp-_hX2s?si=nm7Lkh1bOQjoBL4a'>Lose Yourself</a> <br><a href='https://youtu.be/r_0JjYUe5jo?si=033dbtYXnEtHnPfv'>Godzilla</a> <br><a href='https://youtu.be/S9bCLPwzSC0?si=8bLkOFehBPuP1kYY'>Mockingbird</a>"
   },
   {
     "artist": "Lana Del Rey",
     "genre": "Pop",
     "rank": 55,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/TdrL3QxjyVw?si=mxd9Y2LSF8YIO3J7'>Summer Time Sadness</a>  <br><a href='https://youtu.be/MiAoetOXKcY?si=Ti7BTnje8u8jHU70'>Say Yes To Heaven</a> <br><a href='https://youtu.be/Bag1gUxuU0g?si=p0MwepIQqhjXC-DV'>Born To Die</a> <br><a href='https://youtu.be/3-NTv0CdFCk?si=fpEHfcGdEVU180lJ'>Love</a> <br><a href='https://youtu.be/eP4eqhWc7sI?si=psZdzwdzMzj99F-O'>Lust For Life</a>"
   },
   {
     "artist": "Ariana Grande",
     "genre": "Pop",
     "rank": 59,
-    "description": ""
+    "description": "Popular Songs  <br><a href='https://youtu.be/KNtJGQkC-WI?si=XLaRrhOmrLBSe57v'>We Can’t Be Friends</a>  <br><a href='https://youtu.be/eB6txyhHFG4?si=QeqkEapzQax_zgZN'>Yes, And</a> <br><a href='https://youtu.be/ZqCWXdZFc58?si=vLX7xiIxQaYN950k'>The Boy Is Mine</a> <br><a href='https://youtu.be/p7jATa6Soag?si=iv1Ssjh9F6WV3VHd'>Intro</a> <br><a href='https://youtu.be/ffxKSjUwKdU?si=dpkMVHBWzKEH1lXw'>No Tears Left To Cry</a>"
   },
 ];
 
