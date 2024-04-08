@@ -4,6 +4,41 @@ body, html {
 	overflow-x: hidden;
 }
 
+nav {
+    background-color: #343a40;
+    padding: 0.5rem 1 rem;
+}
+
+nav {
+    background-color: #343a40;
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #495057;
+}
+
 .textDetails {
 	flex: 1;
 	margin-right: 20px;
