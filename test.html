@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comment Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+        input[type=text], input[type=email] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comment Section</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" required></textarea>
+
+        <button type="submit" id="AddBtn">Submit</button>
+    </form>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCAoLUSafn3HFjl__psH1L7iHwNHtyOhpE",
+          authDomain: "fir-ec626.firebaseapp.com",
+          projectId: "fir-ec626",
+          storageBucket: "fir-ec626.appspot.com",
+          messagingSenderId: "601974069703",
+          appId: "1:601974069703:web:476d6a4d8341c5afe2a1e2",
+          measurementId: "G-D9P08JJTEV"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        import{getDatabase,ref,child,get,set,update,remove} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+        const db = getDatabase();
+
+        
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let comment = document.getElementById("comment");
+
+        function AddData(){
+            set(ref(db,'userSet/' + randomNumber(1,10000)),{
+                nameofuser: name.value,
+                email:email.value,
+                comment: comment.value
+            }).then(()=>{
+                alert("data added");
+            }).catch(()=>{
+                alert("error");
+                console.log(error);
+            })
+        }
+
+        function RetData(){
+            const dbref = ref(db);
+
+            get(child(dbref,"userSet/" + randomNumber(1,10000))).then((snapshot)=>{
+                if(snapshot.exists()){
+                    name.value = snapshot.val().name
+                    email.value = snapshot.val().email
+                    comment.value = snapshot.val().comment
+
+
+                }
+                else{
+                    alert("user do not exist");
+                }
+            })
+            .catch((error)=>{
+                alert("unsuccessful");
+                console.log(error);
+            })
+        }
+
+        function UpdateData(){
+            update(ref(db,'userSet/' + randomNumber(1,10000)),{
+                nameofuser: name.value,
+                email:email.value,
+                comment: comment.value
+            }).then(()=>{
+                alert("data update");
+            }).catch(()=>{
+                alert("error");
+                console.log(error);
+            })
+        }
+
+        function DeleteData(){
+            set(ref(db,'userSet/' + randomNumber(1,10000))).then(()=>{
+                alert("data removed");
+            }).catch(()=>{
+                alert("error");
+                console.log(error);
+            })
+        }
+
+        function randomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+
+
+
+        
+
+        AddBtn.addEventListener('click',AddData);
+
+      </script>
+</body>
+</html>
