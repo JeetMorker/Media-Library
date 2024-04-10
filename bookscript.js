@@ -4,7 +4,7 @@ const booksArray = [
 "YearPublished": 1925.0,
     "Title": "The Great Gatsby",
     "Author": "F. Scott Fitzgerald",
-    "Genre": "Tragedy,Literary Fiction",
+    "Genre": "Literary Fiction",
     "Rating": "4/5",
     "Description": "The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan." 
 },
@@ -28,7 +28,7 @@ const booksArray = [
 "YearPublished": 1954.0,
    "Title": "Lord of the Flies",
    "Author": "William Golding",
-   "Genre": "Fiction, Classic, Literature",
+   "Genre": "Fiction",
    "Rating": "3.69/5",
    "Summary": "Lord of the Flies is about a group of British schoolboys who are stranded on an uninhabited island after their plane crashes. At first, they attempt to establish order and rules, but their society gradually descends into chaos and violence."
 },
@@ -36,7 +36,7 @@ const booksArray = [
 "YearPublished": 1951.0,
    "Title": "Catcher in the Rye",
    "Author": "J.D. Salinger",
-   "Genre": "Classics, Fiction, Literature",
+   "Genre": "Fiction, Literature",
    "Rating": "3.8/5",
    "Summary": "The novel details two days in the life of 16-year-old Holden Caulfield after he has been expelled from prep school. Confused and disillusioned, Holden searches for truth and rails against the phoniness of the adult world."
 },
@@ -44,7 +44,7 @@ const booksArray = [
 "YearPublished": 2023.0,
    "Title": "The 272",
    "Author": "Rachel L. Swarns",
-   "Genre": "Biography, Genealogy",
+   "Genre": "Biography",
    "Rating": "4.2/5", 
    "Summary": "The 272 tells a bigger story, demonstrating how slavery fueled the growth of the Catholic Church in America and bringing to light the enslaved people whose forced labor helped to build the largest religious denomination in the nation."
 },
@@ -60,7 +60,7 @@ const booksArray = [
 "YearPublished": 2023.0,
    "Title": "All the Sinner's Bleed",
    "Author": "S.A. Cosby",
-   "Genre": "Southern Thriller",
+   "Genre": "Thriller",
    "Rating": "3/5",
    "Summary": "In his earlier thrillers, Cosby worked the outlaw side of the crime genre. In his new one — about a Black sheriff in a rural Southern town, searching for a serial killer who tortures Black children — he’s written a crackling good police procedural." 
 },
@@ -84,7 +84,7 @@ const booksArray = [
 "YearPublished": 1949.0,
    "Title": "1984",
    "Author": "George Orwell",
-   "Genre": "Genre",
+   "Genre": "Dystopian Fiction, Historical Fiction",
    "Rating": "4.2/5",
    "Summary": "1984 is a dystopian novel that was written by George Orwell and published in 1949. It tells the story of Winston Smith, a citizen of the miserable society of Oceania, who is trying to rebel against the Party and its omnipresent symbol, Big Brother." 
 },
@@ -100,7 +100,7 @@ const booksArray = [
 "YearPublished": 1605.0,
    "Title": "Don Quixote",
    "Author": "Miguel de Cervantes",
-   "Genre": "Novel,Psychological Fiction, Satire",
+   "Genre": "Psychological Fiction, Satire",
    "Rating": "3.9/5",
    "Summary": "Don Quixote was a one volume book published in 1605, divided internally into four parts, not the first part of a two-part set. The mention in the 1605 book of further adventures yet to be told was totally conventional, did not indicate any authorial plans for a continuation, and was not taken seriously by the books first readers.",
 },
@@ -116,7 +116,7 @@ const booksArray = [
 "YearPublished": 1997.0,
    "Title": "Harry Potter and the Sorcerer's Stone",
    "Author": "J.K. Rowling",
-   "Genre": "Novel, Children's Literature, Fantasy Fiction",
+   "Genre": "Children's Literature, Fantasy Fiction",
    "Rating": "4.9/5",
    "Summary": "11 year old Harry Potter receives a letter saying that he is invited to attend Hogwarts, school of witchcrat and wizardry. He then learns that a powerful wizard and his minions are after the sorcerer's stone that will make this evil waizard immortal and undefeatable.",
 },
@@ -124,7 +124,7 @@ const booksArray = [
 "YearPublished": 1899.0,
    "Title": "Heart of Darkness",
    "Author": "Joseph Conrad",
-   "Genre": "Novella, Fiction",
+   "Genre": "Fiction",
    "Rating": "3.4/5",
    "Summary": "Various European powers are exploiting Africa for its riches and resources while leaving little or nothing to the Africans who are laboring under them. Through Marlow, Conrad shows the horros of colonialism and concludes that the Europeans, not the Africans, are the true savages.",
 },
@@ -132,7 +132,7 @@ const booksArray = [
 "YearPublished": 1998.0,
    "Title": "Holes",
    "Author": "Louis Sachar",
-   "Genre": "Novel, Children's Literature, Mystery, Satire, Adventure Fiction",
+   "Genre": "Children's Literature, Mystery, Satire, Adventure Fiction",
    "Rating": "4/5",
    "Summary": "The book centers on Stanley Yelnats, who is sent to Camp Green Lake, a correctional boot camp in a desert in Texas, after being falsely accused of theft."
 }
