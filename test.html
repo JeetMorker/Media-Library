@@ -89,13 +89,14 @@
         import{getDatabase,ref,child,get,set,update,remove} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
         const db = getDatabase();
 
-        
+        let counter = 0; 
         let name = document.getElementById("name");
         let email = document.getElementById("email");
         let comment = document.getElementById("comment");
 
         function AddData(){
-            set(ref(db,'userSet/' + randomNumber(1,10000)),{
+            counter++;
+            set(ref(db,'userSet/' + counter),{
                 nameofuser: name.value,
                 email:email.value,
                 comment: comment.value
@@ -150,7 +151,7 @@
             })
         }
 
-        function randomNumber(min, max) {
+        function randomNumber(  ) {
             return Math.floor(Math.random() * (max - min) + min);
         }
 
