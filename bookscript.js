@@ -207,8 +207,14 @@ function updateBooks() {
 }
 
 
-function sortAndDisplayBooks(BooksToSort, sortOption) {
-    let sortedBooks = [...BooksToSort]; 
+function sortAndDisplayBooks(BooksToSort, sortOption, genreFilter) {
+     showOverlay();    
+
+let sortedBooks = [...BooksToSort]; 
+
+if (genreFilter != "All") {
+    sortedBooks = sortedBooks.filter(movie = > book.genre.includes(genreFilter));
+}
 
     switch (sortOption) {
         case 'Recently Published':
