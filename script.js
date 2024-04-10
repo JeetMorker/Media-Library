@@ -573,7 +573,8 @@ function clearSearch() {
     document.getElementById('titleSearch').value = '';
     document.getElementById('sortOptions').value = 'a-z';
  document.getElementById('genreSelect').value = 'All';
-    sortAndDisplayMovies(movies, 'a-z','All');
+document.getElementById('ageRating').value = 'All';
+    sortAndDisplayMovies(movies, 'a-z','All','All');
 }
 
 
