@@ -572,7 +572,7 @@ sortAndDisplayMovies(movies, 'a-z', 'All','All');
 function clearSearch() {
     document.getElementById('titleSearch').value = '';
     document.getElementById('sortOptions').value = 'a-z';
- document.getElementById('genreSelect').value = 'All';
+document.getElementById('genreSelect').value = 'All';
 document.getElementById('ageRating').value = 'All';
     sortAndDisplayMovies(movies, 'a-z','All','All');
 }
@@ -618,7 +618,6 @@ function showOverlay() {
 }
 
 
-
 function showLoadingOverlay() {
     document.getElementById('loading-overlay').style.display = 'flex';
 }
@@ -626,10 +625,6 @@ function showLoadingOverlay() {
 function hideLoadingOverlay() {
     document.getElementById('loading-overlay').style.display = 'none';
 }
-
-
-
-
 
 
 document.getElementById('sortOptions').addEventListener('change', function() {
@@ -662,12 +657,12 @@ currentageRating = document.getElementById('ageRating').value;
 }
 
 
-function sortAndDisplayMovies(moviesToSort, sortOption, genreFilter,ageRating) {
+function sortAndDisplayMovies(moviesToSort, sortOption, genreSelect,ageRating) {
 showLoadingOverlay(); 
 
    let sortedMovies = [...moviesToSort]; 
-if (genreFilter != "All") {
-	 sortedMovies = sortedMovies.filter(movie => movie.genre.includes(genreFilter));
+if (genreSelect != "All") {
+	 sortedMovies = sortedMovies.filter(movie => movie.genre.includes(genreSelect));
 }
 if (ageRating != "All") {
          sortedMovies = sortedMovies.filter(movie => movie.age.includes(ageRating));

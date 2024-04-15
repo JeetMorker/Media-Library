@@ -142,7 +142,9 @@ let Books = booksArray;
 
 document.addEventListener('DOMContentLoaded', function() {
 sortAndDisplayBooks(Books, 'a-z', 'All');
+closeOverlay()
         });
+
 
 
 
@@ -150,7 +152,7 @@ function clearSearch() {
     document.getElementById('titleSearch').value = '';
     document.getElementById('sortOptions').value = 'a-z';
     document.getElementById('genreFilter').value = 'All';
-    sortAndDisplayBooks(Books, 'a-z');
+    sortAndDisplayBooks(Books, 'a-z', 'All');
 }
 
 
@@ -170,7 +172,7 @@ function showDetails(book) {
             <div class="Summary:">${book.Summary}</div>
 </div>
 <div class="bookPoster">
-<img src="books/${book.Title.replace(/:/g, '')}.jpg" alt="${book.title}" class="bookPoster">
+<img src="books/${book.Title.replace(/:/g, '')}.jpg" alt="${book.Title}" class="bookPoster">
 </div>
 </div>
 `;
@@ -194,7 +196,13 @@ function showOverlay() {
     }
 }
 
+function showLoadingOverlay() {
+    document.getElementById('loading-overlay').style.display = 'flex';
+}
 
+function hideLoadingOverlay() {
+    document.getElementById('loading-overlay').style.display = 'none';
+}
 
 
 document.getElementById('sortOptions').addEventListener('change', function() {
@@ -211,14 +219,12 @@ updateBooks();
 
 
 
-
-
 function updateBooks() {
     const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
     
     const filteredBooks = Books.filter(book => book.Title.toLowerCase().includes(titleSearchValue));
 	currentSortOption = document.getElementById('sortOptions').value;
-currentGenreOption = document.getElementById('genreFilter').value;
+	currentGenreOption = document.getElementById('genreFilter').value;
     sortAndDisplayBooks(filteredBooks, currentSortOption, currentGenreOption);
 }
 
@@ -229,7 +235,7 @@ function sortAndDisplayBooks(BooksToSort, sortOption, genreFilter) {
 let sortedBooks = [...BooksToSort]; 
 
 if (genreFilter != "All") {
-    sortedBooks = sortedBooks.filter(book => book.genre.includes(genreFilter));
+    sortedBooks = sortedBooks.filter(book => book.Genre.includes(genreFilter));
 }
 
     switch (sortOption) {
@@ -282,7 +288,7 @@ console.log('Sorted Books: ', sortedBooks);
 function searchBooks() {
     const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
     const filteredBooks = Books.filter(book => {
-        return book.title.toLowerCase().includes(titleSearchValue); 
+        return book.Title.toLowerCase().includes(titleSearchValue); 
     });
     loadBooks(filteredBooks);
 
