@@ -146,8 +146,6 @@ closeOverlay()
         });
 
 
-
-
 function clearSearch() {
     document.getElementById('titleSearch').value = '';
     document.getElementById('sortOptions').value = 'a-z';
@@ -218,19 +216,18 @@ updateBooks();
 });
 
 
-
 function updateBooks() {
     const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
     
     const filteredBooks = Books.filter(book => book.Title.toLowerCase().includes(titleSearchValue));
 	currentSortOption = document.getElementById('sortOptions').value;
-	currentGenreOption = document.getElementById('genreFilter').value;
+currentGenreOption = document.getElementById('genreFilter').value;
     sortAndDisplayBooks(filteredBooks, currentSortOption, currentGenreOption);
 }
 
 
 function sortAndDisplayBooks(BooksToSort, sortOption, genreFilter) {
-     showOverlay();    
+showLoadingOverlay();    
 
 let sortedBooks = [...BooksToSort]; 
 
@@ -245,9 +242,6 @@ if (genreFilter != "All") {
         case 'Oldest (year)':
             sortedBooks.sort((a, b) => parseInt(a.PublishedYear) - parseInt(b.PublishedYear));
             break;
-        case 'Rating':
-            sortedBooks.sort((a, b) => parseFloat(b.Rating) - parseFloat(a.Rating));
-            break;
         case 'A-Z':
             sortedBooks.sort((a, b) => a.Title.localeCompare(b.Title));
             break;
@@ -257,6 +251,7 @@ if (genreFilter != "All") {
     }
 
     loadBooks(sortedBooks);
+    hideLoadingOverlay();
 }
 function sortBooks() {
     const sortValue = document.getElementById('sortOptions').value;
@@ -299,14 +294,16 @@ document.getElementById('titleSearch').addEventListener('input', updateBooks);
 function loadBooks(filteredBooks = Books) {
     const grid = document.getElementById('booksGrid');
     grid.innerHTML = '';
+
     filteredBooks.forEach(book => {
         const bookItem = document.createElement('div');
+
         bookItem.className = 'bookItem';
+
         bookItem.innerHTML = `<img src="books/${book.Title.replace(/:/g, '')}.jpg" alt="${book.Title}" style="width:100%"><h3>${book.Title}</h3>`;
         bookItem.onclick = () => showDetails(book);
         grid.appendChild(bookItem);
     });
 	document.getElementById('bookCount').textContent = `${filteredBooks.length} results`;
 }
-
-
+updateBooks();
