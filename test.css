@@ -38,6 +38,88 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+.star-rating-wrapper {
+    position: relative;
+    font-size: 25px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.star-rating-background,
+.star-rating-foreground {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.star-rating-background {
+    color: lightgray;
+}
+
+.star-rating-foreground {
+    color: gold;
+    width: 0; 
+    overflow: hidden;
+}
+.comment-section textarea {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none; 
+}
+
+.comment-section button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.comment-section button:hover {
+    background-color: #45a049;
+}
+
+.comment-section #commentDisplay {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column;
