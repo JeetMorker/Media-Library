@@ -591,6 +591,24 @@ function showDetails(movie) {
             <p><strong>IMDB Rating:</strong> ${movie.rating}</p>
             <p><strong>Genre(s):</strong> ${movie.genre}</p>
             <div class="movieDescription">${movie.description}</div>
+
+
+<div class="star-rating-wrapper" onclick="setRating(event)" data-rating="0">
+    <div class="star-rating-background">
+        &#9733; &#9733; &#9733; &#9733; &#9733;
+    </div>
+    <div class="star-rating-foreground" style="width: 0%;">
+        &#9733; &#9733; &#9733; &#9733; &#9733;
+    </div>
+</div>
+
+    <div class="comment-section">
+        <textarea placeholder="Add a comment..." id="commentInput"></textarea>
+        <button onclick="postComment()">Post Comment</button>
+        <div id="commentDisplay"></div>
+    </div>
+
+
 </div>
 <div class="moviePoster">
 <img src="movies/${movie.title.replace(/:/g, '')}.jpg" alt="${movie.title}" class="moviePoster">
@@ -644,6 +662,52 @@ document.getElementById('ageRating').addEventListener('change', function() {
 updateMovies();
 
 });
+
+
+function postComment() {
+    var input = document.getElementById('commentInput');
+    var commentDisplay = document.getElementById('commentDisplay');
+    var newComment = document.createElement('div');
+    newComment.textContent = input.value;
+    commentDisplay.appendChild(newComment);
+    input.value = "";
+}
+
+
+function setRating(e) {
+    const starWrapper = e.currentTarget;
+    const bounds = starWrapper.getBoundingClientRect();
+    const starWidth = bounds.width / 5; 
+    const rating = (e.clientX - bounds.left) / starWidth;
+    
+    starWrapper.dataset.rating = rating.toFixed(1); 
+    updateStars(starWrapper, rating);
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('star') || e.target.parentNode.classList.contains('star-rating-wrapper')) {
+            const starWrapper = e.target.closest('.star-rating-wrapper');
+            if (starWrapper) {
+                setRating(e, starWrapper);
+            }
+        }
+    });
+});
+
+
+
+
+
+
+function updateStars(wrapper, rating) {
+    const foreground = wrapper.querySelector('.star-rating-foreground');
+    foreground.style.width = `${rating / 5 * 100}%`;
+}
+
+
+
 
 
 function updateMovies() {
