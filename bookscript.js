@@ -141,7 +141,7 @@ const booksArray = [
 let Books = booksArray; 
 
 document.addEventListener('DOMContentLoaded', function() {
-sortAndDisplayBooks(Books, 'a-z');
+sortAndDisplayBooks(Books, 'a-z', 'All');
         });
 
 
@@ -149,6 +149,7 @@ sortAndDisplayBooks(Books, 'a-z');
 function clearSearch() {
     document.getElementById('titleSearch').value = '';
     document.getElementById('sortOptions').value = 'a-z';
+    document.getElementById('genreFilter').value = 'All';
     sortAndDisplayBooks(Books, 'a-z');
 }
 
@@ -193,17 +194,32 @@ function showOverlay() {
     }
 }
 
+
+
+
 document.getElementById('sortOptions').addEventListener('change', function() {
 	currentSortOption = this.value;
 updateBooks();
 
 });
 
+document.getElementById('genreFilter').addEventListener('change', function() {
+	currentGenreOption = this.value;
+updateBooks();
+
+});
+
+
+
+
+
 function updateBooks() {
     const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
+    
     const filteredBooks = Books.filter(book => book.Title.toLowerCase().includes(titleSearchValue));
 	currentSortOption = document.getElementById('sortOptions').value;
-    sortAndDisplayBooks(filteredBooks, currentSortOption);
+currentGenreOption = document.getElementById('genreFilter').value;
+    sortAndDisplayBooks(filteredBooks, currentSortOption, currentGenreOption);
 }
 
 
@@ -213,7 +229,7 @@ function sortAndDisplayBooks(BooksToSort, sortOption, genreFilter) {
 let sortedBooks = [...BooksToSort]; 
 
 if (genreFilter != "All") {
-    sortedBooks = sortedBooks.filter(movie = > book.genre.includes(genreFilter));
+    sortedBooks = sortedBooks.filter(book => book.genre.includes(genreFilter));
 }
 
     switch (sortOption) {
