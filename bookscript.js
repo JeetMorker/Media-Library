@@ -6,7 +6,7 @@ const booksArray = [
     "Author": "F. Scott Fitzgerald",
     "Genre": "Literary Fiction",
     "Rating": "4/5",
-    "Description": "The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan." 
+    "Description": "filler" 
 },
 {
 "YearPublished": 2010.0,
@@ -221,16 +221,16 @@ const booksArray = [
 let Books = booksArray; 
 
 document.addEventListener('DOMContentLoaded', function() {
-sortAndDisplayBooks(Books, 'a-z', 'All');
+sortAndDisplayBooks(Books, 'A-Z', 'All');
 closeOverlay()
         });
 
 
 function clearSearch() {
     document.getElementById('titleSearch').value = '';
-    document.getElementById('sortOptions').value = 'a-z';
+    document.getElementById('sortOptions').value = 'A-Z';
     document.getElementById('genreFilter').value = 'All';
-    sortAndDisplayBooks(Books, 'a-z', 'All');
+    sortAndDisplayBooks(Books, 'A-Z', 'All');
 }
 
 
