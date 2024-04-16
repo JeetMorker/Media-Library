@@ -135,6 +135,86 @@ const booksArray = [
    "Genre": "Children's Literature, Mystery, Satire, Adventure Fiction",
    "Rating": "4/5",
    "Summary": "The book centers on Stanley Yelnats, who is sent to Camp Green Lake, a correctional boot camp in a desert in Texas, after being falsely accused of theft."
+},
+{
+"Year Published": 1851.0,
+   "Title": "Moby Dick",
+   "Author": "Herman Melville",
+   "Genre": "Adventure Fiction",
+   "Rating": "3.9/5",
+   "Summary": "Moby-Dick; or, The Whale is an 1851 novel by American writer Herman Melville. The book is the sailor Ishmael's narrative of the maniacal quest of Ahav, captain of the whaling ship Pequod, for vengence against Moby Dick, the giant white sperm whale that bit off his leg on the ship's previous voyage."
+},
+{
+"Year Published": 2005.0,
+   "Title": "The Lightning Thief",
+   "Author": "Rick Riordan",
+   "Genre": "Greek Mythology, Fantasy Fiction",
+   "Rating": "4.3/5",
+   "Summary": "The Lightning Thief is a light-hearted fantasy about a modern 12-year-old boy who learns that his true father is Poseidon, the Greek god of the sea. Percy sets out to become a hero by undertaking a quest across the United States to find the entrance to the UnderWorld and stop a war between the gods."
+},
+{
+"Year Published": 1884.0,
+   "Title": "The Adventures of HuckleBerry Finn",
+   "Author": "Mark Twain",
+   "Genre": "Adventure Fiction, Humor",
+   "Rating": "3.8/5",
+   "Summary": "Mark Twain's classic The Adventures of Huckleberry Finn is told from the point of view of Huck Finn, a barely literate teen who fakes his own death to esacpe his abusive, drunken father. He encounters a runaway slave named Jim, and the two embark on a raft journey down the Mississippi River."
+},
+{
+"Year Published": 1993.0,
+   "Title": "The Giver",
+   "Author": "Lois Lowry",
+   "Genre": "Science Fiction, Dystopia",
+   "Rating": "4.1/5",
+   "Summary": "The Giver, written by Lois Lowry, is a story about a society with citizens who have no memories of its past, except for the individual known as the Receiver of Memory. Citizens are not given freedom or choice. Without choice, the elders of society believe they can prevent negative elements, such as war and poverty."
+},
+{
+"Year Published": 1979.0, 
+   "Title": "The Hitchhiker's Guide to the Galaxy",
+   "Author": "Douglas Adams",
+   "Genre": "Science Fiction",
+   "Rating": "4.2/5",
+   "Summary": "The Hitchhiker's Guide to the Galaxy explores and satirizes many facets of modern life, such as the legitimacy of authority, the absurdity of bureaucracy, and the search for the ultimate answer to the question of life, the universe, and everything."
+},
+{
+"Year Published": 1950.0,
+   "Title": "The Lion, the Witch, and the Wardrobe",
+   "Author": "C.S. Lewis",
+   "Genre": "Fantasy Fiction",
+   "Rating":"4.2/5",
+   "Summary": "The Lion, The Witch and the Wardrobe by C.S. Lewis is a classic children's fantasy novel that tales readers on a magical journey through a wardrobe into the enchanting world of Narnia where four siblings must battle the evil witch and restore the rightful fuler to the throne."
+},
+{ 
+"Year Published": 1954.0,  
+   "Title": "The Lord of the Rings",
+   "Author": "J.R.R. Tolkien",
+   "Genre": "Fantasy Fiction",
+   "Rating": "4.5/5",
+   "Summary": "A hobbit names Frodo inherits the One Ring, which can destroy the entire world. With the reccently reawakened evil, being Sauron, going after the Ring to cement his reign, Frodo joins with eight others to destroy the Ring and defeat Sauron."
+},
+{
+"Year Published": 1952.0,
+   "Title": "The Old Man and the Sea",
+   "Author": "Ernest Hemingway",
+   "Genre": "Fiction",
+   "Rating": "3.8/5",
+   "Summary": "Santiago, an old and once great fisherman, has gone 84 days without catching a fish. His only friend, a loyal boy, tales care of him. To break his unlucky streak, Santiago takes his boat furthur than he ever has before and spends three days battling a giant marlin."
+},
+{
+"Year Published": 1908.0,
+   "Title": "The Wind in the Willows",
+   "Author": "Kenneth Grahame",
+   "Genre": "Children's Literature",
+   "Rating": "4/5",
+   "Summary": "The Wind in the Willows, details the story of Mole, Ratty, and Badger as they try to help Mr. Toad, after he becomes obsessed with motorcars and gets into trouble."
+},
+{
+"Year Published": 1883.0,
+   "Title": "Treasure Island",
+   "Author": "Robert Louis Stevenson",
+   "Genre": "Adventure Fiction",
+   "Rating": "3.8/5",
+   "Summmary": "Treasure Island tells the story of an impulsive and adventurous young boy named Jim Hawkins who comes across a treasure map. he goes on a journey to try and recover the treasure."
 }
 ];
 
