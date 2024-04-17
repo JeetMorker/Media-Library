@@ -321,16 +321,16 @@ function sortAndDisplayBooks(booksToSort, sortOption) {
     let sortedBooks = [...booksToSort]; 
 
     switch (sortOption) {
-        case 'Recently Published':
+        case 'recentlypublished':
             sortedBooks.sort((a, b) => parseInt(b.publishedyear) - parseInt(a.publishedyear));
             break;
-        case 'Oldest (year)':
+        case 'oldest':
             sortedBooks.sort((a, b) => parseInt(a.publishedyear) - parseInt(b.publishedyear));
             break;
-        case 'A-Z':
+        case 'a-z':
             sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
             break;
-        case 'Z-A':
+        case 'z-a':
             sortedBooks.sort((a, b) => b.title.localeCompare(a.title));
             break;
     }
