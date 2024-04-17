@@ -12,7 +12,7 @@ const moviesArray = [
     "title": "The Lion King",
     "genre": "Adventure,Animation,Drama",
     "rating": 8.5,
-    "age": "PG",
+    "age": "PG ",
     "description": "This Disney animated feature follows the adventures of the young lion Simba (Jonathan Taylor Thomas), the heir of his father, Mufasa (James Earl Jones). Simba's wicked uncle, Scar (Jeremy Irons), plots to usurp Mufasa's throne by luring father and son into a stampede of wildebeests. But Simba escapes, and only Mufasa is killed. Simba returns as an adult (Matthew Broderick) to take back his homeland from Scar with the help of his friends Timon (Nathan Lane) and Pumbaa (Ernie Sabella)."
   },
   {
@@ -44,7 +44,7 @@ const moviesArray = [
     "title": "Corpse Bride",
     "genre": "Animation,Drama,Family",
     "rating": 7.3,
-    "age": "PG",
+    "age": "PG ",
     "description": "Victor (Johnny Depp) and Victoria's (Emily Watson) families have arranged their marriage. Though they like each other, Victor is nervous about the ceremony. While he's in a forest practicing his lines for the wedding, a tree branch becomes a hand that drags him to the land of the dead. It belongs to Emily, who was murdered after eloping with her love and wants to marry Victor. Victor must get back aboveground before Victoria marries the villainous Barkis Bittern (Richard E. Grant)."
   },
   {
@@ -84,7 +84,7 @@ const moviesArray = [
     "title": "Chances Are",
     "genre": "Comedy,Romance",
     "rating": 8.6,
-    "age": "PG",
+    "age": "PG ",
     "description": "A man's love for his pregnant wife, Corinne Jeffries (Cybill Shepherd), is interrupted when a car accident sends him to heaven. He is reincarnated, however, and two decades later he is a writer named Alex Finch (Robert Downey Jr.). But when Alex starts dating Miranda Jeffries (Mary Stuart Masterson) -- his all-grown-up daughter from his previous life -- he remembers his love for Corinne. This spells trouble for his past-life best friend, Philip Train (Ryan O'Neal), who is now pursuing Corinne."
   },
   {
@@ -92,7 +92,7 @@ const moviesArray = [
     "title": "The Incredibles",
     "genre": "Action,Adventure,Animation",
     "rating": 8.0,
-    "age": "PG",
+    "age": "PG ",
     "description": "In this lauded Pixar animated film, married superheroes Mr. Incredible (Craig T. Nelson) and Elastigirl (Holly Hunter) are forced to assume mundane lives as Bob and Helen Parr after all super-powered activities have been banned by the government. While Mr. Incredible loves his wife and kids, he longs to return to a life of adventure, and he gets a chance when summoned to an island to battle an out-of-control robot. Soon, Mr. Incredible is in trouble, and it's up to his family to save him."
   },
   {
@@ -100,7 +100,7 @@ const moviesArray = [
     "title": "Coraline",
     "genre": "Animation,Drama,Family",
     "rating": 7.7,
-    "age": "PG",
+    "age": "PG ",
     "description": "While exploring her new home, a girl named Coraline (Dakota Fanning) discovers a secret door, behind which lies an alternate world that closely mirrors her own but, in many ways, is better. She rejoices in her discovery, until Other Mother (Teri Hatcher) and the rest of her parallel family try to keep her there forever. Coraline must use all her resources and bravery to make it back to her own family and life."
   },
   {
@@ -140,7 +140,7 @@ const moviesArray = [
     "title": "Malfunkshun: The Andrew Wood Story",
     "genre": "Documentary,Music",
     "rating": 8.1,
-    "age": "PG",
+    "age": "PG ",
     "description": "Experiencing the life of the fallen LoveChild, Andrew Wood from childhood to relationships and more."
   },
   {
@@ -164,7 +164,7 @@ const moviesArray = [
     "title": "Mrs. Henderson Presents",
     "genre": "Comedy,Drama,Music",
     "rating": 7.0,
-    "age": "PG",
+    "age": "PG ",
     "description": "With some money in her pocket after the death of her husband, Mrs. Laura Henderson (Judi Dench) buys a theater and hires the irascible theater manager Vivian Van Damm (Bob Hoskins) to run the business, despite bad blood between the two. Henderson has a hit on her hands when she decides to add beautiful nude women to the stage shows at her Windmill Theatre. Though they are touched by tragedy, Henderson and her company bravely keep the theater active during the 1940-'41 Blitz of London."
   },
   {
@@ -180,7 +180,7 @@ const moviesArray = [
     "title": "Brand Upon the Brain!",
     "genre": "Comedy,Drama,Fantasy",
     "rating": 7.3,
-    "age": "PG",
+    "age": "PG ",
     "description": "Guy returns to his childhood home on an abandoned Canadian island to paint a lighthouse his parents used as an orphanage."
   },
   {
@@ -188,7 +188,7 @@ const moviesArray = [
     "title": "Hoodwinked",
     "genre": "Adventure,Animation,Comedy",
     "rating": 6.5,
-    "age": "PG",
+    "age": "PG ",
     "description": "Bank robber Hank Tagert arrives home and learns an outlaw gang is planning to trick him into a dangerous stagecoach robbery."
   },
   {
@@ -236,7 +236,7 @@ const moviesArray = [
     "title": "Alan Partridge",
     "genre": "Action,Comedy,Crime",
     "rating": 6.9,
-    "age": "PG",
+    "age": "PG ",
     "description": "Radio host Alan Partridge (Steve Coogan) gets a chance to boost his sagging career by serving as a liaison between police and his former co-host (Colm Meaney), who has taken hostages at their radio station."
   },
   {
@@ -252,7 +252,7 @@ const moviesArray = [
     "title": "Silence",
     "genre": "Drama,History",
     "rating": 7.1,
-    "age": "PG",
+    "age": "PG ",
     "description": "An autistic boy (Ian Geer Flanders) wanders away from his parents and befriends an old hermit (Will Geer) in the woods."
   },
   {
@@ -276,7 +276,7 @@ const moviesArray = [
     "title": "The Boxtrolls",
     "genre": "Adventure,Animation,Comedy",
     "rating": 6.8,
-    "age": "PG",
+    "age": "PG ",
     "description": "Eggs (Isaac Hempstead-Wright), an orphan, lives with the Boxtrolls -- a community of quirky, mischievous creatures who inhabit a cavern beneath the city of Cheesebridge. When villainous Archibald Snatcher (Ben Kingsley) hatches a plan to get rid of the pretty harmless beings, Eggs decides to go above ground, where he meets and befriends feisty Winnifred (Elle Fanning). Together, Eggs and Winnifred devise a daring plan to save the Boxtrolls from extermination."
   },
   {
@@ -388,7 +388,7 @@ const moviesArray = [
     "title": "Cheer Up, Mr. Lee",
     "genre": "Comedy,Drama,Family",
     "rating": 6.9,
-    "age": "PG",
+    "age": "PG ",
     "description": "Cheol Soo has the perfect appearance, but is a bit slow. One day, after having been sick and in hospital, his daughter, Saet Byeol, suddenly appears in front of him, and together they go on a trip."
   },
   {
@@ -420,7 +420,7 @@ const moviesArray = [
     "title": "The Athlete",
     "genre": "Biography,Drama",
     "rating": 6.6,
-    "age": "PG",
+    "age": "PG ",
     "description": "After losing the use of his legs in a car accident, marathon runner Abebe Bikila (Rasselas Lakew) finds a new outlet for his athletic ability and competitive nature in archery and a type of sled-dog racing."
   },
   {
@@ -468,7 +468,7 @@ const moviesArray = [
     "title": "Wojnarowicz",
     "genre": "Documentary",
     "rating": 7.6,
-    "age": "PG",
+    "age": "PG ",
     "description": "Filmmaker Chris McKim examines the life and work of artist, writer, photographer and AIDS activist David Wojnarowicz."
   },
   {
@@ -492,7 +492,7 @@ const moviesArray = [
     "title": "Disneynature: Wings of Life",
     "genre": "Documentary,Family,News",
     "rating": 7.3,
-    "age": "PG",
+    "age": "PG ",
     "description": "Filmmaker Louis Schwartzberg examines how the Earth's food chain depends on bees, hummingbirds, bats and other creatures."
   },
   {
@@ -524,7 +524,7 @@ const moviesArray = [
     "title": "Ghostbusters",
     "genre": "Action,Comedy,Fantasy",
     "rating": 6.8,
-    "age": "PG",
+    "age": "PG ",
     "description": "After the members of a team of scientists (Harold Ramis, Dan Aykroyd, Bill Murray) lose their cushy positions at a university in New York City, they decide to become \"ghostbusters\" to wage a high-tech battle with the supernatural for money. They stumble upon a gateway to another dimension, a doorway that will release evil upon the city. The Ghostbusters must now save New York from complete destruction."
   },
   {
