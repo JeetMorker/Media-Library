@@ -114,7 +114,7 @@ const booksArray = [
 },
 {
 "yearpublished": 1997.0,
-   "title": "Harry Potter and the Sorcerer's Stone",
+   "title": "Harry Potter Sorcerer's Stone",
    "author": "J.K. Rowling",
    "genre": "Children's Literature, Fantasy Fiction",
    "rating": "4.9/5",
@@ -137,7 +137,7 @@ const booksArray = [
    "summary": "The book centers on Stanley Yelnats, who is sent to Camp Green Lake, a correctional boot camp in a desert in Texas, after being falsely accused of theft."
 },
 {
-"Year Published": 1851.0,
+"yearpublished": 1851.0,
    "title": "Moby Dick",
    "author": "Herman Melville",
    "genre": "Adventure Fiction",
@@ -145,7 +145,7 @@ const booksArray = [
    "summary": "Moby-Dick; or, The Whale is an 1851 novel by American writer Herman Melville. The book is the sailor Ishmael's narrative of the maniacal quest of Ahav, captain of the whaling ship Pequod, for vengence against Moby Dick, the giant white sperm whale that bit off his leg on the ship's previous voyage."
 },
 {
-"Year Published": 2005.0,
+"yearpublished": 2005.0,
    "title": "Percy Jackson and the Lightning Thief",
    "author": "Rick Riordan",
    "genre": "Greek Mythology, Fantasy Fiction",
@@ -153,7 +153,7 @@ const booksArray = [
    "summary": "The Lightning Thief is a light-hearted fantasy about a modern 12-year-old boy who learns that his true father is Poseidon, the Greek god of the sea. Percy sets out to become a hero by undertaking a quest across the United States to find the entrance to the UnderWorld and stop a war between the gods."
 },
 {
-"Year Published": 1884.0,
+"yearpublished": 1884.0,
    "title": "The Adventures of Huckleberry Finn",
    "author": "Mark Twain",
    "genre": "Adventure Fiction, Humor",
@@ -161,7 +161,7 @@ const booksArray = [
    "summary": "Mark Twain's classic The Adventures of Huckleberry Finn is told from the point of view of Huck Finn, a barely literate teen who fakes his own death to esacpe his abusive, drunken father. He encounters a runaway slave named Jim, and the two embark on a raft journey down the Mississippi River."
 },
 {
-"Year Published": 1993.0,
+"yearpublished": 1993.0,
    "title": "The Giver",
    "author": "Lois Lowry",
    "genre": "Science Fiction, Dystopia",
@@ -169,7 +169,7 @@ const booksArray = [
    "summary": "The Giver, written by Lois Lowry, is a story about a society with citizens who have no memories of its past, except for the individual known as the Receiver of Memory. Citizens are not given freedom or choice. Without choice, the elders of society believe they can prevent negative elements, such as war and poverty."
 },
 {
-"Year Published": 1979.0, 
+"yearpublished": 1979.0, 
    "title": "The Hitchhiker's Guide to the Galaxy",
    "author": "Douglas Adams",
    "genre": "Science Fiction",
@@ -177,7 +177,7 @@ const booksArray = [
    "summary": "The Hitchhiker's Guide to the Galaxy explores and satirizes many facets of modern life, such as the legitimacy of authority, the absurdity of bureaucracy, and the search for the ultimate answer to the question of life, the universe, and everything."
 },
 {
-"Year Published": 1950.0,
+"yearpublished": 1950.0,
    "title": "The Lion, the Witch, and the Wardrobe",
    "author": "C.S. Lewis",
    "genre": "Fantasy Fiction",
@@ -185,7 +185,7 @@ const booksArray = [
    "summary": "The Lion, The Witch and the Wardrobe by C.S. Lewis is a classic children's fantasy novel that tales readers on a magical journey through a wardrobe into the enchanting world of Narnia where four siblings must battle the evil witch and restore the rightful fuler to the throne."
 },
 { 
-"Year Published": 1954.0,  
+"yearpublished": 1954.0,  
    "title": "The Lord of the Rings",
    "author": "J.R.R. Tolkien",
    "genre": "Fantasy Fiction",
@@ -193,7 +193,7 @@ const booksArray = [
    "summary": "A hobbit names Frodo inherits the One Ring, which can destroy the entire world. With the reccently reawakened evil, being Sauron, going after the Ring to cement his reign, Frodo joins with eight others to destroy the Ring and defeat Sauron."
 },
 {
-"Year Published": 1952.0,
+"yearpublished": 1952.0,
    "title": "The Old Man and the Sea",
    "author": "Ernest Hemingway",
    "genre": "Fiction",
@@ -201,7 +201,7 @@ const booksArray = [
    "summary": "Santiago, an old and once great fisherman, has gone 84 days without catching a fish. His only friend, a loyal boy, tales care of him. To break his unlucky streak, Santiago takes his boat furthur than he ever has before and spends three days battling a giant marlin."
 },
 {
-"Year Published": 1908.0,
+"yearpublished": 1908.0,
    "title": "The Wind in the Willows",
    "author": "Kenneth Grahame",
    "genre": "Children's Literature",
@@ -209,12 +209,28 @@ const booksArray = [
    "summary": "The Wind in the Willows, details the story of Mole, Ratty, and Badger as they try to help Mr. Toad, after he becomes obsessed with motorcars and gets into trouble."
 },
 {
-"Year Published": 1883.0,
+"yearpublished": 1883.0,
    "title": "Treasure Island",
    "author": "Robert Louis Stevenson",
    "genre": "Adventure Fiction",
    "rating": "3.8/5",
-   "Summmary": "Treasure Island tells the story of an impulsive and adventurous young boy named Jim Hawkins who comes across a treasure map. he goes on a journey to try and recover the treasure."
+   "summmary": "Treasure Island tells the story of an impulsive and adventurous young boy named Jim Hawkins who comes across a treasure map. he goes on a journey to try and recover the treasure."
+},
+{
+"yearpublished": 1997.0,
+   "title": "Geronimo Stilton: Lost Treasure of the Emerald Eye",
+   "author": "Thea Stilton",
+   "genre": "Fiction",
+   "rating": "4.9/5",
+   "summary": "It all started when my sister, Thea, discovered a mysterious map. It showed a secret treasure on a faraway island. And before I could let out a squeak of protest, Thea dragged me into her treasure hunt! In no time at all, we'd set sail for the island. It was an adventure I'd never forget...."
+},
+{
+"yearpublished": 2010.0,
+   "title": "I Survived The Sinking Of The Titanic, 1912",
+   "author": "Lauren Tarshis",
+   "genre": "Historical Fiction",
+   "rating": "4.5/5",
+   "summary": "Ten-year-old George Calder can't wait to explore every inch of the Titanic, even if his little sister, Phoebe, has to tag along. But when George sneaks away without her and ventures into the first class baggage room, a terrible boom shakes the entire ship. The ship hits an iceberg and George must find his sister on the sinking ship."
 }
 ];
 
