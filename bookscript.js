@@ -146,7 +146,7 @@ const booksArray = [
 },
 {
 "Year Published": 2005.0,
-   "title": "The Lightning Thief",
+   "title": "Percy Jackson and the Lightning Thief",
    "author": "Rick Riordan",
    "genre": "Greek Mythology, Fantasy Fiction",
    "rating": "4.3/5",
@@ -154,7 +154,7 @@ const booksArray = [
 },
 {
 "Year Published": 1884.0,
-   "title": "The Adventures of HuckleBerry Finn",
+   "title": "The Adventures of Huckleberry Finn",
    "author": "Mark Twain",
    "genre": "Adventure Fiction, Humor",
    "rating": "3.8/5",
