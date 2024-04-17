@@ -218,19 +218,18 @@ const booksArray = [
 }
 ];
 
-let Books = booksArray; 
+let books = booksArray; 
 
 document.addEventListener('DOMContentLoaded', function() {
-sortAndDisplayBooks(Books, 'A-Z', 'All');
-closeOverlay()
+sortAndDisplayBooks(books, 'a-z');
         });
+
 
 
 function clearSearch() {
     document.getElementById('titleSearch').value = '';
-    document.getElementById('sortOptions').value = 'A-Z';
-    document.getElementById('genreFilter').value = 'All';
-    sortAndDisplayBooks(Books, 'A-Z', 'All');
+    document.getElementById('sortOptions').value = 'a-z';
+    sortAndDisplayBooks(books, 'a-z');
 }
 
 
@@ -240,17 +239,17 @@ function showDetails(book) {
     const details = document.getElementById('bookDetails');
     details.innerHTML = ` <button id="closeOverlay" onclick="closeOverlay()">Close</button>
 
-<h2>${book.Title}</h2>
+<h2>${book.title}</h2>
 <div class="bookContent">	
 		<div class="textDetails">
-            <p><strong>Year Published:</strong> ${book.YearPublished}</p>
-	    <p><strong>Author:</strong> ${book.Author}</p>
-            <p><strong>Rating:</strong> ${book.Rating}</p>
-            <p><strong>Genre(s):</strong> ${book.Genre}</p>
-            <div class="Summary:">${book.Summary}</div>
+            <p><strong>Year Published:</strong> ${book.yearpublished}</p>
+	    <p><strong>Author:</strong> ${book.author}</p>
+            <p><strong>Rating:</strong> ${book.rating}</p>
+            <p><strong>Genre(s):</strong> ${book.genre}</p>
+            <div class="Summary:">${book.summary}</div>
 </div>
 <div class="bookPoster">
-<img src="books/${book.Title.replace(/:/g, '')}.jpg" alt="${book.Title}" class="bookPoster">
+<img src="books/${book.title.replace(/:/g, '')}.jpg" alt="${book.title}" class="bookPoster">
 </div>
 </div>
 `;
@@ -274,86 +273,75 @@ function showOverlay() {
     }
 }
 
-function showLoadingOverlay() {
-    document.getElementById('loading-overlay').style.display = 'flex';
-}
-
-function hideLoadingOverlay() {
-    document.getElementById('loading-overlay').style.display = 'none';
-}
-
-
 document.getElementById('sortOptions').addEventListener('change', function() {
 	currentSortOption = this.value;
 updateBooks();
 
 });
 
-document.getElementById('genreFilter').addEventListener('change', function() {
-	currentGenreOption = this.value;
-updateBooks();
+function updateBooks() {
+    const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();    
+    const filteredBooks = books.filter(book => book.title.toLowerCase().includes(titleSearchValue));
+	currentSortOption = document.getElementById('sortOptions').value;
+    sortAndDisplayBooks(filteredBooks, currentSortOption);
+}
 
+document.getElementById('genreSelect').addEventListener('change', function() {
+    const selectedGenre = this.value;
+    if (selectedGenre === 'all') {
+	sortAndDisplayBooks(books, document.getElementById('sortOptions').value);
+    } else {
+	sortBooksByGenre(selectedGenre);
+    }
 });
 
-
-function updateBooks() {
-    const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
-    
-    const filteredBooks = Books.filter(book => book.Title.toLowerCase().includes(titleSearchValue));
-	currentSortOption = document.getElementById('sortOptions').value;
-currentGenreOption = document.getElementById('genreFilter').value;
-    sortAndDisplayBooks(filteredBooks, currentSortOption, currentGenreOption);
+function sortBooksByGenre(genre) {
+    const filteredBooksByGenre = books.filter(book => book.genre === genre);
+    sortAndDisplayBooks(filteredBooksByGenre, document.getElementById('sortOptions').value);
 }
 
 
-function sortAndDisplayBooks(BooksToSort, sortOption, genreFilter) {
-showLoadingOverlay();    
-
-let sortedBooks = [...BooksToSort]; 
-
-if (genreFilter != "All") {
-    sortedBooks = sortedBooks.filter(book => book.Genre.includes(genreFilter));
-}
+function sortAndDisplayBooks(booksToSort, sortOption) {    
+    let sortedBooks = [...booksToSort]; 
 
     switch (sortOption) {
         case 'Recently Published':
-            sortedBooks.sort((a, b) => parseInt(b.PublishedYear) - parseInt(a.PublishedYear));
+            sortedBooks.sort((a, b) => parseInt(b.publishedyear) - parseInt(a.publishedyear));
             break;
         case 'Oldest (year)':
-            sortedBooks.sort((a, b) => parseInt(a.PublishedYear) - parseInt(b.PublishedYear));
+            sortedBooks.sort((a, b) => parseInt(a.publishedyear) - parseInt(b.publishedyear));
             break;
         case 'A-Z':
-            sortedBooks.sort((a, b) => a.Title.localeCompare(b.Title));
+            sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
             break;
         case 'Z-A':
-            sortedBooks.sort((a, b) => b.Title.localeCompare(a.Title));
+            sortedBooks.sort((a, b) => b.title.localeCompare(a.title));
             break;
     }
 
     loadBooks(sortedBooks);
-    hideLoadingOverlay();
 }
 function sortBooks() {
     const sortValue = document.getElementById('sortOptions').value;
-    let sortedBooks = [...Books]; 
+    let sortedBooks = [...books]; 
 
 console.log('Sorting Books by: ', sortValue);
 console.log('Sorted Books: ', sortedBooks);
     switch (sortValue) {
         case 'newest':
-            sortedBooks.sort((a, b) => b.PublishedYear - a.PublishedYear);
+            sortedBooks.sort((a, b) => b.publishedyear - a.publishedyear);
             break;
         case 'oldest':
-            sortedBooks.sort((a, b) => a.PublishedYear - b.PublishedYear);
+            sortedBooks.sort((a, b) => a.publishedyear - b.publishedyear);
             break;
         case 'rating':
-            sortedBooks.sort((a, b) => b.Rating - a.Rating);
+            sortedBooks.sort((a, b) => b.rating - a.rating);
             break;
         case 'a-z':
-            sortedBooks.sort((a, b) => a.Title.localeCompare(b.Title));
+            sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
             break;
         case 'z-a':
-            sortedBooks.sort((a, b) => b.Title.localeCompare(a.Title));
+            sortedBooks.sort((a, b) => b.title.localeCompare(a.title));
             break;
     }
 
@@ -362,8 +350,8 @@ console.log('Sorted Books: ', sortedBooks);
 
 function searchBooks() {
     const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
-    const filteredBooks = Books.filter(book => {
-        return book.Title.toLowerCase().includes(titleSearchValue); 
+    const filteredBooks = books.filter(book => {
+        return book.title.toLowerCase().includes(titleSearchValue); 
     });
     loadBooks(filteredBooks);
 
@@ -371,19 +359,17 @@ function searchBooks() {
 
 document.getElementById('titleSearch').addEventListener('input', updateBooks);
 
-function loadBooks(filteredBooks = Books) {
+function loadBooks(filteredBooks = books) {
     const grid = document.getElementById('booksGrid');
     grid.innerHTML = '';
 
     filteredBooks.forEach(book => {
         const bookItem = document.createElement('div');
-
         bookItem.className = 'bookItem';
-
-        bookItem.innerHTML = `<img src="books/${book.Title.replace(/:/g, '')}.jpg" alt="${book.Title}" style="width:100%"><h3>${book.Title}</h3>`;
+        bookItem.innerHTML = `<img src="books/${book.title.replace(/:/g, '')}.jpg" alt="${book.title}" style="width:100%"><h3>${book.title}</h3>`;
         bookItem.onclick = () => showDetails(book);
         grid.appendChild(bookItem);
     });
-	document.getElementById('bookCount').textContent = `${filteredBooks.length} results`;
+   document.getElementById('bookCount').textContent = `${filteredBooks.length} results`;
 }
-updateBooks();
+
