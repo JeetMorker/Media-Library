@@ -29,6 +29,7 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 
+
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column;
@@ -130,3 +131,7 @@ header {
 .column a:hover {
   text-decoration: underline;
 }
+
+h2 {
+   margin-left: 15px;
+   }
