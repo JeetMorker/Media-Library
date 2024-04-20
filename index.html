@@ -20,18 +20,17 @@
   </header>
   <h2>Popular Today</h2>
   <div class="row">
-      <div class="column">
+      <div class="column" id="popular-song">
           <h3>Song</h3>
-          <p><a href="https://youtu.be/XzOvgu3GPwY?si=wS4Q2Ly_aVFF_V9L">Karma by Taylor Swift ft. Ice Spice</a></p>
-
+          <p><a href="#" id="song-link">Loading...</a></p>
       </div>
-      <div class="column">
+      <div class="column" id="popular-movie">
           <h3>Movie</h3>
-          <p><a href="https://youtu.be/uYPbbksJxIg?si=oMpdHx-uL2O-mzx8">Oppenheimer</a></p>
+          <p><a href="#" id="movie-link">Loading...</a></p>
       </div> 
-      <div class="column">
+      <div class="column" id="popular-book">
           <h3>Book</h3>
-          <p><a href="https://www.suzannecollinsbooks.com/the_hunger_games_69765.htm">The Hunger Games by Suzanne Collins</a></p>
+          <p><a href="#" id="book-link">Loading...</a></p>
       </div>
   </div>
   <h2> Popular Genres </h2>
@@ -41,7 +40,6 @@
           <p>Pop</p>
           <p>Hip Hop</p>
           <p>Country</p>
-          
       </div>
       <div class="column">
           <h3>Movies</h3>
@@ -71,6 +69,39 @@
           <p>Happy Place by Emily Henry</p>
       </div>
   </div>
+
+  <script>
+    // Define arrays containing popular songs, movies, and books with name and link
+    var popularSongs = [
+      { name: "Fortnight by Taylor Swift ft. Post Malone", link: "https://www.youtube.com/watch?v=q3zqJs7JUCQ" },
+      { name: "Florida!!! by Taylor Swift ft. Florence", link: "https://youtu.be/FiqoZyauhdA?si=vV0rn-w9GmTHtqKD" },
+      { name: "The Alchemy by Taylor Swift", link: "https://youtu.be/FK-ETNt7M7E?si=HHOdQX8xErxy9eXF" }
+    ];
+    var popularMovies = [
+      { name: "Oppenheimer", link: "https://youtu.be/uYPbbksJxIg?si=oMpdHx-uL2O-mzx8" },
+      { name: "Dune 2", link: "https://www.imdb.com/title/tt15239678/" },
+      { name: "Inception", link: "https://www.imdb.com/title/tt1375666/?ref_=hm_tpks_tt_t_5_pd_tp1_pbr_ic" }
+    ];
+    var popularBooks = [
+      { name: "The Hunger Games by Suzanne Collins", link: "https://www.suzannecollinsbooks.com/the_hunger_games_69765.htm" },
+      { name: "Animal Farm by George Orwell", link: "https://www.amazon.com/Animal-Farm-George-Orwell/dp/0451526341" },
+      { name: "The Song of Achilles by Madeline Miller", link: "https://www.goodreads.com/book/show/13623848-the-song-of-achilles" }
+    ];
+
+    // Function to set a random item from an array as the text content and link of an element
+    function setRandomItem(elementId, array) {
+      var randomIndex = Math.floor(Math.random() * array.length);
+      var element = document.getElementById(elementId);
+      element.textContent = array[randomIndex].name;
+      element.href = array[randomIndex].link;
+    }
+
+    // Set a random popular song, movie, and book when the page loads
+    window.onload = function() {
+      setRandomItem("song-link", popularSongs);
+      setRandomItem("movie-link", popularMovies);
+      setRandomItem("book-link", popularBooks);
+    };
+  </script>
 </body>
 </html>
-
