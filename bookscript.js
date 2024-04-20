@@ -12,7 +12,7 @@ const booksArray = [
 "yearpublished": 2010.0,
    "title": "The Hunger Games",
    "author": "Suzanne Collins",
-   "genre": "Science Fiction, Thriller, Dystopian Fiction",
+   "genre": "Dystopian Fiction",
    "rating": "4.7/5",
    "summary": "The Hunger Games is a series of young adult dystopian novels written by American author Suzanne Collins. The first three novels are part of a trilogy following teenage protagonist Katniss Everdeen, and the fourth book is a prequel set 64 years before the original."
 },
@@ -36,7 +36,7 @@ const booksArray = [
 "yearpublished": 1951.0,
    "title": "Catcher in the Rye",
    "author": "J.D. Salinger",
-   "genre": "Fiction, Literature",
+   "genre": "Fiction",
    "rating": "3.8/5",
    "summary": "The novel details two days in the life of 16-year-old Holden Caulfield after he has been expelled from prep school. Confused and disillusioned, Holden searches for truth and rails against the phoniness of the adult world."
 },
@@ -52,7 +52,7 @@ const booksArray = [
 "yearpublished": 2023.0,
    "title": "The Bee Sting",
    "author": "Paul Murray",
-   "genre": "Humor, Psychological Fiction",
+   "genre": "Psychological Fiction",
    "rating": "4/5",
    "summary": "In Murray’s boisterous tragicomic novel, a once wealthy Irish family struggles with both the aftermath of the 2008 financial crash and their own inner demons."
 },
@@ -68,7 +68,7 @@ const booksArray = [
 "yearpublished": 2023.0, 
    "title": "Chain-Gang All Stars", 
    "author": "Nana Kwame Adjei-Brenyah",
-   "genre": "Literary Dystopia",
+   "genre": "Dystopian Fiction",
    "rating": "4.1/5",
    "summary": "This satire — in which prison inmates duel on TV for a chance at freedom — makes readers complicit with the bloodthirsty fans sitting ringside. The fight scenes are so well written they demonstrate how easy it might be to accept a world this sick."
 },
@@ -84,7 +84,7 @@ const booksArray = [
 "yearpublished": 1949.0,
    "title": "1984",
    "author": "George Orwell",
-   "genre": "Dystopian Fiction, Historical Fiction",
+   "genre": "Historical Fiction, Dystopian Fiction",
    "rating": "4.2/5",
    "summary": "1984 is a dystopian novel that was written by George Orwell and published in 1949. It tells the story of Winston Smith, a citizen of the miserable society of Oceania, who is trying to rebel against the Party and its omnipresent symbol, Big Brother." 
 },
@@ -237,7 +237,7 @@ const booksArray = [
 let books = booksArray; 
 
 document.addEventListener('DOMContentLoaded', function() {
-sortAndDisplayBooks(books, 'a-z');
+sortAndDisplayBooks(books, 'a-z', 'All');
         });
 
 
@@ -245,7 +245,8 @@ sortAndDisplayBooks(books, 'a-z');
 function clearSearch() {
     document.getElementById('titleSearch').value = '';
     document.getElementById('sortOptions').value = 'a-z';
-    sortAndDisplayBooks(books, 'a-z');
+    document.getElementById('genreSelect').value = 'All';
+    sortAndDisplayBooks(books, 'a-z', 'All');
 }
 
 
@@ -349,9 +350,6 @@ console.log('Sorted Books: ', sortedBooks);
             break;
         case 'oldest':
             sortedBooks.sort((a, b) => a.publishedyear - b.publishedyear);
-            break;
-        case 'rating':
-            sortedBooks.sort((a, b) => b.rating - a.rating);
             break;
         case 'a-z':
             sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
