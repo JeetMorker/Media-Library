@@ -20,7 +20,7 @@ const booksArray = [
 "yearpublished": 1960.0,
    "title": "To Kill A MockingBird",
    "author": "Harper Lee",
-   "genre": "Fiction, Historical Fiction, Literature",
+   "genre": "Fiction, Historical Fiction",
    "rating": "4.26/5",
    "summary": "Set in small-town Alabama, the novel is a bildungsroman, or coming-of-age story, and chronicles the childhood of Scout and Jem Finch as their father Atticus defends a Black man falsely accused of rape. Scout and Jem are mocked by classmates for this."
 },
@@ -92,7 +92,7 @@ const booksArray = [
 "yearpublished": 1865.0, 
    "title": "Alice's Adventure in Wonderland",
    "author": "Lewis Carroll",
-   "genre": "Children's Literature, Fantasy Fiction",
+   "genre": "Fantasy Fiction",
    "rating": "4.4/5",
    "summary": "A young girl named Alice is the main character in Alice's Adventures in Wonderland. She falls asleep and dreams that she follows a White Rabbit down a rabbit hole. She has many wondrous, often bizarre adventures. Alice often changes size unexpectedly, growing as tall as a house an shrinking to three inches."
 },
@@ -116,7 +116,7 @@ const booksArray = [
 "yearpublished": 1997.0,
    "title": "Harry Potter Sorcerer's Stone",
    "author": "J.K. Rowling",
-   "genre": "Children's Literature, Fantasy Fiction",
+   "genre": "Fantasy Fiction",
    "rating": "4.9/5",
    "summary": "11 year old Harry Potter receives a letter saying that he is invited to attend Hogwarts, school of witchcrat and wizardry. He then learns that a powerful wizard and his minions are after the sorcerer's stone that will make this evil waizard immortal and undefeatable.",
 },
@@ -132,7 +132,7 @@ const booksArray = [
 "yearpublished": 1998.0,
    "title": "Holes",
    "author": "Louis Sachar",
-   "genre": "Children's Literature, Mystery, Satire, Adventure Fiction",
+   "genre": "Mystery, Adventure Fiction",
    "rating": "4/5",
    "summary": "The book centers on Stanley Yelnats, who is sent to Camp Green Lake, a correctional boot camp in a desert in Texas, after being falsely accused of theft."
 },
@@ -218,7 +218,7 @@ const booksArray = [
 },
 {
 "yearpublished": 1997.0,
-   "title": "Geronimo Stilton: Lost Treasure of the Emerald Eye",
+   "title": "Geronimo Stilton Lost Treasure of the Emerald Eye",
    "author": "Thea Stilton",
    "genre": "Fiction",
    "rating": "4.9/5",
@@ -231,7 +231,55 @@ const booksArray = [
    "genre": "Historical Fiction",
    "rating": "4.5/5",
    "summary": "Ten-year-old George Calder can't wait to explore every inch of the Titanic, even if his little sister, Phoebe, has to tag along. But when George sneaks away without her and ventures into the first class baggage room, a terrible boom shakes the entire ship. The ship hits an iceberg and George must find his sister on the sinking ship."
-}
+},
+{
+"yearpublished": 1991.0,
+   "title": "Bone Out From Boneville",
+   "author": "Jeff Smith",
+   "genre": "Fantasy",
+   "rating": "4.7/5",
+   "summary": "A group of three 'Bones' from 'Boneville' who get lost and end up in a kingdom far from home, then get caught up in an epic struggle between good and evil.",
+},
+{
+"yearpublish": 1969.0,
+   "title": "Slaughterhouse-Five",
+   "auther": "Kurt Vonnegut Jr.",
+   "genre": "Satire",
+   "rating": "4.1/5",
+   "summary": "Billy Pilgrim is an ordinary World War II soldier with one major exception: he has mysteriously become unstuck in time. Billy goes on an uncontrollable trip back and forth from his birth in New York to life on a distant planet and back again to the horrors of the 1945 fire-bombing of Dresden",
+},
+{
+"yearpublished": 2012.0,
+   "title": "Lemony Snicket",
+   "author": "Daniel Handler",
+   "genre": "Mystery",
+   "rating": "3.8/5",
+   "summary": "The novel tells the story of a young Lemony Scicket, who is apprenticing for the V.F.D under the worse-ranked agent, S.",
+},
+{
+"yearpublished": 2008.0,
+   "title": "The 39 Clues The Maze of Bones",
+   "author": "Rick Riordan",
+   "genre": "Mystery",
+   "rating": "3.9/5",
+   "summary": "Amy and Dan Cahill are two orphans who discover upon their grandmother Grace's death, that they are part of the powerful Cahill family. The members constantly fight each other for Clues, which are ingredients to a mysterious serum.",
+},
+{
+"yearpublished": 2024.0,
+   "title": "Ghosted",
+   "author": "Nancy French",
+   "genre": "Nonfiction",
+   "rating": "4.6/5",
+   "summary": "Nancy's family hails from the foothill of the Appalachians, where life was dominated by coal mining, violence, abuse, and poverty. Longing for an adventure, she married a stranger, moved to New York, and dropped out of college. In spite of her lack of education, she found success as a ghostwriter for conservative political leaders. But when she was unwilling to endorse an unsuitable president, her allies turned on her and she found herself spiritually adrift. She learned the importance of finding her own voice and that the people she thought were her enemies could be her closest friend.",
+},
+{
+"yearpublished": 1938.0,
+   "title": "Homage to Catalonia",
+   "author": "George Orwell", 
+   "genre": "Nonfiction",
+   "rating": "4.1/5",
+   "summary": "Homage to Catalonia is George Orwell's personal account of his experiences and observations fighting in the Spanish Civil War for the POUM militia of the Republican army.",
+}	
 ];
 
 let books = booksArray; 
