@@ -1,4 +1,6 @@
-const moviesArray = [
+var score2 = 0;
+var user = 1;
+ const moviesArray = [
   {
     "year": 1991.0,
     "title": "Terminator 2: Judgment Day",
@@ -565,7 +567,11 @@ let movies = moviesArray;
 
 document.addEventListener('DOMContentLoaded', function() {
 sortAndDisplayMovies(movies, 'a-z', 'All','All');
-        });
+        
+
+});
+
+
 
 
 
@@ -580,6 +586,8 @@ document.getElementById('ageRating').value = 'All';
 
 
 function showDetails(movie) {
+const artistId = movie.title.replace(/\s+/g, '_');
+currentMovie = movie.title.replace(/\s+/g, '_');
     const overlay = document.getElementById('overlay');
     const details = document.getElementById('movieDetails');
     details.innerHTML = ` <button id="closeOverlay" onclick="closeOverlay()">Close</button>
@@ -593,14 +601,11 @@ function showDetails(movie) {
             <div class="movieDescription">${movie.description}</div>
 
 
-<div class="star-rating-wrapper" onclick="setRating(event)" data-rating="0">
-    <div class="star-rating-background">
-        &#9733; &#9733; &#9733; &#9733; &#9733;
-    </div>
-    <div class="star-rating-foreground" style="width: 0%;">
-        &#9733; &#9733; &#9733; &#9733; &#9733;
-    </div>
-</div>
+
+     <div class="star-rating" id="starRating_${artistId}">
+                ${generateStarRatingHTML(artistId, movie.score || 0)}
+            </div>
+
 
     <div class="comment-section">
         <textarea placeholder="Add a comment..." id="commentInput"></textarea>
@@ -609,17 +614,80 @@ function showDetails(movie) {
     </div>
 
 
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+1
 <div class="moviePoster">
 <img src="movies/${movie.title.replace(/:/g, '')}.jpg" alt="${movie.title}" class="moviePoster">
 </div>
 </div>
 `;
-  
 
-  overlay.style.display = 'flex';
-overlay.classList.add('active');
+
+    overlay.style.display = 'flex';
+    overlay.classList.add('active');
+
+    // Attach event listeners for star rating
+    const starRatingDiv = document.getElementById(`starRating_${artistId}`);
+    if (starRatingDiv) {
+        starRatingDiv.addEventListener('click', event => {
+            if (event.target.matches('label')) {
+                const score = parseInt(event.target.dataset.value);
+		score2 = score;
+                updateSongRating(movie, score);
+                // Update star ratings appearance
+                const labels = starRatingDiv.querySelectorAll('label');
+                const selectedRating = parseInt(event.target.dataset.value);
+                labels.forEach((label, index) => {
+                    if (index < selectedRating) {
+                        label.classList.add('selected');
+                    } else {
+                        label.classList.remove('selected');
+                    }
+                });
+            }
+        });
+    } else {
+        console.error(`Element with ID 'starRating_${artistId}' not found.`);
+    }
 }
+
+function generateStarRatingHTML(artistId, score) {
+    let starsHTML = '';
+score2 = score;
+for (let i = 1; i <= 5; i++) {
+        const checked = i === score ? 'selected' : '';
+        starsHTML += `
+            <input type="radio" id="star_${artistId}_${i}" name="score_${artistId}" value="${i}" style="display:none;">
+            <label for="star_${artistId}_${i}" data-value="${i}" class="star ${checked}">&#9733;</label>
+        `;
+    }
+    return starsHTML;
+}
+
+
+function updateSongRating(song, score) {
+    console.log(`Updating rating for song '${song.artist}' to ${score}`);
+}
+
+var currentMovie = "";
+
+
+
+
+
 function closeOverlay() {
     var overlay = document.getElementById('overlay');
     if (overlay) {
@@ -664,47 +732,63 @@ updateMovies();
 });
 
 
-function postComment() {
-    var input = document.getElementById('commentInput');
-    var commentDisplay = document.getElementById('commentDisplay');
-    var newComment = document.createElement('div');
-    newComment.textContent = input.value;
-    commentDisplay.appendChild(newComment);
-    input.value = "";
-}
-
-
-function setRating(e) {
-    const starWrapper = e.currentTarget;
-    const bounds = starWrapper.getBoundingClientRect();
-    const starWidth = bounds.width / 5; 
-    const rating = (e.clientX - bounds.left) / starWidth;
+function postComment(artistId) {
     
-    starWrapper.dataset.rating = rating.toFixed(1); 
-    updateStars(starWrapper, rating);
+var input = document.getElementById('commentInput');
+    var commentDisplay = document.getElementById('commentDisplay');
+
+    var newComment = document.createElement('div');
+    newComment.classList.add('comment'); 
+
+    var nameSpan = document.createElement('span');
+    nameSpan.classList.add('name');
+    nameSpan.textContent = 'User ' + String(user);
+	user = user + 1; 
+    newComment.appendChild(nameSpan);
+
+
+
+    var ratingSpan = document.createElement('ratingSpan');
+    ratingSpan.classList.add('rating');
+
+
+ratingSpan.textContent = "    " + "★".repeat(score2) + "☆".repeat(5-score2);
+
+//const ratingSpann = document.getElementById('ratingSpan');
+//ratingSpann.innerHTML = `${score2} ${generateStarRatingHTML(currentMovie, score2)}`;
+
+
+
+//const starRatingDiv = document.getElementById(`starRating_${artistId}`);
+ //const labels = starRatingDiv.querySelectorAll('label');
+   //             const selectedRating = parseInt(event.target.dataset.value);
+     //           labels.forEach((label, index) => {
+       //                 label.classList.remove('selected');
+         //           }
+//)
+
+
+
+
+
+    newComment.appendChild(ratingSpan);
+
+    var textDiv = document.createElement('div');
+    textDiv.classList.add('text');
+    textDiv.textContent = input.value;
+    newComment.appendChild(textDiv);
+
+    commentDisplay.appendChild(newComment);
+
+    input.value = '';
 }
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    document.body.addEventListener('click', function(e) {
-        if (e.target.classList.contains('star') || e.target.parentNode.classList.contains('star-rating-wrapper')) {
-            const starWrapper = e.target.closest('.star-rating-wrapper');
-            if (starWrapper) {
-                setRating(e, starWrapper);
-            }
-        }
-    });
-});
 
 
 
 
 
-
-function updateStars(wrapper, rating) {
-    const foreground = wrapper.querySelector('.star-rating-foreground');
-    foreground.style.width = `${rating / 5 * 100}%`;
-}
 
 
 

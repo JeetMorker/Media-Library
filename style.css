@@ -30,6 +30,25 @@ li{
     flex-wrap: wrap;
 }
 
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    display: inline-block;
+    font-size: 2em;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star-rating label.selected {
+    color: gold;
+}
+
+
+
+
+
 .column{
     flex: 1;
     align-items: center;
