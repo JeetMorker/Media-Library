@@ -93,7 +93,7 @@
         let name = document.getElementById("name");
         let email = document.getElementById("email");
         let comment = document.getElementById("comment");
-
+//add
         function AddData(){
             counter++;
             set(ref(db,'userSet/' + counter),{
@@ -108,6 +108,7 @@
             })
         }
 
+        //get data
         function RetData(){
             const dbref = ref(db);
 
@@ -128,7 +129,7 @@
                 console.log(error);
             })
         }
-
+// updates 
         function UpdateData(){
             update(ref(db,'userSet/' + randomNumber(1,10000)),{
                 nameofuser: name.value,
@@ -141,7 +142,7 @@
                 console.log(error);
             })
         }
-
+//delete
         function DeleteData(){
             set(ref(db,'userSet/' + randomNumber(1,10000))).then(()=>{
                 alert("data removed");
@@ -151,13 +152,6 @@
             })
         }
 
-        function randomNumber(  ) {
-            return Math.floor(Math.random() * (max - min) + min);
-        }
-
-
-
-        
 
         AddBtn.addEventListener('click',AddData);
 
