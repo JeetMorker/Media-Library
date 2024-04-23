@@ -20,7 +20,7 @@ const booksArray = [
 "yearpublished": 1960.0,
    "title": "To Kill A MockingBird",
    "author": "Harper Lee",
-   "genre": "Fiction, Historical Fiction",
+   "genre": "Fiction,Historical Fiction",
    "rating": "4.26/5",
    "summary": "Set in small-town Alabama, the novel is a bildungsroman, or coming-of-age story, and chronicles the childhood of Scout and Jem Finch as their father Atticus defends a Black man falsely accused of rape. Scout and Jem are mocked by classmates for this."
 },
@@ -84,7 +84,7 @@ const booksArray = [
 "yearpublished": 1949.0,
    "title": "1984",
    "author": "George Orwell",
-   "genre": "Historical Fiction, Dystopian Fiction",
+   "genre": "Historical Fiction,Dystopian Fiction",
    "rating": "4.2/5",
    "summary": "1984 is a dystopian novel that was written by George Orwell and published in 1949. It tells the story of Winston Smith, a citizen of the miserable society of Oceania, who is trying to rebel against the Party and its omnipresent symbol, Big Brother." 
 },
@@ -100,7 +100,7 @@ const booksArray = [
 "yearpublished": 1605.0,
    "title": "Don Quixote",
    "author": "Miguel de Cervantes",
-   "genre": "Psychological Fiction, Satire",
+   "genre": "Psychological Fiction,Satire",
    "rating": "3.9/5",
    "summary": "Don Quixote was a one volume book published in 1605, divided internally into four parts, not the first part of a two-part set. The mention in the 1605 book of further adventures yet to be told was totally conventional, did not indicate any authorial plans for a continuation, and was not taken seriously by the books first readers.",
 },
@@ -108,7 +108,7 @@ const booksArray = [
 "yearpublished": 1726.0,
    "title": "Gulliver's Travels",
    "author": "Jonathan Swift",
-   "genre": "Satire, Science Fiction",
+   "genre": "Satire,Science Fiction",
    "rating": "3.6/5",
    "summary": "Gulliver goes to the sea as a surgeon on the merchant ship,Antelope. This ship is destroyed during a heavy windstorm, and Gulliver, the only survivor, swims to a nearby island, Lilliput. Being nearly exhausted from the ordeal, he falls asleep. Upon awakening, he finds himself captured by the island's inhabitants.",
 },
@@ -116,7 +116,7 @@ const booksArray = [
 "yearpublished": 1997.0,
    "title": "Harry Potter Sorcerer's Stone",
    "author": "J.K. Rowling",
-   "genre": "Fantasy Fiction",
+   "genre": "Fantasy,Fiction",
    "rating": "4.9/5",
    "summary": "11 year old Harry Potter receives a letter saying that he is invited to attend Hogwarts, school of witchcrat and wizardry. He then learns that a powerful wizard and his minions are after the sorcerer's stone that will make this evil waizard immortal and undefeatable.",
 },
@@ -132,7 +132,7 @@ const booksArray = [
 "yearpublished": 1998.0,
    "title": "Holes",
    "author": "Louis Sachar",
-   "genre": "Mystery, Adventure Fiction",
+   "genre": "Mystery,Adventure Fiction",
    "rating": "4/5",
    "summary": "The book centers on Stanley Yelnats, who is sent to Camp Green Lake, a correctional boot camp in a desert in Texas, after being falsely accused of theft."
 },
@@ -148,7 +148,7 @@ const booksArray = [
 "yearpublished": 2005.0,
    "title": "Percy Jackson and the Lightning Thief",
    "author": "Rick Riordan",
-   "genre": "Greek Mythology, Fantasy Fiction",
+   "genre": "Fantasy Fiction",
    "rating": "4.3/5",
    "summary": "The Lightning Thief is a light-hearted fantasy about a modern 12-year-old boy who learns that his true father is Poseidon, the Greek god of the sea. Percy sets out to become a hero by undertaking a quest across the United States to find the entrance to the UnderWorld and stop a war between the gods."
 },
@@ -156,7 +156,7 @@ const booksArray = [
 "yearpublished": 1884.0,
    "title": "The Adventures of Huckleberry Finn",
    "author": "Mark Twain",
-   "genre": "Adventure Fiction, Humor",
+   "genre": "Adventure Fiction,Humor",
    "rating": "3.8/5",
    "summary": "Mark Twain's classic The Adventures of Huckleberry Finn is told from the point of view of Huck Finn, a barely literate teen who fakes his own death to esacpe his abusive, drunken father. He encounters a runaway slave named Jim, and the two embark on a raft journey down the Mississippi River."
 },
@@ -164,7 +164,7 @@ const booksArray = [
 "yearpublished": 1993.0,
    "title": "The Giver",
    "author": "Lois Lowry",
-   "genre": "Science Fiction, Dystopia",
+   "genre": "Science Fiction,Dystopia",
    "rating": "4.1/5",
    "summary": "The Giver, written by Lois Lowry, is a story about a society with citizens who have no memories of its past, except for the individual known as the Receiver of Memory. Citizens are not given freedom or choice. Without choice, the elders of society believe they can prevent negative elements, such as war and poverty."
 },
@@ -180,7 +180,7 @@ const booksArray = [
 "yearpublished": 1950.0,
    "title": "The Lion, the Witch, and the Wardrobe",
    "author": "C.S. Lewis",
-   "genre": "Fantasy Fiction",
+   "genre": "Fantasy,Fiction",
    "rating":"4.2/5",
    "summary": "The Lion, The Witch and the Wardrobe by C.S. Lewis is a classic children's fantasy novel that tales readers on a magical journey through a wardrobe into the enchanting world of Narnia where four siblings must battle the evil witch and restore the rightful fuler to the throne."
 },
@@ -188,7 +188,7 @@ const booksArray = [
 "yearpublished": 1954.0,  
    "title": "The Lord of the Rings",
    "author": "J.R.R. Tolkien",
-   "genre": "Fantasy Fiction",
+   "genre": "Fantasy,Fiction",
    "rating": "4.5/5",
    "summary": "A hobbit names Frodo inherits the One Ring, which can destroy the entire world. With the reccently reawakened evil, being Sauron, going after the Ring to cement his reign, Frodo joins with eight others to destroy the Ring and defeat Sauron."
 },
@@ -348,10 +348,12 @@ const booksArray = [
 "yearpublished": 2024.0,
    "title": "The Good, the Bad, and the Aunties",
    "author": "Jesse Q Sutanto",
-   "genre": "Romance, Fiction",
+   "genre": "Romance,Fiction",
    "rating": "3.68/5",
    "summary": "What should have been a family celebration of Chinese New Year descends into chaos when longtime foes crash the party.",
-}
+},
+{
+"yearpublished": 
 ];
 
 let books = booksArray; 
