@@ -63,6 +63,12 @@
 
         <button type="submit" id="AddBtn">Submit</button>
     </form>
+
+
+
+    <div id = "UserDiv">
+
+    </div>
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
@@ -89,6 +95,9 @@
         import{getDatabase,ref,child,get,set,update,remove} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
         const db = getDatabase();
 
+        let UserDiv = document.getElementById("UserDiv")
+        let stdno = 1;
+
         let counter = 0; 
         let name = document.getElementById("name");
         let email = document.getElementById("email");
@@ -102,6 +111,8 @@
                 comment: comment.value
             }).then(()=>{
                 alert("data added");
+
+                
             }).catch(()=>{
                 alert("error");
                 console.log(error);
@@ -112,17 +123,12 @@
         function RetData(){
             const dbref = ref(db);
 
-            get(child(dbref,"userSet/" + randomNumber(1,10000))).then((snapshot)=>{
-                if(snapshot.exists()){
-                    name.value = snapshot.val().name
-                    email.value = snapshot.val().email
-                    comment.value = snapshot.val().comment
+            get(child(dbref,"userSet/")).then((user)=>{
+               user.forEach(std =>{
+                adduser(std);
 
 
-                }
-                else{
-                    alert("user do not exist");
-                }
+               });
             })
             .catch((error)=>{
                 alert("unsuccessful");
@@ -152,9 +158,27 @@
             })
         }
 
+function adduser(std){
+    let key =std.key;
+    let value = std.val();
 
+    let name = document.createElement("li");
+    let email = document.createElement("li");
+    let comment = document.createElement("li");
+
+    name.innerHTML = "Name: " + value.name;
+    email.innerHTML = "Emai: " + value.email;
+    comment.innerHTML = "comment : " + value.comment;
+
+    let ul = document.createElement('ul');
+    ul.append(name , email, comment);
+    UserDiv.append(ul);
+    stdno++;
+
+
+}
         AddBtn.addEventListener('click',AddData);
-
+window.addEventListener('load', RetData)
       </script>
 </body>
 </html>
