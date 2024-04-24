@@ -352,8 +352,7 @@ const booksArray = [
    "rating": "3.68/5",
    "summary": "What should have been a family celebration of Chinese New Year descends into chaos when longtime foes crash the party.",
 },
-{
-"yearpublished": 
+
 ];
 
 let books = booksArray; 
