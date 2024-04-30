@@ -90,7 +90,7 @@
       
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+
 
         import{getDatabase,ref,child,get,set,update,remove} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
         const db = getDatabase();
@@ -98,19 +98,21 @@
         let UserDiv = document.getElementById("UserDiv")
         let stdno = 1;
 
-        let counter = 0; 
+     
         let name = document.getElementById("name");
         let email = document.getElementById("email");
         let comment = document.getElementById("comment");
 //add
         function AddData(){
-            counter++;
-            set(ref(db,'userSet/' + counter),{
-                nameofuser: name.value,
+            
+            set(ref(db,'userSet/' + document.getElementById("name").value),{
+                name: name.value,
                 email:email.value,
                 comment: comment.value
             }).then(()=>{
+
                 alert("data added");
+                RetData();
 
                 
             }).catch(()=>{
