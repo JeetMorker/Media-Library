@@ -24,16 +24,37 @@
           <h3>Song</h3>
           <p><a href="#" id="song-link">Loading...</a></p>
           <img src="" alt="Song Image" id="song-image">
+          <div class="rating">
+              <span class="star" data-value="1">&#9734;</span>
+              <span class="star" data-value="2">&#9734;</span>
+              <span class="star" data-value="3">&#9734;</span>
+              <span class="star" data-value="4">&#9734;</span>
+              <span class="star" data-value="5">&#9734;</span>
+          </div>
       </div>
       <div class="column" id="popular-movie">
           <h3>Movie</h3>
           <p><a href="#" id="movie-link">Loading...</a></p>
           <img src="" alt="Movie Image" id="movie-image">
+          <div class="rating">
+              <span class="star" data-value="1">&#9734;</span>
+              <span class="star" data-value="2">&#9734;</span>
+              <span class="star" data-value="3">&#9734;</span>
+              <span class="star" data-value="4">&#9734;</span>
+              <span class="star" data-value="5">&#9734;</span>
+          </div>
       </div> 
       <div class="column" id="popular-book">
           <h3>Book</h3>
           <p><a href="#" id="book-link">Loading...</a></p>
           <img src="" alt="Book Image" id="book-image">
+          <div class="rating">
+              <span class="star" data-value="1">&#9734;</span>
+              <span class="star" data-value="2">&#9734;</span>
+              <span class="star" data-value="3">&#9734;</span>
+              <span class="star" data-value="4">&#9734;</span>
+              <span class="star" data-value="5">&#9734;</span>
+          </div>
       </div>
   </div>
   <h2> Popular Genres </h2>
@@ -116,6 +137,24 @@
       setRandomItem("movie-link", popularMovies, "movie-image");
       setRandomItem("book-link", popularBooks, "book-image");
     };
+
+      document.addEventListener("DOMContentLoaded", function() {
+          var stars = document.querySelectorAll(".star");
+
+          stars.forEach(function(star, index) {
+              star.addEventListener("click", function() {
+                  var value = index + 1; // Add 1 to index to get the value of the star clicked
+                  stars.forEach(function(s, i) {
+                      if (i < value) {
+                          s.innerHTML = "&#9733;"; // Filled star character
+                      } else {
+                          s.innerHTML = "&#9734;"; // Empty star character
+                      }
+                  });
+              });
+          });
+      });
+
   </script>
 </body>
 </html>

@@ -144,4 +144,17 @@ p1 {
   margin-left: 15px;
 }
 
+.rating {
+    margin-top: 10px;
+    font-size: 24px;
+}
 
+.star {
+    font-size: 24px;
+    color: #ffd700; /* Default color */
+    cursor: pointer;
+}
+
+.star.selected {
+    color: #ffcc00; /* Selected color */
+}
