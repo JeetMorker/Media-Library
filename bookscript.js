@@ -348,10 +348,18 @@ const booksArray = [
 "yearpublished": 2024.0,
    "title": "The Good, the Bad, and the Aunties",
    "author": "Jesse Q Sutanto",
-   "genre": "Romance,Fiction",
+   "genre": "Romance",
    "rating": "3.68/5",
    "summary": "What should have been a family celebration of Chinese New Year descends into chaos when longtime foes crash the party.",
 },
+{
+"yearpublished": 2022.0,
+   "title": "What If? 2",
+   "author": "Randall Munroe",
+   "genre": "Humor",
+   "rating": "4.4/5",
+   "summary": "The questions throughout What If? 2 are equal parts brilliant, gross, and wonderfully absurd and the answers are thorough, deeply researched, and great fun....Science isn't easy, but in Munroe's capable hands, it surely can be fun."
+}
 
 ];
 
