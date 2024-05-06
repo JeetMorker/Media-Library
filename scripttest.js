@@ -1,64 +1,3 @@
-// Import the functions you need from the SDKs you need
-import { collection, getDocs, doc, getDoc, getFirestore } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js";
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyCYGFqE19eQg0rn-MurpJ6OT7JBUii2OzM",
-  authDomain: "media-670bb.firebaseapp.com",
-  projectId: "media-670bb",
-  storageBucket: "media-670bb.appspot.com",
-  messagingSenderId: "784706745218",
-  appId: "1:784706745218:web:b493af2604a4ca38f6159b",
-  measurementId: "G-6G1VW669BZ"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
- import{getDatabase,ref,child,get,set,update,remove} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
- const db = getFirestore(app);
-
-
-
-const docRef = doc(db,"comments/movies/");
-const docSnap = await getDoc(docRef);
-console.log("Document data:", docSnap.data());
-
-
-
-
-
-
-// Query a reference to a subcollection
-const querySnapshot = await getDocs(collection(db, "comments", "movies", "500 Days of Summer"));
-querySnapshot.forEach((doc) => {
-  // doc.data() is never undefined for query doc snapshots
-  console.log(doc.id, " => ", doc.data());
-console.log(doc.comment)
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 var score2 = 0;
@@ -638,7 +577,7 @@ sortAndDisplayMovies(movies, 'a-z', 'All','All');
 
 
 
-function clearSearch() {
+export function clearSearch() {
     document.getElementById('titleSearch').value = '';
     document.getElementById('sortOptions').value = 'a-z';
 document.getElementById('genreSelect').value = 'All';
@@ -648,7 +587,7 @@ document.getElementById('ageRating').value = 'All';
 
 
 
-function showDetails(movie) {
+export function showDetails(movie) {
 const artistId = movie.title.replace(/\s+/g, '_');
 currentMovie = movie.title.replace(/\s+/g, '_');
     const overlay = document.getElementById('overlay');
@@ -733,7 +672,7 @@ currentMovie = movie.title.replace(/\s+/g, '_');
     }
 }
 
-function generateStarRatingHTML(artistId, score) {
+export function generateStarRatingHTML(artistId, score) {
     let starsHTML = '';
 score2 = score;
 for (let i = 1; i <= 5; i++) {
@@ -747,7 +686,7 @@ for (let i = 1; i <= 5; i++) {
 }
 
 
-function updateSongRating(song, score) {
+export function updateSongRating(song, score) {
     console.log(`Updating rating for song '${song.artist}' to ${score}`);
 }
 
@@ -757,7 +696,7 @@ var currentMovie = "";
 
 
 
-function closeOverlay() {
+export function closeOverlay() {
     var overlay = document.getElementById('overlay');
     if (overlay) {
 	overlay.style.transition = 'opacity 0.1s linear';
@@ -765,7 +704,7 @@ function closeOverlay() {
 
     }
 }
-function showOverlay() {
+export function showOverlay() {
     var overlay = document.getElementById('overlay');
     if (overlay) {
         overlay.classList.add('active');
@@ -773,11 +712,11 @@ function showOverlay() {
 }
 
 
-function showLoadingOverlay() {
+export function showLoadingOverlay() {
     document.getElementById('loading-overlay').style.display = 'flex';
 }
 
-function hideLoadingOverlay() {
+export function hideLoadingOverlay() {
     document.getElementById('loading-overlay').style.display = 'none';
 }
 
@@ -801,7 +740,7 @@ updateMovies();
 });
 
 
-function postComment(artistId) {
+export function postComment(artistId) {
     
 var input = document.getElementById('commentInput');
     var commentDisplay = document.getElementById('commentDisplay');
@@ -863,7 +802,7 @@ ratingSpan.textContent = "    " + "★".repeat(score2) + "☆".repeat(5-score2);
 
 
 
-function updateMovies() {
+export function updateMovies() {
     const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
 	
     const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(titleSearchValue));
@@ -874,7 +813,7 @@ currentageRating = document.getElementById('ageRating').value;
 }
 
 
-function sortAndDisplayMovies(moviesToSort, sortOption, genreSelect,ageRating) {
+export function sortAndDisplayMovies(moviesToSort, sortOption, genreSelect,ageRating) {
 showLoadingOverlay(); 
 
    let sortedMovies = [...moviesToSort]; 
@@ -907,7 +846,7 @@ if (ageRating != "All") {
     hideLoadingOverlay();
 
 }
-function sortMovies() {
+export function sortMovies() {
     const sortValue = document.getElementById('sortOptions').value;
     let sortedMovies = [...movies]; 
 
@@ -934,7 +873,7 @@ console.log('Sorted movies: ', sortedMovies);
     loadMovies(sortedMovies);
 }
 
-function searchMovies() {
+export function searchMovies() {
     const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
     const filteredMovies = movies.filter(movie => {
         return movie.title.toLowerCase().includes(titleSearchValue); 
@@ -945,7 +884,7 @@ function searchMovies() {
 
 document.getElementById('titleSearch').addEventListener('input', updateMovies);
 
-function loadMovies(filteredmovies = movies) { // Takes in filtered movie list
+export function loadMovies(filteredmovies = movies) { // Takes in filtered movie list
     const grid = document.getElementById('moviesGrid');
     grid.innerHTML = ''; // Resets current grid
 			

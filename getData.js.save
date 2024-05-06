@@ -9,6 +9,7 @@ import {closeOverlay, clearSearch,showDetails,generateStarRatingHTML, showOverla
 
 updateMovies();
 
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -27,13 +28,14 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+ import{getDatabase,ref,child,get,set,update,remove} from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
  const db = getFirestore(app);
 
 
 
 export function dat() {
-const docRef = firebase.doc(db,"comments/movies/");
-const docSnap = firebase.getDoc(docRef);
+const docRef = doc(db,"comments/movies/");
+const docSnap = getDoc(docRef);
 return docSnap.data();
 }
 

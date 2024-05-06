@@ -1,11 +1,17 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyCYGFqE19eQg0rn-MurpJ6OT7JBUii2OzM",
+  authDomain: "media-670bb.firebaseapp.com",
+  projectId: "media-670bb",
+  storageBucket: "media-670bb.appspot.com",
+  messagingSenderId: "784706745218",
+  appId: "1:784706745218:web:b493af2604a4ca38f6159b",
+  measurementId: "G-6G1VW669BZ"
+};
 
-
-
-
-
-
-
-
+   const firebaseApp = firebase.initializeApp(firebaseConfig);
+   const db = firebaseApp.firestore;
+   const auth = firebaseApp.auth();
+console.log(firebaseApp)
 
 
 var score2 = 0;
@@ -600,8 +606,7 @@ const artistId = movie.title.replace(/\s+/g, '_');
 currentMovie = movie.title.replace(/\s+/g, '_');
     const overlay = document.getElementById('overlay');
     const details = document.getElementById('movieDetails');
-    details.innerHTML = ` <button id="closeOverlay" onclick="closeOverlay()">Close</button>
-
+details.innerHTML = ` <button id="closeOverlay" onclick="closeOverlay()">Close</button>
 <h2>${movie.title}</h2>
 <div class="movieContent">	
 		<div class="textDetails">
@@ -694,6 +699,14 @@ function updateSongRating(song, score) {
 
 var currentMovie = "";
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('yourButtonId'); // Replace 'yourButtonId' with the actual ID of your button
+    if (button) {
+        button.addEventListener('click', closeOverlay);
+    }
+});
 
 
 
