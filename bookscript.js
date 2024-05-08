@@ -353,14 +353,61 @@ const booksArray = [
    "summary": "What should have been a family celebration of Chinese New Year descends into chaos when longtime foes crash the party.",
 },
 {
-"yearpublished": 2022.0,
-   "title": "What If? 2",
-   "author": "Randall Munroe",
-   "genre": "Humor",
-   "rating": "4.4/5",
-   "summary": "The questions throughout What If? 2 are equal parts brilliant, gross, and wonderfully absurd and the answers are thorough, deeply researched, and great fun....Science isn't easy, but in Munroe's capable hands, it surely can be fun."
+"yearpublished": 1953.0,
+   "title": "Fahrenheit 451",
+   "author": "Ray Bradbury",
+   "genre": "Fiction",
+   "rating": "4/5",
+   "summary": "Fahrenheit 451 is a 1953 dystopian novel by American writer Ray Bradbury. It presents a future American society where books have been outlawed and 'firemen' burn any that are found.",
+},
+{
+"yearpublished": 1952.0,
+   "title": "Charlotte's Web",
+   "author": "E.B. White",
+   "genre": "Fiction",
+   "rating": "4.2/5",
+   "summary": "The novel tells the story of a livestock pig names Wilbur and his friendship with a barn spider named Charlotte.",
+},
+{
+"yearpublished": 2012.0,
+   "title": "Ungifted",
+   "author": "Gordan Korman",
+   "genre": "Fiction",
+   "rating": "4/5",
+   "summary": "The story is told with chapters of alternating perspectives. The plot revolves around Donovan Curtis, a troublemaker who gets wrapped up in a major prank gone wrong.",
+},
+{
+"yearpublished": 2007.0,
+   "title": "Diary of a Wimpy Kid",
+   "author": "Jeff Kinney",
+   "genre": "Fiction",
+   "rating": "4.7/5",
+   "summary": "The book is about a boy named Greg Heffley and his attempts to become popular in his first year of middle school.",
+},
+{
+"yearpublished": 2003.0,
+   "title": "Harry Potter and the Order of the Phoenix",
+   "author": "J.K. Rowling",
+   "genre": "Fantasy",
+   "rating": "4.5/5",
+   "summary": "Harry Potter is due to start his fifth year at Hogwarts School of Witchcraft and Wizardy. He is desperate to get back to school and find out why his friends Ron and Hermione have been so secretive all summer.",
+},
+{
+"yearpublished": 2011.0,
+   "title": "Walt Disney The Biography",
+   "author": "Neal Gabler",
+   "genre": "Biography",
+   "rating": "4.2/5",
+   "summary": "His classic films illuminated everyone's childhood. The theme parks are onvery tourist itinerary. The movie empire is one of Hollywood's biggest layers.",
 }
-
+{
+"yearpublished": 2017.0,
+   "title": "I Am Watching You",
+   "author": "Teresa Driscoll",
+   "genre": "Thriller",
+   "rating": "4/5",
+   "summary": "What would it take to make you intervene? When Ella Longfield overhears two attractive young men flirting with teenage girls on a train, she thinks nothing of it--until she realises they are fresh out of prison and her maternal instinct is ut on high alert.",
+}
 ];
 
 let books = booksArray; 
