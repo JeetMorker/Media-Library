@@ -399,7 +399,7 @@ const booksArray = [
    "genre": "Biography",
    "rating": "4.2/5",
    "summary": "His classic films illuminated everyone's childhood. The theme parks are onvery tourist itinerary. The movie empire is one of Hollywood's biggest layers.",
-}
+},
 {
 "yearpublished": 2017.0,
    "title": "I Am Watching You",
