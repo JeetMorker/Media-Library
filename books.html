@@ -117,7 +117,6 @@ a{
 	</style>
 </head>
 
-	<h4 id="DarkModetext">Dark Mode is OFF</h4>
 	<button onclick="darkMode()">Darkmode</button>
 	<button onclick="lightMode()">LightMode</button>
 	<script>
@@ -132,7 +131,10 @@ a{
 		function lightMode() {
 			let element = document.body;
 			let content = document.getElementById("DarkModetext");
-			element.className = "light-mode";			
+			element.className = "light-mode";
+			document.querySelectorAll('h1').forEach(e=>e.style.color="black");
+			document.querySelectorAll('p1')[0].style.color="black";
+			document.querySelectorAll('p3').forEach(e=>e.style.color="black");			
 		}
 	</script>
 </body>
