@@ -42,10 +42,10 @@ a{
         </nav>
 
 	<h1>Welcome to the Books Library!</h1>
-         <p1>Rate Today, Reshape Tommorrow: Your Daily Impact on Media Choices!</p2>
+         <p1>Rate Today, Reshape Tommorrow: Your Daily Impact on Media Choices!</p1>
        </header>
 
-<center><h3>Search for a Book</h3>
+<center><h1>Search for a Book</h1>
 <div id="searchBar">
 	<input type="text" id="titleSearch" placeholder="Search by book title...">
 <select id="sortOptions">
@@ -83,13 +83,13 @@ a{
 </div>
 
 
-	<h2>Featured News & Updates</h2>
+	<h1>Featured News & Updates</h1>
     <div id ="demo">
 <ul>
-<li>Cozy up to a good book from the classics like The Catcher in the Rye, The Giver, and many more!</li>
+<p3>Cozy up to a good book from the classics like The Catcher in the Rye, The Giver, and many more!</p3>
 &nbsp
 &nbsp
-<li>New Releases! Bestselling New Series Fourteen Days by Margaret Atwood hits the shelves on February 6, 2024. Featuring a collection of stories about residents of an apartment building during the pandemic with each character's story written by a different author.</li>
+<p3>New Releases! Bestselling New Series Fourteen Days by Margaret Atwood hits the shelves on February 6, 2024. Featuring a collection of stories about residents of an apartment building during the pandemic with each character's story written by a different author.</p3>
 </ul> 
 </div>
    </body>
@@ -107,6 +107,7 @@ a{
 		.dark-mode {
 			background-color: black;
 			color: black;
+			
 		}
 
 		.light-mode {
@@ -116,7 +117,7 @@ a{
 	</style>
 </head>
 
-	<h3 id="DarkModetext">Dark Mode is OFF</h3>
+	<h4 id="DarkModetext">Dark Mode is OFF</h4>
 	<button onclick="darkMode()">Darkmode</button>
 	<button onclick="lightMode()">LightMode</button>
 	<script>
@@ -124,15 +125,14 @@ a{
 			let element = document.body;
 			let content = document.getElementById("DarkModetext");
 			element.className = "dark-mode";
-			content.innerText = "Dark Mode is ON";
-			
+			document.querySelectorAll('h1').forEach(e=>e.style.color="white");
+			document.querySelectorAll('p1')[0].style.color="white";
+			document.querySelectorAll('p3').forEach(e=>e.style.color="white");
 		}
 		function lightMode() {
 			let element = document.body;
 			let content = document.getElementById("DarkModetext");
-			element.className = "light-mode";
-			content.innerText = "Dark Mode is OFF";
-			
+			element.className = "light-mode";			
 		}
 	</script>
 </body>
