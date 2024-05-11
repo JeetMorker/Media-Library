@@ -262,32 +262,25 @@ function clearSearch() {
 
 
 function showDetails(song) {
+const artistId = song.artist.replace(/\s+/g, '_');
+currentsong = song.artist.replace(/\s+/g, '_');
     const overlay = document.getElementById('overlay');
     const details = document.getElementById('songDetails');
+    details.innerHTML = ` <button id="closeOverlay" onclick="closeOverlay()">Close</button>
 
-    if (!details) {
-        console.error("Element with ID 'songDetails' not found.");
-        return;
-    }
+<h2>${song.artist}</h2>
+<div class="songContent">	
+    <div class="textDetails">
+            <p><strong>Rank:</strong> ${song.rank}</p>
+            <p><strong>Genre:</strong> ${song.genre}</p>
+            <div class="songDescription">${song.description}</div>
 
-    const artistId = song.artist.replace(/\s+/g, '_'); // Replace spaces with underscores
-    details.innerHTML =
-      ` 
-        <button id="closeOverlay" onclick="closeOverlay()">Close</button>
-        <h2>${song.artist}</h2>
-        <div class="songContent">  
-            <div class="textDetails">
-                <p><strong>Billboard rank:</strong> ${song.rank}</p>
-                <p><strong>Genre:</strong> ${song.genre}</p>
-                <div class="songDescription">${song.description}</div>
-            </div>
-            <div class="songPoster">
-            <img src="songs/${song.artist.replace(/:/g, '')}.jpg" alt="${song.artist}" class="songPoster">
+
+
+     <div class="star-rating" id="starRating_${artistId}">
+                ${generateStarRatingHTML(artistId, song.score || 0)}
             </div>
 
-            <div class="star-rating" id="starRating_${artistId}">
-                ${generateStarRatingHTML(artistId, song.rating || 0)}
-            </div>
 
             <div class="comment-section">
                 <textarea placeholder="Add a comment..." id="commentInput"></textarea>
@@ -297,52 +290,67 @@ function showDetails(song) {
 
 
 
+
+     </div>
+
+
+
+
+     <div class="songPoster">
+     <img src="songs/${song.artist.replace(/:/g, '')}.jpg" alt="${song.artist}" class="songPoster">
+     </div>
+
+
+
+
         </div>
     `;
 
     overlay.style.display = 'flex';
     overlay.classList.add('active');
 
-    // Attach event listeners for star rating
-    const starRatingDiv = document.getElementById(`starRating_${artistId}`);
-    if (starRatingDiv) {
-        starRatingDiv.addEventListener('click', event => {
-            if (event.target.matches('label')) {
-                const rating = parseInt(event.target.dataset.value);
-                updateSongRating(song, rating);
-                // Update star ratings appearance
-                const labels = starRatingDiv.querySelectorAll('label');
-                const selectedRating = parseInt(event.target.dataset.value);
-                labels.forEach((label, index) => {
-                    if (index < selectedRating) {
-                        label.classList.add('selected');
-                    } else {
-                        label.classList.remove('selected');
-                    }
-                });
-            }
-        });
-    } else {
-        console.error(`Element with ID 'starRating_${artistId}' not found.`);
-    }
-}
+   // Attach event listeners for star rating
+      const starRatingDiv = document.getElementById(`starRating_${artistId}`);
+      if (starRatingDiv) {
+          starRatingDiv.addEventListener('click', event => {
+              if (event.target.matches('label')) {
+                  const score = parseInt(event.target.dataset.value);
+      score2 = score;
+                  updateSongRating(song, score);
+                  // Update star ratings appearance
+                  const labels = starRatingDiv.querySelectorAll('label');
+                  const selectedRating = parseInt(event.target.dataset.value);
+                  labels.forEach((label, index) => {
+                      if (index < selectedRating) {
+                          label.classList.add('selected');
+                      } else {
+                          label.classList.remove('selected');
+                      }
+                  });
+              }
+          });
+      } else {
+          console.error(`Element with ID 'starRating_${artistId}' not found.`);
+      }
+  }
 
-function generateStarRatingHTML(artistId, rating) {
-    let starsHTML = '';
-    for (let i = 1; i <= 5; i++) {
-        const checked = i === rating ? 'selected' : '';
-        starsHTML += `
-            <input type="radio" id="star_${artistId}_${i}" name="rating_${artistId}" value="${i}" style="display:none;">
-            <label for="star_${artistId}_${i}" data-value="${i}" class="star ${checked}">&#9733;</label>
-        `;
-    }
-    return starsHTML;
-}
+  function generateStarRatingHTML(artistId, score) {
+      let starsHTML = '';
+  score2 = score;
+  for (let i = 1; i <= 5; i++) {
+          const checked = i === score ? 'selected' : '';
+          starsHTML += `
+              <input type="radio" id="star_${artistId}_${i}" name="score_${artistId}" value="${i}" style="display:none;">
+              <label for="star_${artistId}_${i}" data-value="${i}" class="star ${checked}">&#9733;</label>
+          `;
+      }
+      return starsHTML;
+  }
 
 
-function updateSongRating(song, rating) {
-    console.log(`Updating rating for song '${song.artist}' to ${rating}`);
-}
+  function updateSongRating(song, score) {
+      console.log(`Updating rating for song '${song.artist}' to ${score}`);
+  }
 
 function closeOverlay() {
     var overlay = document.getElementById('overlay');
