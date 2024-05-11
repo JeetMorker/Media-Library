@@ -1,3 +1,7 @@
+var score2 = 0;
+var user = 1;
+
+
 const songsArray = [
   {
     "artist": "Taylor Swift",
@@ -277,12 +281,21 @@ function showDetails(song) {
                 <p><strong>Genre:</strong> ${song.genre}</p>
                 <div class="songDescription">${song.description}</div>
             </div>
-            <div class="star-rating" id="starRating_${artistId}">
-                ${generateStarRatingHTML(artistId, song.rating || 0)}
-            </div>
             <div class="songPoster">
             <img src="songs/${song.artist.replace(/:/g, '')}.jpg" alt="${song.artist}" class="songPoster">
             </div>
+
+            <div class="star-rating" id="starRating_${artistId}">
+                ${generateStarRatingHTML(artistId, song.rating || 0)}
+            </div>
+
+            <div class="comment-section">
+                <textarea placeholder="Add a comment..." id="commentInput"></textarea>
+                <button onclick="postComment()">Post Comment</button>
+                <div id="commentDisplay"></div>
+            </div>
+
+
 
         </div>
     `;
@@ -345,6 +358,42 @@ function showOverlay() {
         overlay.classList.add('active');
     }
 }
+
+function postComment(artistId) {
+
+var input = document.getElementById('commentInput');
+    var commentDisplay = document.getElementById('commentDisplay');
+
+    var newComment = document.createElement('div');
+    newComment.classList.add('comment'); 
+
+    var nameSpan = document.createElement('span');
+    nameSpan.classList.add('name');
+    nameSpan.textContent = 'User ' + String(user);
+  user = user + 1; 
+    newComment.appendChild(nameSpan);
+
+
+
+    var ratingSpan = document.createElement('ratingSpan');
+    ratingSpan.classList.add('rating');
+
+
+ratingSpan.textContent = "    " + "★".repeat(score2) + "☆".repeat(5-score2);
+
+      newComment.appendChild(ratingSpan);
+
+      var textDiv = document.createElement('div');
+      textDiv.classList.add('text');
+      textDiv.textContent = input.value;
+      newComment.appendChild(textDiv);
+
+      commentDisplay.appendChild(newComment);
+
+      input.value = '';
+  }
+
+
 
 document.getElementById('sortOptions').addEventListener('change', function() {
   currentSortOption = this.value;
