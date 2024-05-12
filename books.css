@@ -72,7 +72,7 @@ body {
     color: #333;
     line-height: 1.6;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     background: #f4f4f4;
 }
 
@@ -233,4 +233,8 @@ font-size: 18px;
     display: none;
 }
 
+
+.light-mode {
+padding: 0;
+}
 

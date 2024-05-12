@@ -2,7 +2,7 @@
 
 var score2 = 0;
 var user = 1;
- const moviesArray = [
+export const moviesArray = [
   {
     "year": 1991.0,
     "title": "Terminator 2: Judgment Day",
@@ -357,7 +357,7 @@ var user = 1;
   },
   {
     "year": 2020.0,
-    "title": "One Night in Miami...",
+    "title": "One Night in Miami",
     "genre": "Drama",
     "rating": 7.1,
     "age": "R",
@@ -429,7 +429,7 @@ var user = 1;
   },
   {
     "year": 2021.0,
-    "title": "Summer of Soul (...Or, When the Revolution Could Not Be Televised)",
+    "title": "Summer of Soul (Or, When the Revolution Could Not Be Televised)",
     "genre": "Documentary,Music",
     "rating": 8.0,
     "age": "PG-13",
@@ -568,7 +568,7 @@ var user = 1;
 let movies = moviesArray; 
 
 document.addEventListener('DOMContentLoaded', function() {
-sortAndDisplayMovies(movies, 'a-z', 'All','All');
+sortAndDisplayMovies(document,movies, 'a-z', 'All','All');
         
 
 });
@@ -577,12 +577,12 @@ sortAndDisplayMovies(movies, 'a-z', 'All','All');
 
 
 
-export function clearSearch() {
+export function clearSearch(document) {
     document.getElementById('titleSearch').value = '';
     document.getElementById('sortOptions').value = 'a-z';
 document.getElementById('genreSelect').value = 'All';
 document.getElementById('ageRating').value = 'All';
-    sortAndDisplayMovies(movies, 'a-z','All','All');
+    sortAndDisplayMovies(document, movies, 'a-z','All','All');
 }
 
 
@@ -592,9 +592,9 @@ const artistId = movie.title.replace(/\s+/g, '_');
 currentMovie = movie.title.replace(/\s+/g, '_');
     const overlay = document.getElementById('overlay');
     const details = document.getElementById('movieDetails');
-    details.innerHTML = ` <button id="closeOverlay" onclick="closeOverlay()">Close</button>
+    details.innerHTML = ` <button id="closeOverlay" onclick="closeOverlay">Close</button>
 
-<h2>${movie.title}</h2>
+<h2 id = "movieName">${movie.title}</h2>
 <div class="movieContent">	
 		<div class="textDetails">
             <p><strong>Release Year:</strong> ${movie.year}</p>
@@ -616,8 +616,9 @@ currentMovie = movie.title.replace(/\s+/g, '_');
 
 
     <div class="comment-section">
+<textarea placeholder="Enter your name..." id="nameInput"></textarea>
         <textarea placeholder="Add a comment..." id="commentInput"></textarea>
-        <button onclick="postComment()">Post Comment</button>
+<button id = "commentButton">Post Comment</button>
         <div id="commentDisplay"></div>
     </div>
 
@@ -636,7 +637,7 @@ currentMovie = movie.title.replace(/\s+/g, '_');
 
 
 
-1
+
 <div class="moviePoster">
 <img src="movies/${movie.title.replace(/:/g, '')}.jpg" alt="${movie.title}" class="moviePoster">
 </div>
@@ -647,7 +648,6 @@ currentMovie = movie.title.replace(/\s+/g, '_');
     overlay.style.display = 'flex';
     overlay.classList.add('active');
 
-    // Attach event listeners for star rating
     const starRatingDiv = document.getElementById(`starRating_${artistId}`);
     if (starRatingDiv) {
         starRatingDiv.addEventListener('click', event => {
@@ -696,7 +696,7 @@ var currentMovie = "";
 
 
 
-export function closeOverlay() {
+export function closeOverlay(document) {
     var overlay = document.getElementById('overlay');
     if (overlay) {
 	overlay.style.transition = 'opacity 0.1s linear';
@@ -721,36 +721,57 @@ export function hideLoadingOverlay() {
 }
 
 
-document.getElementById('sortOptions').addEventListener('change', function() {
-	currentSortOption = this.value;
-updateMovies();
-
-});
-
-document.getElementById('genreSelect').addEventListener('change', function() {
-        currentGenreOption = this.value;
-updateMovies();
-
-});
-
-document.getElementById('ageRating').addEventListener('change', function() {
-        currentageRating = this.value;
-updateMovies();
-
-});
 
 
-export function postComment(artistId) {
+
+
+
+export function addComment(document,comm,user,rating) {                                                                                                                                                                                                                                                                                                                                                                                             var input = document.getElementById('commentInput');
+    var newComment = document.createElement('div');
+    newComment.classList.add('comment');
+
+    var nameSpan = document.createElement('span');
+    nameSpan.classList.add('name');                                                                                                                                                                                   nameSpan.textContent = 'User ' + String(user);
+nameSpan.textContent = user;        
+
+    newComment.appendChild(nameSpan);
+
+
+
+    var ratingSpan = document.createElement('ratingSpan');
+    ratingSpan.classList.add('rating');
+
+
+ratingSpan.textContent = "    " + "★".repeat(rating) + "☆".repeat(5-rating);
+
+
+    newComment.appendChild(ratingSpan);
+
+    var textDiv = document.createElement('div');
+    textDiv.classList.add('text');
+    textDiv.textContent = comm;
+    newComment.appendChild(textDiv);
+
+    commentDisplay.appendChild(newComment);
+
+}
+
+
+export function postComment(document) {
+
     
 var input = document.getElementById('commentInput');
+
     var commentDisplay = document.getElementById('commentDisplay');
 
     var newComment = document.createElement('div');
     newComment.classList.add('comment'); 
 
+var name = document.getElementById('nameInput');
+
     var nameSpan = document.createElement('span');
     nameSpan.classList.add('name');
-    nameSpan.textContent = 'User ' + String(user);
+    nameSpan.textContent = name.value;
 	user = user + 1; 
     newComment.appendChild(nameSpan);
 
@@ -762,22 +783,6 @@ var input = document.getElementById('commentInput');
 
 ratingSpan.textContent = "    " + "★".repeat(score2) + "☆".repeat(5-score2);
 
-//const ratingSpann = document.getElementById('ratingSpan');
-//ratingSpann.innerHTML = `${score2} ${generateStarRatingHTML(currentMovie, score2)}`;
-
-
-
-//const starRatingDiv = document.getElementById(`starRating_${artistId}`);
- //const labels = starRatingDiv.querySelectorAll('label');
-   //             const selectedRating = parseInt(event.target.dataset.value);
-     //           labels.forEach((label, index) => {
-       //                 label.classList.remove('selected');
-         //           }
-//)
-
-
-
-
 
     newComment.appendChild(ratingSpan);
 
@@ -787,8 +792,10 @@ ratingSpan.textContent = "    " + "★".repeat(score2) + "☆".repeat(5-score2);
     newComment.appendChild(textDiv);
 
     commentDisplay.appendChild(newComment);
-
+const l = [input.value,name.value,score2];
     input.value = '';
+name.value = '';
+return l;
 }
 
 
@@ -802,19 +809,19 @@ ratingSpan.textContent = "    " + "★".repeat(score2) + "☆".repeat(5-score2);
 
 
 
-export function updateMovies() {
+
+export function updateMovies(document) {
     const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
 	
     const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(titleSearchValue));
 var currentSortOption = document.getElementById('sortOptions').value;
-currentGenreOption = document.getElementById('genreSelect').value;
-currentageRating = document.getElementById('ageRating').value;
-    sortAndDisplayMovies(filteredMovies, currentSortOption, currentGenreOption,currentageRating);
+var currentGenreOption = document.getElementById('genreSelect').value;
+var currentageRating = document.getElementById('ageRating').value;
+    sortAndDisplayMovies(document, filteredMovies, currentSortOption, currentGenreOption,currentageRating);
 }
 
 
-export function sortAndDisplayMovies(moviesToSort, sortOption, genreSelect,ageRating) {
-showLoadingOverlay(); 
+export function sortAndDisplayMovies(document,moviesToSort, sortOption, genreSelect,ageRating) {
 
    let sortedMovies = [...moviesToSort]; 
 if (genreSelect != "All") {
@@ -842,8 +849,8 @@ if (ageRating != "All") {
             break;
     }
 
-    loadMovies(sortedMovies);
-    hideLoadingOverlay();
+
+    loadMovies(document,sortedMovies);
 
 }
 export function sortMovies() {
@@ -873,7 +880,7 @@ console.log('Sorted movies: ', sortedMovies);
     loadMovies(sortedMovies);
 }
 
-export function searchMovies() {
+export function searchMovies(document) {
     const titleSearchValue = document.getElementById('titleSearch').value.toLowerCase();
     const filteredMovies = movies.filter(movie => {
         return movie.title.toLowerCase().includes(titleSearchValue); 
@@ -884,16 +891,16 @@ export function searchMovies() {
 
 document.getElementById('titleSearch').addEventListener('input', updateMovies);
 
-export function loadMovies(filteredmovies = movies) { // Takes in filtered movie list
+export function loadMovies(document, filteredmovies = movies) { // Takes in filtered movie list
     const grid = document.getElementById('moviesGrid');
     grid.innerHTML = ''; // Resets current grid
 			
     filteredmovies.forEach(movie => {
-        const movieItem = document.createElement('div');
+        const movieItem = document.createElement('div', { attributes: { id: "movieelement" } });
 
         movieItem.className = 'movieItem'; // Adds movie title to the element
 
-        movieItem.innerHTML = `<img src="movies/${movie.title.replace(/:/g, '')}.jpg" alt="${movie.title}" style="width:100%"><h3>${movie.title}</h3>`;
+        movieItem.innerHTML = `<img src="movies/${movie.title.replace(/:/g, '')}.jpg" id = "movieItem" alt="${movie.title}" style="width:100%"><h3 id = "movieItem">${movie.title}</h3>`;
 	//Adds movie image to the element
 
         movieItem.onclick = () => showDetails(movie);
@@ -901,4 +908,4 @@ export function loadMovies(filteredmovies = movies) { // Takes in filtered movie
     });
 	document.getElementById('movieCount').textContent = `${filteredmovies.length} results`; // Counts total amount of movies in the grid
 }
-updateMovies();
+updateMovies(document);
