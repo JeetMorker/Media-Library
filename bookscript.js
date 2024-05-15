@@ -414,7 +414,7 @@ const booksArray = [
    "author": "Emily McIntire",
    "genre": "Romance",
    "rating": "4.73/5",
-   "summary": He's the prince of La Cosa Nostra. She's the witch who steals his heart",
+   "summary": "He's the prince of La Cosa Nostra. She's the witch who steals his heart",
 },
 {
 "yearpublished": 2024.0,
