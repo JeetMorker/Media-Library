@@ -431,6 +431,14 @@ const booksArray = [
    "genre": "Psychological Fiction",
    "rating": "4.08/5",
    "summary": "Near an isolated mansion lies a beautiful garden. In this garden grow luscious flowers, shady trees...and a collection of precious 'butterflies'.",
+},
+{
+"yearpublished": 1945.0,
+   "title": "Animal Farm",
+   "author": "Goerge Orwell",
+   "genre": "Satire",
+   "rating": "4.01/5",
+   "summary": "Animal Farm tells the story of a group of anthropomorphic farm animals who rebel against their human farmer, hoping to create a society where the animals can be equal, free, and happy." 
 }
 ];
 
