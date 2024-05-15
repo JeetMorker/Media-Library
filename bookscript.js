@@ -407,6 +407,22 @@ const booksArray = [
    "genre": "Thriller",
    "rating": "4/5",
    "summary": "What would it take to make you intervene? When Ella Longfield overhears two attractive young men flirting with teenage girls on a train, she thinks nothing of it--until she realises they are fresh out of prison and her maternal instinct is ut on high alert.",
+},
+{
+"yearpublished": 2024.0,
+   "title": "Hexed",
+   "author": "Emily McIntire",
+   "genre": "Romance",
+   "rating": "4.73/5",
+   "summary": He's the prince of La Cosa Nostra. She's the witch who steals his heart",
+},
+{
+"yearpublished": 2024.0,
+   "title": "King of Sloth",
+   "author": "Ana Huang", 
+   "genre": "Romance",
+   "rating": "4.07/5",
+   "summary": "He'd never wanted anyone enough to chase them...until he met her.",
 }
 ];
 
