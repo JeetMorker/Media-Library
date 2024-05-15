@@ -423,6 +423,14 @@ const booksArray = [
    "genre": "Romance",
    "rating": "4.07/5",
    "summary": "He'd never wanted anyone enough to chase them...until he met her.",
+},
+{
+"yearpublished": 2016.0,
+   "title": "The Butterfly Garden",
+   "author": "Dot Hutchison",
+   "genre": "Psychological Fiction",
+   "rating": "4.08/5",
+   "summary": "Near an isolated mansion lies a beautiful garden. In this garden grow luscious flowers, shady trees...and a collection of precious 'butterflies'.",
 }
 ];
 
