@@ -283,6 +283,7 @@ currentsong = song.artist.replace(/\s+/g, '_');
 
 
             <div class="comment-section">
+            <textarea placeholder="Enter your name..." id="nameInput"></textarea>
                 <textarea placeholder="Add a comment..." id="commentInput"></textarea>
                 <button onclick="postComment()">Post Comment</button>
                 <div id="commentDisplay"></div>
@@ -366,6 +367,36 @@ function showOverlay() {
         overlay.classList.add('active');
     }
 }
+ function addComment(document,comm,user,rating) {                                                                                                                                                                                                                                                                                                                                                                                             var input = document.getElementById('commentInput');
+  var newComment = document.createElement('div');
+  newComment.classList.add('comment');
+
+  var nameSpan = document.createElement('span');
+  nameSpan.classList.add('name');                                                                                                                                                                                   nameSpan.textContent = 'User ' + String(user);
+nameSpan.textContent = user;        
+
+  newComment.appendChild(nameSpan);
+
+
+
+  var ratingSpan = document.createElement('ratingSpan');
+  ratingSpan.classList.add('rating');
+
+
+ratingSpan.textContent = "    " + "★".repeat(rating) + "☆".repeat(5-rating);
+
+
+  newComment.appendChild(ratingSpan);
+
+  var textDiv = document.createElement('div');
+  textDiv.classList.add('text');
+  textDiv.textContent = comm;
+  newComment.appendChild(textDiv);
+
+  commentDisplay.appendChild(newComment);
+
+}
+
 
 function postComment(artistId) {
 
@@ -375,9 +406,11 @@ var input = document.getElementById('commentInput');
     var newComment = document.createElement('div');
     newComment.classList.add('comment'); 
 
+  var name = document.getElementById('nameInput');
+
     var nameSpan = document.createElement('span');
     nameSpan.classList.add('name');
-    nameSpan.textContent = 'User ' + String(user);
+    nameSpan.textContent = name.value;
   user = user + 1; 
     newComment.appendChild(nameSpan);
 
@@ -397,8 +430,11 @@ ratingSpan.textContent = "    " + "★".repeat(score2) + "☆".repeat(5-score2);
       newComment.appendChild(textDiv);
 
       commentDisplay.appendChild(newComment);
-
+  const l = [input.value,name.value,score2];
       input.value = '';
+  name.value = '';
+  return l;
+
   }
 
 
