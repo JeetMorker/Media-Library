@@ -11,6 +11,7 @@ async function fetchAndDisplayData() {
 
 fetchAndDisplayData();
 import {
+censorComment,
     addComment,
     moviesArray,
     sortAndDisplayMovies,
@@ -52,7 +53,6 @@ function setupEventListeners() {
         sortAndDisplayMovies(document,moviesArray, sortOption, genreOption, ageRating);
     });
 
-    // Assuming you have a clear search function tied to a button or form reset
     document.getElementById('clearButton').addEventListener('click', () => {clearSearch(document)});  
 
 
@@ -89,7 +89,7 @@ setComments();
 function ownComment() {
 const rat = postComment(document);
 console.log(rat[0])
-saveComment(document.getElementById("movieName").innerText,rat[0],rat[1],rat[2])
+saveComment(censorComment(document.getElementById("movieName").innerText),rat[0],rat[1],rat[2])
 
 
 }
@@ -99,7 +99,7 @@ const comments = await getComments(document.getElementById("movieName").innerTex
 console.log(comments);
     comments.forEach(comment => {
 
-addComment(document, comment.comment, comment.name, comment.rating);
+addComment(document, censorComment(comment.comment), censorComment(comment.name), comment.rating);
 
 });
 }
