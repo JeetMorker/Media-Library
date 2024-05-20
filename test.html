@@ -1,197 +1,204 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Comment Section</title>
-      <!--This is the css for the webpage. -->
-      
-              <style>
-         body {
-         font-family: Arial, sans-serif;
-         margin: 20px;
-         }
-         h1 {
-         text-align: center;
-         }
-         form {
-         max-width: 500px;
-         margin: 0 auto;
-         padding: 20px;
-         background-color: #f2f2f2;
-         border-radius: 5px;
-         }
-         input[type=text], input[type=email] {
-         width: 100%;
-         padding: 12px 20px;
-         margin: 8px 0;
-         display: inline-block;
-         border: 1px solid #ccc;
-         border-radius: 4px;
-         box-sizing: border-box;
-         }
-         textarea {
-         width: 100%;
-         height: 150px;
-         padding: 12px 20px;
-         box-sizing: border-box;
-         border: 1px solid #ccc;
-         border-radius: 4px;
-         resize: vertical;
-         }
-         button {
-         background-color: #4CAF50;
-         color: white;
-         padding: 14px 20px;
-         margin: 8px 0;
-         border: none;
-         border-radius: 4px;
-         cursor: pointer;
-         }
-         button:hover {
-         background-color: #45a049;
-         }
-      
-      </style>
-    </head>
-    <body>
-       <!--Login screen-->
-       <div id="loginScreen">
-         <h1>Login</h1>
-         <button id="googleLoginBtn">Login with Google</button>
-       </div>
- 
-       <!--Comment section (hidden by default)-->
-       <div id="commentSection" style="display: none;">
-         <h1>Comment Section</h1>
-         <button id="logoutBtn">Logout</button>
-         <form>
-           <label for="name">Name:</label>
-           <input type="text" id="name" name="name" required>
-           <label for="comment">Comment:</label>
-           <textarea id="comment" name="comment" required></textarea>
-           <button type="submit" id="AddBtn">Submit</button>
-         </form>
-         <!-- this part is where the comments are displayed-->
-         <div id="UserDiv"></div>
-       </div>
- 
-       <script type="module">
-          // Import the functions from the SDKs 
-          import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
-          import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
-          import { getDatabase, ref, child, get, set, update, remove, push } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
-          import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
- 
-          // web app's Firebase configuration
-          const firebaseConfig = {
-            apiKey: "AIzaSyCAoLUSafn3HFjl__psH1L7iHwNHtyOhpE",
-            authDomain: "fir-ec626.firebaseapp.com",
-            projectId: "fir-ec626",
-            storageBucket: "fir-ec626.appspot.com",
-            messagingSenderId: "601974069703",
-            appId: "1:601974069703:web:476d6a4d8341c5afe2a1e2",
-            measurementId: "G-D9P08JJTEV"
-          };
+<head>
+  <title>Comment Section</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+    input[type=text], input[type=email] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <!--Login screen-->
+  <div id="loginScreen">
+    <h1>Login</h1>
+    <button id="googleLoginBtn">Login with Google</button>
+  </div>
+
+  <!--Comment section (hidden by default)-->
+  <div id="commentSection" style="display: none;">
+    <h1>Comment Section</h1>
+    <button id="logoutBtn">Logout</button>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" required></textarea>
+      <button type="submit" id="AddBtn">Submit</button>
+    </form>
+    <!-- this part is where the comments are displayed-->
+    <div id="UserDiv"></div>
+  </div>
+
+  <script type="module">
+    // Import the functions from the SDKs 
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
+    import { getDatabase, ref, child, get, set, update, remove, push } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+    // web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCAoLUSafn3HFjl__psH1L7iHwNHtyOhpE",
+      authDomain: "fir-ec626.firebaseapp.com",
+      projectId: "fir-ec626",
+      storageBucket: "fir-ec626.appspot.com",
+      messagingSenderId: "601974069703",
+      appId: "1:601974069703:web:476d6a4d8341c5afe2a1e2",
+      measurementId: "G-D9P08JJTEV"
+    };
+    
+    // Initialize Firebase and the realtime storage 
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase();
+    const auth = getAuth();
+    
+    let loginScreen = document.getElementById("loginScreen");
+    let commentSection = document.getElementById("commentSection");
+    let googleLoginBtn = document.getElementById("googleLoginBtn");
+    let logoutBtn = document.getElementById("logoutBtn");
+
+    let UserDiv = document.getElementById("UserDiv");
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let comment = document.getElementById("comment");
+    let currentUser = null;
+    
+    // Login with Google
+    googleLoginBtn.addEventListener('click', () => {
+      const provider = new GoogleAuthProvider();
+      provider.setCustomParameters({
+        prompt: 'select_account'
+      });
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          // User logged in successfully
+          currentUser = result.user;
+          loginScreen.style.display = "none";
+          commentSection.style.display = "block";
           
-          // Initialize Firebase and the realtime storage 
-          const app = initializeApp(firebaseConfig);
-          const db = getDatabase();
-          const auth = getAuth();
+          // Set the email input field value to the user's email
+          email.value = currentUser.email;
           
-          let loginScreen = document.getElementById("loginScreen");
-          let commentSection = document.getElementById("commentSection");
-          let googleLoginBtn = document.getElementById("googleLoginBtn");
-          let logoutBtn = document.getElementById("logoutBtn");
- 
-          let UserDiv = document.getElementById("UserDiv");
-          let name = document.getElementById("name");
-          let comment = document.getElementById("comment");
-          let currentUser = null;
-          
-          // Login with Google
-          googleLoginBtn.addEventListener('click', () => {
-            const provider = new GoogleAuthProvider();
-            provider.setCustomParameters({
-              prompt: 'select_account'
-            });
-            signInWithPopup(auth, provider)
-              .then((result) => {
-                // User logged in successfully
-                currentUser = result.user;
-                loginScreen.style.display = "none";
-                commentSection.style.display = "block";
-                RetData();
-              })
-              .catch((error) => {
-                // Handle errors
-                console.log(error);
-              });
+          RetData();
+        })
+        .catch((error) => {
+          // Handle errors
+          console.log(error);
+        });
+    });
+
+    // Logout
+    logoutBtn.addEventListener('click', () => {
+      signOut(auth)
+        .then(() => {
+          // User logged out successfully
+          currentUser = null;
+          loginScreen.style.display = "block";
+          commentSection.style.display = "none";
+          UserDiv.innerHTML = ""; // Clear comments
+        })
+        .catch((error) => {
+          // errors
+          console.log(error);
+        });
+    });
+
+    function AddData() {
+      if (currentUser) {
+        const commentRef = push(ref(db, 'userSet'));
+        set(commentRef, {
+          name: name.value,
+          email: email.value,
+          comment: comment.value,
+          userId: currentUser.uid
+        }).then(() => {
+          alert("data added");
+          RetData();
+        }).catch((error) => {
+          alert("error");
+          console.log(error);
+        });
+      }
+    }
+
+    function RetData() {
+      if (currentUser) {
+        const dbref = ref(db, "userSet");
+        get(dbref).then((snapshot) => {
+          UserDiv.innerHTML = ""; // Clear existing comments
+          snapshot.forEach((childSnapshot) => {
+            const childData = childSnapshot.val();
+            adduser(childData);
           });
- 
-          // Logout
-          logoutBtn.addEventListener('click', () => {
-            signOut(auth)
-              .then(() => {
-                // User logged out successfully
-                currentUser = null;
-                loginScreen.style.display = "block";
-                commentSection.style.display = "none";
-                UserDiv.innerHTML = ""; // Clear comments
-              })
-              .catch((error) => {
-                // Handle errors
-                console.log(error);
-              });
-          });
- 
-          function AddData() {
-            if (currentUser) {
-              const commentRef = push(ref(db, 'userSet'));
-              set(commentRef, {
-                name: name.value,
-                comment: comment.value,
-                userId: currentUser.uid
-              }).then(() => {
-                alert("data added");
-                RetData();
-              }).catch((error) => {
-                alert("error");
-                console.log(error);
-              });
-            }
-          }
- 
-          function RetData() {
-            if (currentUser) {
-              const dbref = ref(db, "userSet");
-              get(dbref).then((snapshot) => {
-                UserDiv.innerHTML = ""; // Clear existing comments
-                snapshot.forEach((childSnapshot) => {
-                  const childData = childSnapshot.val();
-                  adduser(childData);
-                });
-              }).catch((error) => {
-                alert("unsuccessful");
-                console.log(error);
-              });
-            }
-          }
- 
-          function adduser(data) {
-            let name = document.createElement("li");
-            let comment = document.createElement("li");
- 
-            name.innerHTML = "Name: " + data.name;
-            comment.innerHTML = "Comment: " + data.comment;
- 
-            let ul = document.createElement('ul');
-            ul.append(name, comment);
-            UserDiv.append(ul);
-          }
- 
-          AddBtn.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent form submission
-            AddData();
-          });
-       </script>
-    </body>
- </html>
+        }).catch((error) => {
+          alert("unsuccessful");
+          console.log(error);
+        });
+      }
+    }
+
+    function adduser(data) {
+      let name = document.createElement("li");
+      let email = document.createElement("li");
+      let comment = document.createElement("li");
+
+      name.innerHTML = "Name: " + data.name;
+      email.innerHTML = "Email: " + data.email;
+      comment.innerHTML = "Comment: " + data.comment;
+
+      let ul = document.createElement('ul');
+      ul.append(name, email, comment);
+      UserDiv.append(ul);
+    }
+
+    AddBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent form submission
+      AddData();
+    });
+  </script>
+</body>
+</html>
