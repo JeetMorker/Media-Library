@@ -12,7 +12,7 @@ const booksArray = [
 "yearpublished": 2010.0,
    "title": "The Hunger Games",
    "author": "Suzanne Collins",
-   "genre": "Dystopian Fiction",
+   "genre": "Dystopia",
    "rating": "4.7/5",
    "summary": "The Hunger Games is a series of young adult dystopian novels written by American author Suzanne Collins. The first three novels are part of a trilogy following teenage protagonist Katniss Everdeen, and the fourth book is a prequel set 64 years before the original."
 },
@@ -68,7 +68,7 @@ const booksArray = [
 "yearpublished": 2023.0, 
    "title": "Chain-Gang All Stars", 
    "author": "Nana Kwame Adjei-Brenyah",
-   "genre": "Dystopian Fiction",
+   "genre": "Dystopia",
    "rating": "4.1/5",
    "summary": "This satire — in which prison inmates duel on TV for a chance at freedom — makes readers complicit with the bloodthirsty fans sitting ringside. The fight scenes are so well written they demonstrate how easy it might be to accept a world this sick."
 },
@@ -84,7 +84,7 @@ const booksArray = [
 "yearpublished": 1949.0,
    "title": "1984",
    "author": "George Orwell",
-   "genre": "Historical Fiction,Dystopian Fiction",
+   "genre": "Dystopia",
    "rating": "4.2/5",
    "summary": "1984 is a dystopian novel that was written by George Orwell and published in 1949. It tells the story of Winston Smith, a citizen of the miserable society of Oceania, who is trying to rebel against the Party and its omnipresent symbol, Big Brother." 
 },
@@ -164,7 +164,7 @@ const booksArray = [
 "yearpublished": 1993.0,
    "title": "The Giver",
    "author": "Lois Lowry",
-   "genre": "Science Fiction,Dystopia",
+   "genre": "Dystopia",
    "rating": "4.1/5",
    "summary": "The Giver, written by Lois Lowry, is a story about a society with citizens who have no memories of its past, except for the individual known as the Receiver of Memory. Citizens are not given freedom or choice. Without choice, the elders of society believe they can prevent negative elements, such as war and poverty."
 },
@@ -435,10 +435,66 @@ const booksArray = [
 {
 "yearpublished": 1945.0,
    "title": "Animal Farm",
-   "author": "Goerge Orwell",
+   "author": "George Orwell",
    "genre": "Satire",
    "rating": "4.01/5",
-   "summary": "Animal Farm tells the story of a group of anthropomorphic farm animals who rebel against their human farmer, hoping to create a society where the animals can be equal, free, and happy." 
+   "summary": "Animal Farm tells the story of a group of anthropomorphic farm animals who rebel against their human farmer, hoping to create a society where the animals can be equal, free, and happy.", 
+},
+{
+"yearpublished": 1965.0,
+   "title": "Dune",
+   "author": "Frank Herbert",
+   "genre": "Science Fiction",
+   "rating": "4.27/5",
+   "summary": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the 'spice' melange, a drug capable of extending life and enhancing consciousness.",
+},
+{
+"yearpublished": 1951.0,
+   "title": "Foundation",
+   "author": "Isaac Asimov",
+   "genre": "Science Fiction",
+   "rating" "4.17/5",
+   "summary": "For twelve thousand years the Galactic Empire has ruled supreme. Now it is dying. But only Hari Seldon, creator of the revolutionary science of psychology, can see into the future--to a dark age of ignorance, barbarism, and warfare that will last thirty thousand years. To preserve knowledge and save humankind, Seldon gathers the best minds in the Empire--both scientists and scholars--and brings them to a bleak planet at the edge of the galaxy to serve as a beacon of hope for future generations. He calls his sanctuary the Foundation.",
+},
+{
+"yearpublished": 2011.0,
+   "title": "Ready Player One",
+   "author": "Ernest Cline",
+   "genre": "Science Fiction",
+   "rating": "4.23/5",
+   "summary": "In the year 2044, reality is an ugly place. The only time teenage Wade Watts really feels alive is when he's jacked into the virtual utopia known as the OASIS. Wade's devoted his life to studying the puzzles hidden within this world's digital confines, puzzles that are based on their creator's obsession with the pop culture of decades past and that promise massive power and fortune to whoever can unlock them.",
+},
+{
+"yearpublished": 2011.0,
+   "title": "The Martian",
+   "author": "Andy Weir",
+   "genre": "Science Fiction",
+   "rating": "4.42/5",
+   "summary": "Six days ago, astronaut Mark Watney became one of the first people to walk on Mars. Now, he's sure he'll be the first person to die there. After a dust strom nearly kills him and forces his crew to evacuate while thinking him dead, Mark finds himself stranded and completely alone with no way to even signal Earth that he's alive-and even if he could get word out, his supplies would be gone long before a rescue could arrive.",
+},
+{
+"yearpublished": 1985.0,
+   "title": "Ender's Game",
+   "author": "Orson Scott Card",
+   "genre": Science Fiction",
+   "rating": "4.31/5",
+   "summary": "Andrew 'Ender' Wiggin thinks he is playing computer simulated war games; he is, in fact, engaged in something far more desperate. The result of genetic experimentationm Ender may be the military genius Earth desperately needs in a war against an alien enemy seeking to destroy all human life. The only way to find out is to throw Ender into ever harsher training, to chip away and find the diamond inside, or destroy him utterly. Ender Wiggin is six years old when it begins.",
+},
+{
+"yearpublished": 2009.0,
+   "title": "Catching Fire",
+   "author": "Suzanne Collins",
+   "genre": "Dystopia",
+   "rating": "4.33/5",
+   "summary": "Against all odds, Katniss Everdeen has won the Hunger Games. She and fellow District 12 tribute Peeta Mellark are miraculously still alive. Katniss should be relieved, happy even. After all, she has returned to her family and her longtime friend, Gale. Yet nothing is the way Katniss wishes it to be. Gale holds her at an icy distance. Peeta has turned his back on her completely. And there are whispers of a rebellion against the Capitol-a rebellion that Katniss and Peeta may have helped create.",
+},
+{
+"yearpublished": 1999.0,
+   "title": "Harry Potter and the Prisoner of Azkaban",
+   "author": "J.K. Rowling",
+   "genre": "Fantasy",
+   "rating": "4.58/5",
+   "summary": "Harry Potter, along with his best friends, Ron and Hermione, is about to start his third year at Hogwarts School of Witchcraft and Wizardry. Harry can't wait to get back to school after the summer holidays. But when Harry gets to Hogwars, the atmosphere is tense. There's an escaped mass murderer on the loose, and the sinister prison guards of Azkaban have been called in to guard the school...",
 }
 ];
 
