@@ -453,7 +453,7 @@ const booksArray = [
    "title": "Foundation",
    "author": "Isaac Asimov",
    "genre": "Science Fiction",
-   "rating" "4.17/5",
+   "rating": "4.17/5",
    "summary": "For twelve thousand years the Galactic Empire has ruled supreme. Now it is dying. But only Hari Seldon, creator of the revolutionary science of psychology, can see into the future--to a dark age of ignorance, barbarism, and warfare that will last thirty thousand years. To preserve knowledge and save humankind, Seldon gathers the best minds in the Empire--both scientists and scholars--and brings them to a bleak planet at the edge of the galaxy to serve as a beacon of hope for future generations. He calls his sanctuary the Foundation.",
 },
 {
@@ -476,7 +476,7 @@ const booksArray = [
 "yearpublished": 1985.0,
    "title": "Ender's Game",
    "author": "Orson Scott Card",
-   "genre": Science Fiction",
+   "genre": "Science Fiction",
    "rating": "4.31/5",
    "summary": "Andrew 'Ender' Wiggin thinks he is playing computer simulated war games; he is, in fact, engaged in something far more desperate. The result of genetic experimentationm Ender may be the military genius Earth desperately needs in a war against an alien enemy seeking to destroy all human life. The only way to find out is to throw Ender into ever harsher training, to chip away and find the diamond inside, or destroy him utterly. Ender Wiggin is six years old when it begins.",
 },
