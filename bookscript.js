@@ -569,9 +569,11 @@ function updateBooks() {
 
 document.getElementById('genreSelect').addEventListener('change', function() {
     const selectedGenre = this.value;
-    if (selectedGenre === 'all') {
+    if (selectedGenre === 'All') {
+console.log("all");
 	sortAndDisplayBooks(books, document.getElementById('sortOptions').value);
     } else {
+console.log("else");
 	sortBooksByGenre(selectedGenre);
     }
 });
