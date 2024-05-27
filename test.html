@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Comment Section</title>
+  // the css 
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -96,6 +97,7 @@
     const db = getDatabase();
     const auth = getAuth();
     
+    // get user input from the html into a  variable for later use. 
     let loginScreen = document.getElementById("loginScreen");
     let commentSection = document.getElementById("commentSection");
     let googleLoginBtn = document.getElementById("googleLoginBtn");
@@ -146,7 +148,7 @@
           console.log(error);
         });
     });
-
+    // add comments 
     function AddData() {
       if (currentUser) {
         const commentRef = push(ref(db, 'userSet'));
