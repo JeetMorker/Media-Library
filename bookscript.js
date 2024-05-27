@@ -495,6 +495,54 @@ const booksArray = [
    "genre": "Fantasy",
    "rating": "4.58/5",
    "summary": "Harry Potter, along with his best friends, Ron and Hermione, is about to start his third year at Hogwarts School of Witchcraft and Wizardry. Harry can't wait to get back to school after the summer holidays. But when Harry gets to Hogwars, the atmosphere is tense. There's an escaped mass murderer on the loose, and the sinister prison guards of Azkaban have been called in to guard the school...",
+},
+{
+"yearpublished": 2000.0,
+   "title": "Kitchen Confidential",
+   "author": "Anthony Bourdain",
+   "genre": "Cookbook",
+   "rating": "4.16/5",
+   "summary": "A deluxe, annotated edition of Kitchen Confidential to celebrate the life of Anthony Bourdain, featuring new photo inserts.",
+},
+{
+"yearpublished": 2023.0,
+   "title": "Knife Drop",
+   "author": "Nick DiGiovanni, Gordon Ramsay (Foreword)",
+   "genre": "Cookbook",
+   "rating": "4.33/5",
+   "summary": "Forget the rules. Just cook!",
+},
+{
+"yearpublished": 2015.0,
+   "title": "The Food Lab",
+   "author": "J. Kenji Lopez-Alt",
+   "genre": "Cookbook",
+   "rating": "4.29/5",
+   "summary": "In The Food Lab, Kenji focuses on teh science behind beloved American dishes, delving into the interactions between heat, energy, and molecules that create great food.",
+},
+{
+"yearpublished": 1988.0,
+   "title": "The Alchemist",
+   "author": "Paulo Coelho",
+   "genre": "Fable",
+   "rating": "3.91/5",
+   "summary": "Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different and far more satisfying than he imagined.",
+},
+{
+"yearpublished": 2009.0,
+   "title": "The Lion and the Mouse",
+   "author": "Jerry Pinkey",
+   "genre": "Fable",
+   "rating": "4.22/5",
+   "summary": "Sometimes even the King needs help...and little friends may prove to be great friends.",
+},
+{
+"yearpublished": 2013.0,
+   "title": "The Tortoise & the Hare",
+   "author": "Jerry Pinkney",
+   "genre": "Fable",
+   "rating": "4.08/5",
+   "summary": "This lavish, highly-acclaimed rendition of Aesop's most beloved fable about grit, hope, and resilience is brought to life by Caldecott Medal-winning artist Jerry Pinkney.",
 }
 ];
 
@@ -509,8 +557,8 @@ sortAndDisplayBooks(books, 'a-z', 'All');
 function clearSearch() {
     document.getElementById('titleSearch').value = '';
     document.getElementById('sortOptions').value = 'a-z';
-    document.getElementById('genreSelect').value = 'All';
-    sortAndDisplayBooks(books, 'a-z', 'All');
+    document.getElementById('genreSelect').value = 'Select Book Genre';
+    sortAndDisplayBooks(books, 'a-z', 'Select Book Genre');
 }
 
 
