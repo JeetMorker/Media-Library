@@ -636,12 +636,6 @@ function sortAndDisplayBooks(booksToSort, sortOption) {
     let sortedBooks = [...booksToSort]; 
 
     switch (sortOption) {
-        case 'recentlypublished':
-            sortedBooks.sort((a, b) => parseInt(b.publishedyear) - parseInt(a.publishedyear));
-            break;
-        case 'oldest':
-            sortedBooks.sort((a, b) => parseInt(a.publishedyear) - parseInt(b.publishedyear));
-            break;
         case 'a-z':
             sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
             break;
