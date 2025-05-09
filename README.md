@@ -3,7 +3,7 @@
 ## Name
 Media Library
 
-## Link to Wesbite
+## Link to Website
 https://www.cs.drexel.edu/~ta654/ci-102-lab-61-group-14/
 
 ## Description
