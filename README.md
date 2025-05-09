@@ -1,4 +1,4 @@
-# CI 102 Lab 61 Group 14
+# Media Library
 
 ## Name
 Media Library
